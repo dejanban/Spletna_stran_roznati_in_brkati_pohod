@@ -25,7 +25,6 @@ public/                       Spletna stran; vsebino te mape objavite na gostova
   data/news.json              Katalog novic in fotografij.
   data/news.js                Ustvarjena brskalniška različica kataloga.
   data/routes.js              Podatki poti, ustvarjeni iz GPX.
-  offline/                    Samostojen offline zemljevid in lokalna podlaga OSM.
   assets/branding/            Znak spletne strani.
   assets/Logo/                Dodani izvirni logotipi pohodov (PNG/PDF).
   assets/vabila/              Spletne kopije vabil.
@@ -49,11 +48,12 @@ Mapa `public` vsebuje neposredno uporabljene datoteke. Stran ne potrebuje gradnj
 
 ## Urejanje
 
-- **Napovedi in pohodi:** [public/data/events.js](public/data/events.js).
+**Obrazec za urejanje:** po zagonu odprite http://localhost:8080/urejevalnik/. Omogoča dogodke, novice, vabila in fotografske galerije. [Navodila za urejevalnik](docs/UREJEVALNIK.md). Spremembe shranjuje lokalno v projekt in pred shranjevanjem pripravi varnostno kopijo.
+
+- **Napovedi in pohodi:** obrazec `/urejevalnik/`; podatki so v [public/data/events.json](public/data/events.json), brskalniška različica `events.js` se ustvari ob shranjevanju.
 - **Povzetki novic:** [content/news-copy.json](content/news-copy.json), nato `python scripts/import_odeon.py`.
 - **Oblikovanje:** [public/css/styles.css](public/css/styles.css).
 - **Poti GPX:** datoteki sta v [public/assets/gpx/](public/assets/gpx/); po spremembi zaženite `python scripts/prepare_routes.py`. [Navodila za poti in zemljevid](docs/POTI.md).
-- **Offline zemljevid:** pod potmi kliknite »Prenesi offline zemljevid« in shranjeni HTML odprite v brskalniku brez povezave. Vsebuje obe poti in lokalno podlago. Po spremembi GPX zaženite tudi `python scripts/prepare_offline_map.py`; [navodila](docs/POTI.md#zemljevid-brez-povezave).
 - **Majice:** tri oblačila so prikazana v razdelku `#majice`; slike so v [public/assets/majice/](public/assets/majice/), [navodila in podatki za naročanje](docs/MAJICE.md). Prikaz in povezave za povpraševanje urejajte v `public/index.html`.
 - **Galerije, viri in podrobna navodila:** [docs/UPORABA.md](docs/UPORABA.md).
 

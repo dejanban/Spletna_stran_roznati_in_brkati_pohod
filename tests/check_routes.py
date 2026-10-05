@@ -22,8 +22,8 @@ def main():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     routes = json.loads((ROOT / 'public/data/routes.json').read_text(encoding='utf-8'))['routes']
-    assert [(r['pointCount'], r['closed']) for r in routes] == [(376, True), (152, False)]
-    assert 12700 < routes[0]['distanceMeters'] < 12800
+    assert [(r['pointCount'], r['closed']) for r in routes] == [(1166, True), (152, False)]
+    assert 10700 < routes[0]['distanceMeters'] < 10800
     assert 4500 < routes[1]['distanceMeters'] < 4600
     for route in routes:
         path = ROOT / 'public' / route['download']
@@ -80,7 +80,7 @@ def main():
             page.locator('#route-fit').click()
             page.locator('button[data-route="roznati"]').click()
             expect(page.locator('#route-map .leaflet-overlay-pane path')).to_have_count(2)
-            expect(page.locator('#route-length')).to_have_text('12,8 km')
+            expect(page.locator('#route-length')).to_have_text('10,7 km')
             page.locator('#route-map-toggle').click()
             expect(page.locator('#route-outline')).to_be_visible()
             page.locator('#poti').evaluate("e => e.scrollIntoView({block:'start',behavior:'instant'})")

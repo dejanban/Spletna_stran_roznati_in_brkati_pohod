@@ -15,7 +15,7 @@ V razdelku **Majice** (`/#majice`) so prikazani:
 - Rožnat pulover s kapuco: `public/assets/majice/roznati-koraki/Pulover_zadnji_del_candyfloss_pink.png`.
 - Črna majica z dolgimi rokavi: `public/assets/majice/brkati-pohod/Majica-Brkati_pohod.png`.
 
-Klik na sliko odpre izvirno datoteko v novem zavihku. Razdelek je namenjen prikazu oblačil in ne vsebuje gumbov za naročanje ali povpraševanje.
+Slike oblačil so prikazane brez povezav za povečanje. Razdelek je namenjen prikazu oblačil in ne vsebuje gumbov za naročanje ali povpraševanje.
 
 Logotip Rožnatih korakov je prikazan ob predstavitvi pohoda. Izvirnika PNG in PDF sta v `public/assets/Logo/Roznati koraki/`; za prikaz je uporabljen PNG. Skupni znak obeh pohodov v glavi strani ostaja ločen od logotipa posameznega pohoda.
 

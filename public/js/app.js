@@ -11,7 +11,7 @@
       event.paragraphs = article.paragraphs;
       event.summary = article.summary;
       event.reportUrl = article.sourceUrl;
-      event.reportLabel = `Radio Odeon · ${article.sourceCredit}`;
+      event.reportLabel = [article.sourceName || "Radio Odeon", article.sourceCredit].filter(Boolean).join(" · ");
     }
   }
   const events = [...window.EVENTS].sort((a, b) => b.date.localeCompare(a.date));
@@ -45,7 +45,7 @@
       <div class="event-meta"><span class="tag ${escape(event.type)}">${escape(typeLabel(event))}</span><span>· ${escape(dateLabel(event))}</span></div><h3>${escape(event.title)}</h3><p>${escape(event.summary)}</p><button class="text-link" data-event="${escape(event.id)}">Zgodba pohoda <span aria-hidden="true">↗</span></button></article>`).join("") : '<p class="empty-results">Za izbrano leto in vrsto še ni objavljenih pohodov. Poskusite drug izbor.</p>';
     $("#result-count").textContent = `Število prikazanih pohodov: ${selected.length}.`;
   }
-  $("#news-grid").innerHTML = news.length ? news.map(article => `<article class="news-card"><button class="news-image" data-news="${escape(article.eventId)}" aria-label="Preberi novico: ${escape(article.title)}"><img src="${safeUrl(article.cover)}" alt="Utrinek: ${escape(article.title)}" loading="lazy"><span class="image-label">${article.photos.length} fotografij</span></button><p class="news-meta">RADIO ODEON · ${escape(publicationLabel(article))}</p><h3>${escape(article.title)}</h3><p>${escape(article.summary)}</p><button class="text-link" data-news="${escape(article.eventId)}">Preberi novico in poglej fotografije <span aria-hidden="true">↗</span></button></article>`).join("") : '<p>Novice trenutno niso na voljo. Poskusite osvežiti stran.</p>';
+  $("#news-grid").innerHTML = news.length ? news.map(article => `<article class="news-card"><button class="news-image" data-news="${escape(article.eventId)}" aria-label="Preberi novico: ${escape(article.title)}"><img src="${safeUrl(article.cover)}" alt="Utrinek: ${escape(article.title)}" loading="lazy"><span class="image-label">${article.photos.length} fotografij</span></button><p class="news-meta">${escape(article.sourceName || "Radio Odeon")} · ${escape(publicationLabel(article))}</p><h3>${escape(article.title)}</h3><p>${escape(article.summary)}</p><button class="text-link" data-news="${escape(article.eventId)}">Preberi novico in poglej fotografije <span aria-hidden="true">↗</span></button></article>`).join("") : '<p>Novice trenutno niso na voljo. Poskusite osvežiti stran.</p>';
   document.querySelectorAll("[data-filter]").forEach(button => button.addEventListener("click", () => {
     filter = button.dataset.filter;
     document.querySelectorAll("[data-filter]").forEach(item => { const active = item === button; item.classList.toggle("active", active); item.setAttribute("aria-pressed", String(active)); });
@@ -73,7 +73,7 @@
     disposeGallery();
     const event = events.find(item => item.id === article.eventId);
     if (!event) return;
-    $("#dialog-content").innerHTML = `<div class="detail-head"><p class="eyebrow">NOVICE · ${escape(typeLabel(event))}</p><h2 id="dialog-title">${escape(article.title)}</h2><p class="news-publication">Objavljeno na Radiu Odeon: ${escape(publicationLabel(article))}</p></div><div class="news-body">${article.paragraphs.map(p => `<p>${escape(p)}</p>`).join("")}</div><div class="news-source"><p>Kratek povzetek po članku Radia Odeon. ${escape(article.sourceCredit)}</p><a class="source-link" href="${safeUrl(article.sourceUrl)}" target="_blank" rel="noopener">Celoten izvirni članek: ${escape(article.sourceTitle)} ↗</a></div><section class="gallery" aria-label="Fotografije pohoda"><h3>Pohod v ${article.photos.length} fotografijah</h3><p class="photo-credit">${escape(article.photoCredit)}</p><div id="gallery-body"></div></section>`;
+    $("#dialog-content").innerHTML = `<div class="detail-head"><p class="eyebrow">NOVICE · ${escape(typeLabel(event))}</p><h2 id="dialog-title">${escape(article.title)}</h2><p class="news-publication">Objavljeno: ${escape(publicationLabel(article))}</p></div><div class="news-body">${article.paragraphs.map(p => `<p>${escape(p)}</p>`).join("")}</div>${article.sourceUrl ? `<div class="news-source"><p>${escape(article.sourceName || "Radio Odeon")}${article.sourceCredit ? ` · ${escape(article.sourceCredit)}` : ""}</p><a class="source-link" href="${safeUrl(article.sourceUrl)}" target="_blank" rel="noopener">Celoten izvirni članek${article.sourceTitle ? `: ${escape(article.sourceTitle)}` : ""} ↗</a></div>` : ""}<section class="gallery" aria-label="Fotografije pohoda"><h3>Pohod v ${article.photos.length} fotografijah</h3><p class="photo-credit">${escape(article.photoCredit)}</p><div id="gallery-body"></div></section>`;
     document.body.classList.add("modal-open"); dialog.showModal(); dialog.scrollTop = 0;
     setupGallery({...event, photos: article.photos, driveFolderId: ""});
   }

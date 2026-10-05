@@ -14,7 +14,7 @@ Nato odprite <http://127.0.0.1:8080>. Strežnik ustavite s Ctrl+C. Na statično 
 
 ## Urejanje novic in pohodov
 
-Vsi dogodki so v `public/data/events.js`, v seznamu `window.EVENTS`. Urejanje trenutno poteka v tej datoteki, ne prek spletne administracije. Vsak dogodek ima svojo podrobno novico, vabilo, povezavo do poročila in galerijo. Za dodajanje kopirajte obstoječi zapis in mu dodelite enoličen `id`.
+Vsi dogodki so v `public/data/events.js`, v seznamu `window.EVENTS`. Za urejanje uporabite lokalni obrazec na **http://localhost:8080/urejevalnik/**; [podrobna navodila](UREJEVALNIK.md). Podatki obrazca so v `public/data/events.json`; ob shranjevanju se ustvari `events.js`. Neposredne spremembe samo v `events.js` bi naslednje shranjevanje v obrazcu prepisalo. Vsak dogodek ima svojo podrobno novico, vabilo, povezavo do poročila in galerijo. Za dodajanje kopirajte obstoječi zapis in mu dodelite enoličen `id`.
 
 ### Novice Radia Odeon in lokalna zbirka fotografij
 

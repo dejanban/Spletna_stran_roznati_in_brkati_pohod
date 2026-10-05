@@ -9,7 +9,7 @@
 
   async function addLocalBasemap() {
     try {
-      const response = await fetch('offline/podlaga.geojson');
+      const response = await fetch('data/map-basemap.geojson');
       if (!response.ok) throw new Error('Local map unavailable');
       const basemap = await response.json();
       map.createPane('local-base');
@@ -87,7 +87,6 @@
     $('#route-download').href = selected.download;
     $('#route-download').download = selected.download.split('/').pop();
     $('#route-download').setAttribute('aria-label', `Prenesi GPX: ${selected.title}`);
-    $('#route-offline-open').href = `offline/zemljevid.html#${selected.id}`;
     $('#route-start-link').href = `https://www.openstreetmap.org/?mlat=${start[0]}&mlon=${start[1]}#map=16/${start[0]}/${start[1]}`;
     renderOutline(selected);
     if (mapVisible) drawMap();

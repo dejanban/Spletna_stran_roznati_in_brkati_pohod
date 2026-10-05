@@ -48,8 +48,14 @@ def import_news():
     copy = json.loads((ROOT / 'content' / 'news-copy.json').read_text(encoding='utf-8'))
     exclusions_path = ROOT / 'content' / 'gallery-exclusions.json'
     exclusions = json.loads(exclusions_path.read_text(encoding='utf-8')) if exclusions_path.exists() else {}
-    catalog = {'schemaVersion': 1, 'source': 'Radio Odeon', 'articles': []}
+    existing_path = ROOT / 'public/data/news.json'
+    existing = json.loads(existing_path.read_text(encoding='utf-8')) if existing_path.exists() else {'articles': []}
+    managed = [a for a in existing['articles'] if a.get('editorManaged')]
+    managed_ids = {a['eventId'] for a in managed}
+    catalog = {'schemaVersion': 1, 'source': 'Radio Odeon', 'articles': managed}
     for event_id, slug in ARTICLES.items():
+        if event_id in managed_ids:
+            continue  # Preserve articles and galleries saved through the editor.
         url = f'https://radio-odeon.com/novice/{slug}/'
         cached = cache / f'{event_id}.html'
         if not cached.exists():
