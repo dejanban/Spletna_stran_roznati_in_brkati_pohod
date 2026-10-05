@@ -1,0 +1,1646 @@
+[
+  {
+    "Source": "spletna-stran\\dist\\app.js",
+    "Target": "public/js/app.js",
+    "SHA256": "B0F55D0E04F7835F4B7D866826C51FDD5F83168847FE15508D190B9EAC1657D3",
+    "CurrentSHA256": "B0F55D0E04F7835F4B7D866826C51FDD5F83168847FE15508D190B9EAC1657D3"
+  },
+  {
+    "Source": "spletna-stran\\dist\\content.js",
+    "Target": "public/data/events.js",
+    "SHA256": "9E2C6E1EE8DAE753AD0494096187CB1D659B3B63CA6397E24B6BB87480097141",
+    "CurrentSHA256": "624102A6415777132E7A3DA1E0C3D2E43C5BA3CE6996CAA106EC378952B4A1D2"
+  },
+  {
+    "Source": "spletna-stran\\dist\\index.html",
+    "Target": "public/index.html",
+    "SHA256": "287B3C4F260F68779D61AC74FCFE261F1BD9AA111BA8D3260395B88C3888AAAE",
+    "CurrentSHA256": "241F94F1E4998902583C3D8592E09FC0CCB84C78CF14CAA599BA54F911E1892A"
+  },
+  {
+    "Source": "spletna-stran\\dist\\styles.css",
+    "Target": "public/css/styles.css",
+    "SHA256": "7A8C0A7335737EF72816E7E9AD05D8D634FF94B4B8A7F28FAD3F3467CAF8251D",
+    "CurrentSHA256": "7A8C0A7335737EF72816E7E9AD05D8D634FF94B4B8A7F28FAD3F3467CAF8251D"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\brkati-2024.webp",
+    "Target": "public/assets/vabila/brkati-2024.webp",
+    "SHA256": "9FDA9ECD1371026512DE285A67D076797204CB96483061F7747963DC6AAE6F97",
+    "CurrentSHA256": "9FDA9ECD1371026512DE285A67D076797204CB96483061F7747963DC6AAE6F97"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\brkati-2025.webp",
+    "Target": "public/assets/vabila/brkati-2025.webp",
+    "SHA256": "C2CA4D98C05508A824D2A29472E762715C1C63F00507075F202EF2BA1170175B",
+    "CurrentSHA256": "C2CA4D98C05508A824D2A29472E762715C1C63F00507075F202EF2BA1170175B"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\mark.svg",
+    "Target": "public/assets/branding/mark.svg",
+    "SHA256": "8D7253006C3CB663E035F7070F257B483A59F3F6A14241CEFCEC9ABBD02826BE",
+    "CurrentSHA256": "8D7253006C3CB663E035F7070F257B483A59F3F6A14241CEFCEC9ABBD02826BE"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\roznati-2024.webp",
+    "Target": "public/assets/vabila/roznati-2024.webp",
+    "SHA256": "18909AA12167920996BF95D20A054AFA3BE580F08775EB487416B6685C258E47",
+    "CurrentSHA256": "18909AA12167920996BF95D20A054AFA3BE580F08775EB487416B6685C258E47"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\roznati-2025.webp",
+    "Target": "public/assets/vabila/roznati-2025.webp",
+    "SHA256": "7C6ECE27DE564502823FD56546F6B265893AC4877102E99FBFEF35F37A6E766C",
+    "CurrentSHA256": "7C6ECE27DE564502823FD56546F6B265893AC4877102E99FBFEF35F37A6E766C"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\roznati-2026.webp",
+    "Target": "public/assets/vabila/roznati-2026.webp",
+    "SHA256": "3379B1A9F75CFF9A6F8D40F480608753FC0F64C33195D0290B58E12DCD9DA820",
+    "CurrentSHA256": "3379B1A9F75CFF9A6F8D40F480608753FC0F64C33195D0290B58E12DCD9DA820"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\001.jpg",
+    "Target": "public/assets/novice/brkati-2023/001.jpg",
+    "SHA256": "240BE93788A7D0FD1C9FD40D6BFC1E732E83E03C15B4005AD9214782C654AEB0",
+    "CurrentSHA256": "240BE93788A7D0FD1C9FD40D6BFC1E732E83E03C15B4005AD9214782C654AEB0"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\002.jpg",
+    "Target": "public/assets/novice/brkati-2023/002.jpg",
+    "SHA256": "EE0EDFBAB27D2F806BAB605D71E8D63A6A4C9CC7C3C5ACB0CA3B273E3DE0AEA2",
+    "CurrentSHA256": "EE0EDFBAB27D2F806BAB605D71E8D63A6A4C9CC7C3C5ACB0CA3B273E3DE0AEA2"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\003.jpg",
+    "Target": "public/assets/novice/brkati-2023/003.jpg",
+    "SHA256": "9014CB44BBA70152E13FA6AEB8C5E6F6965EABB29150358D926F9F3083FEEA6C",
+    "CurrentSHA256": "9014CB44BBA70152E13FA6AEB8C5E6F6965EABB29150358D926F9F3083FEEA6C"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\004.jpg",
+    "Target": "public/assets/novice/brkati-2023/004.jpg",
+    "SHA256": "96DA4230BB81C51817D83E05CA7196D64D7BC68C3750C3D3032D2D3A3D809015",
+    "CurrentSHA256": "96DA4230BB81C51817D83E05CA7196D64D7BC68C3750C3D3032D2D3A3D809015"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\005.jpg",
+    "Target": "public/assets/novice/brkati-2023/005.jpg",
+    "SHA256": "AAE366BC098E8F030472518F39EC928E039F18DD339E4C6DCA1F916A6D010502",
+    "CurrentSHA256": "AAE366BC098E8F030472518F39EC928E039F18DD339E4C6DCA1F916A6D010502"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\006.jpg",
+    "Target": "public/assets/novice/brkati-2023/006.jpg",
+    "SHA256": "5DF91EB5B745DF33F6286D76E95DD60F13A738F658B73441AF0F7C71D6E37001",
+    "CurrentSHA256": "5DF91EB5B745DF33F6286D76E95DD60F13A738F658B73441AF0F7C71D6E37001"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\007.jpg",
+    "Target": "public/assets/novice/brkati-2023/007.jpg",
+    "SHA256": "2785E89D8E20139D5BC8F825C16D7535F568299E1835334626FC6BE092E58B5B",
+    "CurrentSHA256": "2785E89D8E20139D5BC8F825C16D7535F568299E1835334626FC6BE092E58B5B"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\008.jpg",
+    "Target": "public/assets/novice/brkati-2023/008.jpg",
+    "SHA256": "D7C6F350E2F46E624852D186E9044B105EE34C0FD7491EE183D388CF659490DF",
+    "CurrentSHA256": "D7C6F350E2F46E624852D186E9044B105EE34C0FD7491EE183D388CF659490DF"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\009.jpg",
+    "Target": "public/assets/novice/brkati-2023/009.jpg",
+    "SHA256": "7002598DFF39A89AB46887A47E93075EC719229DBA5F628F38C7332D70691B13",
+    "CurrentSHA256": "7002598DFF39A89AB46887A47E93075EC719229DBA5F628F38C7332D70691B13"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\010.jpg",
+    "Target": "public/assets/novice/brkati-2023/010.jpg",
+    "SHA256": "159C0DE4D6D81C791523C781DBC8B094543245FC625FB9BD66DB3196053839A6",
+    "CurrentSHA256": "159C0DE4D6D81C791523C781DBC8B094543245FC625FB9BD66DB3196053839A6"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\011.jpg",
+    "Target": "public/assets/novice/brkati-2023/011.jpg",
+    "SHA256": "8672A1E084956F7F9AE287F145BFCD8DDAAD7B2F4AEB376A16E8D0A50C1D4477",
+    "CurrentSHA256": "8672A1E084956F7F9AE287F145BFCD8DDAAD7B2F4AEB376A16E8D0A50C1D4477"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\012.jpg",
+    "Target": "public/assets/novice/brkati-2023/012.jpg",
+    "SHA256": "56DF12E00CFEC522D5DAA18D886226B3EB75348F3F5100AFED112D8A2EB37B8B",
+    "CurrentSHA256": "56DF12E00CFEC522D5DAA18D886226B3EB75348F3F5100AFED112D8A2EB37B8B"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\013.jpg",
+    "Target": "public/assets/novice/brkati-2023/013.jpg",
+    "SHA256": "28324BD5B14BC57BC88464E3D7F4C5B7FB41016F3128F54FE6240086C6EBC69D",
+    "CurrentSHA256": "28324BD5B14BC57BC88464E3D7F4C5B7FB41016F3128F54FE6240086C6EBC69D"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\014.jpg",
+    "Target": "public/assets/novice/brkati-2023/014.jpg",
+    "SHA256": "42C01FAC1C6AF160595B78CC4E11C6BBEB3458476F99D5B71A7C17513B84037D",
+    "CurrentSHA256": "42C01FAC1C6AF160595B78CC4E11C6BBEB3458476F99D5B71A7C17513B84037D"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\015.jpg",
+    "Target": "public/assets/novice/brkati-2023/015.jpg",
+    "SHA256": "2785E89D8E20139D5BC8F825C16D7535F568299E1835334626FC6BE092E58B5B",
+    "CurrentSHA256": "2785E89D8E20139D5BC8F825C16D7535F568299E1835334626FC6BE092E58B5B"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\016.jpg",
+    "Target": "public/assets/novice/brkati-2023/016.jpg",
+    "SHA256": "AEC7650A6FF930ABCE604281262E6E00766DEDCA61223990B0C0E899F2917571",
+    "CurrentSHA256": "AEC7650A6FF930ABCE604281262E6E00766DEDCA61223990B0C0E899F2917571"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\017.jpg",
+    "Target": "public/assets/novice/brkati-2023/017.jpg",
+    "SHA256": "553E279F10B4CF5A73B6D660E3D39B1CF6393777B0505AF475C666268DFB9C53",
+    "CurrentSHA256": "553E279F10B4CF5A73B6D660E3D39B1CF6393777B0505AF475C666268DFB9C53"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\018.jpg",
+    "Target": "public/assets/novice/brkati-2023/018.jpg",
+    "SHA256": "35D0EB443C109B449725BB78418AD1DBD94439040ED30C26613C4FB87D696041",
+    "CurrentSHA256": "35D0EB443C109B449725BB78418AD1DBD94439040ED30C26613C4FB87D696041"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\019.jpg",
+    "Target": "public/assets/novice/brkati-2023/019.jpg",
+    "SHA256": "420C8AE6D42F473D5E7D4D1F1E17C21DC3D73543981836B7026EB8474373A8B9",
+    "CurrentSHA256": "420C8AE6D42F473D5E7D4D1F1E17C21DC3D73543981836B7026EB8474373A8B9"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2023\\020.jpg",
+    "Target": "public/assets/novice/brkati-2023/020.jpg",
+    "SHA256": "648D5FA40F076F62EA425CC0CAF5BD338FCA3DC1A32C214C6CE2C1510216F112",
+    "CurrentSHA256": "648D5FA40F076F62EA425CC0CAF5BD338FCA3DC1A32C214C6CE2C1510216F112"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\001.jpg",
+    "Target": "public/assets/novice/brkati-2024/001.jpg",
+    "SHA256": "71F8A4F088FE779136E81B3EBEF4EF61164F7CE15CB0ED0655A22ECE088906E6",
+    "CurrentSHA256": "71F8A4F088FE779136E81B3EBEF4EF61164F7CE15CB0ED0655A22ECE088906E6"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\002.jpg",
+    "Target": "public/assets/novice/brkati-2024/002.jpg",
+    "SHA256": "BCE4F526FA1320DB20AE415420C80C63E8B58474B2EEEFEC955CB591278D6A8A",
+    "CurrentSHA256": "BCE4F526FA1320DB20AE415420C80C63E8B58474B2EEEFEC955CB591278D6A8A"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\003.jpg",
+    "Target": "public/assets/novice/brkati-2024/003.jpg",
+    "SHA256": "E2ACA189397FA52C6F629DF09188628BAA9A5BA5FF921A6A43F1B01D46B0F9FD",
+    "CurrentSHA256": "E2ACA189397FA52C6F629DF09188628BAA9A5BA5FF921A6A43F1B01D46B0F9FD"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\004.jpg",
+    "Target": "public/assets/novice/brkati-2024/004.jpg",
+    "SHA256": "DB09E09D9FC684698D8D0BA3E3DA7100F88AC2943BB19D63D788AE90AC555BBE",
+    "CurrentSHA256": "DB09E09D9FC684698D8D0BA3E3DA7100F88AC2943BB19D63D788AE90AC555BBE"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\005.jpg",
+    "Target": "public/assets/novice/brkati-2024/005.jpg",
+    "SHA256": "8FB00F41CC21BB69E8F314DA9ECDB8911C7B8C8949A94CF24BDA6848E9A77ADD",
+    "CurrentSHA256": "8FB00F41CC21BB69E8F314DA9ECDB8911C7B8C8949A94CF24BDA6848E9A77ADD"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\006.jpg",
+    "Target": "public/assets/novice/brkati-2024/006.jpg",
+    "SHA256": "22121F8AF0C2E444F974846620935C4B9BF81B83C1C3CCE5B2092988423E67C3",
+    "CurrentSHA256": "22121F8AF0C2E444F974846620935C4B9BF81B83C1C3CCE5B2092988423E67C3"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\007.jpg",
+    "Target": "public/assets/novice/brkati-2024/007.jpg",
+    "SHA256": "56BF0C10D2D6A1C571F21A9AD4FFA607142A07C6D484B24774192C21845A1E15",
+    "CurrentSHA256": "56BF0C10D2D6A1C571F21A9AD4FFA607142A07C6D484B24774192C21845A1E15"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\008.jpg",
+    "Target": "public/assets/novice/brkati-2024/008.jpg",
+    "SHA256": "F466738E07836B37CE3870DC5A64C0EBC24332EC3820A33E1F70D5573E1A14A9",
+    "CurrentSHA256": "F466738E07836B37CE3870DC5A64C0EBC24332EC3820A33E1F70D5573E1A14A9"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\009.jpg",
+    "Target": "public/assets/novice/brkati-2024/009.jpg",
+    "SHA256": "DCCD2598815D28B0DC338FB2DE8E77E8C9E65FE686276F9FA2611712D8C2901B",
+    "CurrentSHA256": "DCCD2598815D28B0DC338FB2DE8E77E8C9E65FE686276F9FA2611712D8C2901B"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\010.jpg",
+    "Target": "public/assets/novice/brkati-2024/010.jpg",
+    "SHA256": "1ECAD30046228ED33B0D234D7E097D924CD27CC973C8A64937F5B79B91CA81BF",
+    "CurrentSHA256": "1ECAD30046228ED33B0D234D7E097D924CD27CC973C8A64937F5B79B91CA81BF"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\011.jpg",
+    "Target": "public/assets/novice/brkati-2024/011.jpg",
+    "SHA256": "C8A488C5BF87DAFD0C272DBA0961D8DDABCA7E1170E3B73F9FB1E5B62943B344",
+    "CurrentSHA256": "C8A488C5BF87DAFD0C272DBA0961D8DDABCA7E1170E3B73F9FB1E5B62943B344"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\012.jpg",
+    "Target": "public/assets/novice/brkati-2024/012.jpg",
+    "SHA256": "EB3A5D0DF211253F0AA2403F8961295311C259BD916366628EE524D6DA799630",
+    "CurrentSHA256": "EB3A5D0DF211253F0AA2403F8961295311C259BD916366628EE524D6DA799630"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\013.jpg",
+    "Target": "public/assets/novice/brkati-2024/013.jpg",
+    "SHA256": "713B83FB47230E27CD5428DFBCFFD2B7F6174E66841DED01423FCABE19AE9164",
+    "CurrentSHA256": "713B83FB47230E27CD5428DFBCFFD2B7F6174E66841DED01423FCABE19AE9164"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\014.jpg",
+    "Target": "public/assets/novice/brkati-2024/014.jpg",
+    "SHA256": "7E25EC3212F6D89C465A5AB8C2B2E1C2DC2BB928C62D886F728B6E89E57B11E0",
+    "CurrentSHA256": "7E25EC3212F6D89C465A5AB8C2B2E1C2DC2BB928C62D886F728B6E89E57B11E0"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\015.jpg",
+    "Target": "public/assets/novice/brkati-2024/015.jpg",
+    "SHA256": "5167A975E9EC13A91A19A7DF291DCDB1E94372938A67EC67587ABE08465EBCA9",
+    "CurrentSHA256": "5167A975E9EC13A91A19A7DF291DCDB1E94372938A67EC67587ABE08465EBCA9"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\016.jpg",
+    "Target": "public/assets/novice/brkati-2024/016.jpg",
+    "SHA256": "718461C7F2AE83C4EB6766EA6F8C4EA8C8AC98397C7334148CFDF75BAC6569C6",
+    "CurrentSHA256": "718461C7F2AE83C4EB6766EA6F8C4EA8C8AC98397C7334148CFDF75BAC6569C6"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\017.jpg",
+    "Target": "public/assets/novice/brkati-2024/017.jpg",
+    "SHA256": "DFCC69FC44330AE2CC95B3AD5D0E930C1C768881D2D63C7090C1FBDA9E13999C",
+    "CurrentSHA256": "DFCC69FC44330AE2CC95B3AD5D0E930C1C768881D2D63C7090C1FBDA9E13999C"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\018.jpg",
+    "Target": "public/assets/novice/brkati-2024/018.jpg",
+    "SHA256": "7C56D9F973CB55F3C01340C5CED10DA225A13C183D9E0795E0266D860747452D",
+    "CurrentSHA256": "7C56D9F973CB55F3C01340C5CED10DA225A13C183D9E0795E0266D860747452D"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\019.jpg",
+    "Target": "public/assets/novice/brkati-2024/019.jpg",
+    "SHA256": "E207B397CBD04D6CFD3DE343184D07EF9493B63D75440FE4F463FEEADAE04AE4",
+    "CurrentSHA256": "E207B397CBD04D6CFD3DE343184D07EF9493B63D75440FE4F463FEEADAE04AE4"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\020.jpg",
+    "Target": "public/assets/novice/brkati-2024/020.jpg",
+    "SHA256": "0EE8601466A1E89A4CB5F2385BC3927EAC9651A3B2A78839222619AFD97B3537",
+    "CurrentSHA256": "0EE8601466A1E89A4CB5F2385BC3927EAC9651A3B2A78839222619AFD97B3537"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\021.jpg",
+    "Target": "public/assets/novice/brkati-2024/021.jpg",
+    "SHA256": "19609364E7BF2DA193BEB392E95A872CF35CE717E42E88C172CDEB12A7557D97",
+    "CurrentSHA256": "19609364E7BF2DA193BEB392E95A872CF35CE717E42E88C172CDEB12A7557D97"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\022.jpg",
+    "Target": "public/assets/novice/brkati-2024/022.jpg",
+    "SHA256": "396B16291C7E0B52E1E23886AC69F8723D814FE7FA3AA607A91D61F1605EC675",
+    "CurrentSHA256": "396B16291C7E0B52E1E23886AC69F8723D814FE7FA3AA607A91D61F1605EC675"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\023.jpg",
+    "Target": "public/assets/novice/brkati-2024/023.jpg",
+    "SHA256": "00B813CCE6EB7835B4B058317E96B81C2F32E7C86EB16188364BB065E7705288",
+    "CurrentSHA256": "00B813CCE6EB7835B4B058317E96B81C2F32E7C86EB16188364BB065E7705288"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\024.jpg",
+    "Target": "public/assets/novice/brkati-2024/024.jpg",
+    "SHA256": "0623B606F7E264875839C328F3158652B1A329F8DEFF3563D080201B8643D404",
+    "CurrentSHA256": "0623B606F7E264875839C328F3158652B1A329F8DEFF3563D080201B8643D404"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\025.jpg",
+    "Target": "public/assets/novice/brkati-2024/025.jpg",
+    "SHA256": "7D64BE5B8E04F8F8502ECD10620CBD2763EE58AEBB7293F0DD42541D7B8CB486",
+    "CurrentSHA256": "7D64BE5B8E04F8F8502ECD10620CBD2763EE58AEBB7293F0DD42541D7B8CB486"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\026.jpg",
+    "Target": "public/assets/novice/brkati-2024/026.jpg",
+    "SHA256": "32081230A4130AF410C6135578FA2920F0C2137BAF1AE82554FC994C287B2474",
+    "CurrentSHA256": "32081230A4130AF410C6135578FA2920F0C2137BAF1AE82554FC994C287B2474"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\027.jpg",
+    "Target": "public/assets/novice/brkati-2024/027.jpg",
+    "SHA256": "D156B8D1326F3324F8786A5B71F6D4D03DF8F6D8D7A549E745C1D443457785FF",
+    "CurrentSHA256": "D156B8D1326F3324F8786A5B71F6D4D03DF8F6D8D7A549E745C1D443457785FF"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\028.jpg",
+    "Target": "public/assets/novice/brkati-2024/028.jpg",
+    "SHA256": "B78944A733C26B8CC6188D596C32B7841F190875C8E68AC3A570F61969A225CB",
+    "CurrentSHA256": "B78944A733C26B8CC6188D596C32B7841F190875C8E68AC3A570F61969A225CB"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\029.jpg",
+    "Target": "public/assets/novice/brkati-2024/029.jpg",
+    "SHA256": "701AF44E9523705D22014B0160EC7481E827DA14FF57170C1B8176036559C30A",
+    "CurrentSHA256": "701AF44E9523705D22014B0160EC7481E827DA14FF57170C1B8176036559C30A"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\030.jpg",
+    "Target": "public/assets/novice/brkati-2024/030.jpg",
+    "SHA256": "89B10B366D7A95882B49C49E0B98911459BF2AABB6F32001728E687A7CF247C2",
+    "CurrentSHA256": "89B10B366D7A95882B49C49E0B98911459BF2AABB6F32001728E687A7CF247C2"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\031.jpg",
+    "Target": "public/assets/novice/brkati-2024/031.jpg",
+    "SHA256": "ED55B3CCE76D157A5F9458FA887B59C174001D5CEE49E7554481E5145650A0F4",
+    "CurrentSHA256": "ED55B3CCE76D157A5F9458FA887B59C174001D5CEE49E7554481E5145650A0F4"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\032.jpg",
+    "Target": "public/assets/novice/brkati-2024/032.jpg",
+    "SHA256": "F04D304104107F53AB71A78406BB0F4AE3670F1CDC53DA2EB444EEAABFAFD6B0",
+    "CurrentSHA256": "F04D304104107F53AB71A78406BB0F4AE3670F1CDC53DA2EB444EEAABFAFD6B0"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\033.jpg",
+    "Target": "public/assets/novice/brkati-2024/033.jpg",
+    "SHA256": "B86DDE702447AE66E92DC4D70B36DBA0320776633032C0FC24225D73056A9B19",
+    "CurrentSHA256": "B86DDE702447AE66E92DC4D70B36DBA0320776633032C0FC24225D73056A9B19"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\034.jpg",
+    "Target": "public/assets/novice/brkati-2024/034.jpg",
+    "SHA256": "45937AE9788712050BE0BE88663635C0B64F6CB1778FF1EADB78749C19761F46",
+    "CurrentSHA256": "45937AE9788712050BE0BE88663635C0B64F6CB1778FF1EADB78749C19761F46"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\035.jpg",
+    "Target": "public/assets/novice/brkati-2024/035.jpg",
+    "SHA256": "4038B722D2681CEF8D5749C3C25EEB168C67474AE33D1DD85EBFEF9875EFA136",
+    "CurrentSHA256": "4038B722D2681CEF8D5749C3C25EEB168C67474AE33D1DD85EBFEF9875EFA136"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\036.jpg",
+    "Target": "public/assets/novice/brkati-2024/036.jpg",
+    "SHA256": "B805D9C890708B54C356C6B488A2630D47AE2068896C34F4BD075AF9C69328C4",
+    "CurrentSHA256": "B805D9C890708B54C356C6B488A2630D47AE2068896C34F4BD075AF9C69328C4"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\037.jpg",
+    "Target": "public/assets/novice/brkati-2024/037.jpg",
+    "SHA256": "C16EE3C598DAF30469B167AA38C3D333CB3B57160490FB2FCE699D5D3097E641",
+    "CurrentSHA256": "C16EE3C598DAF30469B167AA38C3D333CB3B57160490FB2FCE699D5D3097E641"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\038.jpg",
+    "Target": "public/assets/novice/brkati-2024/038.jpg",
+    "SHA256": "3D39BDAB6D24224947538AE3B02A1760857D4591EF1430582EEA66992D93F92F",
+    "CurrentSHA256": "3D39BDAB6D24224947538AE3B02A1760857D4591EF1430582EEA66992D93F92F"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\039.jpg",
+    "Target": "public/assets/novice/brkati-2024/039.jpg",
+    "SHA256": "4FF0B93D8849E6FB73153EE3F4CFB95BE7BDD4E3F7D742BB263D11A6831DE9FF",
+    "CurrentSHA256": "4FF0B93D8849E6FB73153EE3F4CFB95BE7BDD4E3F7D742BB263D11A6831DE9FF"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\040.jpg",
+    "Target": "public/assets/novice/brkati-2024/040.jpg",
+    "SHA256": "504CFC8643EDA26291DDC6475997DB63478B2524BF063E6AA5A9B68CE7866024",
+    "CurrentSHA256": "504CFC8643EDA26291DDC6475997DB63478B2524BF063E6AA5A9B68CE7866024"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\041.jpg",
+    "Target": "public/assets/novice/brkati-2024/041.jpg",
+    "SHA256": "A717BBA196197F7E2B53339230B6B5676EC13BD3C9716EE0BAE5CC9F51F3FDC4",
+    "CurrentSHA256": "A717BBA196197F7E2B53339230B6B5676EC13BD3C9716EE0BAE5CC9F51F3FDC4"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\042.jpg",
+    "Target": "public/assets/novice/brkati-2024/042.jpg",
+    "SHA256": "35C7D6232D559D85E214A73A2E5C6CC8CE14026182C5DAD6A2C00D66A29A565F",
+    "CurrentSHA256": "35C7D6232D559D85E214A73A2E5C6CC8CE14026182C5DAD6A2C00D66A29A565F"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\043.jpg",
+    "Target": "public/assets/novice/brkati-2024/043.jpg",
+    "SHA256": "89FA97CDE8E30E68128EB3025D61708259FD44AC23D72297A68A113602F9C47D",
+    "CurrentSHA256": "89FA97CDE8E30E68128EB3025D61708259FD44AC23D72297A68A113602F9C47D"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\044.jpg",
+    "Target": "public/assets/novice/brkati-2024/044.jpg",
+    "SHA256": "F2D18B3FBC1ABEE529ACCA22FF6AC9D02CB07841A402E68DE7FE991FF1F29169",
+    "CurrentSHA256": "F2D18B3FBC1ABEE529ACCA22FF6AC9D02CB07841A402E68DE7FE991FF1F29169"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\045.jpg",
+    "Target": "public/assets/novice/brkati-2024/045.jpg",
+    "SHA256": "DCCEB282BE1D7619ADA0F156BD16D7CC026BCF87DEF4C0EF13A5B613FA118C61",
+    "CurrentSHA256": "DCCEB282BE1D7619ADA0F156BD16D7CC026BCF87DEF4C0EF13A5B613FA118C61"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\046.jpg",
+    "Target": "public/assets/novice/brkati-2024/046.jpg",
+    "SHA256": "A48CF56BC4AD8F966600B0F0665A7A134223E669672A44ABE12ACFC3C9C8AED7",
+    "CurrentSHA256": "A48CF56BC4AD8F966600B0F0665A7A134223E669672A44ABE12ACFC3C9C8AED7"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\047.jpg",
+    "Target": "public/assets/novice/brkati-2024/047.jpg",
+    "SHA256": "F01A0DB51630660AAFBB44B05C7412384BEEEB9BEEA7ADE5C5D6C804B440BAE6",
+    "CurrentSHA256": "F01A0DB51630660AAFBB44B05C7412384BEEEB9BEEA7ADE5C5D6C804B440BAE6"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\048.jpg",
+    "Target": "public/assets/novice/brkati-2024/048.jpg",
+    "SHA256": "709E9399B5462DABE5C357156935769BFCE4AE8FB22ED514A641D16726E0D135",
+    "CurrentSHA256": "709E9399B5462DABE5C357156935769BFCE4AE8FB22ED514A641D16726E0D135"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\049.jpg",
+    "Target": "public/assets/novice/brkati-2024/049.jpg",
+    "SHA256": "7FCED6AF0AF2E7A933E29A9E10EA96034A3E62315162DB1A569A3BA07AACF788",
+    "CurrentSHA256": "7FCED6AF0AF2E7A933E29A9E10EA96034A3E62315162DB1A569A3BA07AACF788"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\050.jpg",
+    "Target": "public/assets/novice/brkati-2024/050.jpg",
+    "SHA256": "4D6A07CE6FA8DC2D27E5A5CCC04B011C3554DBAD91490D1A3848E1C67F80F0B8",
+    "CurrentSHA256": "4D6A07CE6FA8DC2D27E5A5CCC04B011C3554DBAD91490D1A3848E1C67F80F0B8"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\051.jpg",
+    "Target": "public/assets/novice/brkati-2024/051.jpg",
+    "SHA256": "4220A101520543B295C208BFB1F8C22C404A6AEBBB9DAB505EFBA024CBC937E6",
+    "CurrentSHA256": "4220A101520543B295C208BFB1F8C22C404A6AEBBB9DAB505EFBA024CBC937E6"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\052.jpg",
+    "Target": "public/assets/novice/brkati-2024/052.jpg",
+    "SHA256": "1FEE935D4D3FAC3653B1E509BC9B9CB2F06531972EB93DCE484BC6A678508AC7",
+    "CurrentSHA256": "1FEE935D4D3FAC3653B1E509BC9B9CB2F06531972EB93DCE484BC6A678508AC7"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\053.jpg",
+    "Target": "public/assets/novice/brkati-2024/053.jpg",
+    "SHA256": "720DB660B9296CF15C4FFD7AF2B85B0F0AF2D2DEB6ED926BE65A2C7BA6CF5FEA",
+    "CurrentSHA256": "720DB660B9296CF15C4FFD7AF2B85B0F0AF2D2DEB6ED926BE65A2C7BA6CF5FEA"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\054.jpg",
+    "Target": "public/assets/novice/brkati-2024/054.jpg",
+    "SHA256": "8A0060EA2CC0F198DA915581779CB52214C44181F4D5A2FEA480F05C10085326",
+    "CurrentSHA256": "8A0060EA2CC0F198DA915581779CB52214C44181F4D5A2FEA480F05C10085326"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\055.jpg",
+    "Target": "public/assets/novice/brkati-2024/055.jpg",
+    "SHA256": "F0DEEDA0CB1BB77670F43BAEA725AFB857856E49947B925812412B2556919715",
+    "CurrentSHA256": "F0DEEDA0CB1BB77670F43BAEA725AFB857856E49947B925812412B2556919715"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\056.jpg",
+    "Target": "public/assets/novice/brkati-2024/056.jpg",
+    "SHA256": "26148311CBB8582E523489D9618893160B62D8D34886D5B6B0871F7D970638AD",
+    "CurrentSHA256": "26148311CBB8582E523489D9618893160B62D8D34886D5B6B0871F7D970638AD"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\057.jpg",
+    "Target": "public/assets/novice/brkati-2024/057.jpg",
+    "SHA256": "9FA11C2CD69457AC692DA7021ED3742677C18A5100A31F0756FBF515B93BB940",
+    "CurrentSHA256": "9FA11C2CD69457AC692DA7021ED3742677C18A5100A31F0756FBF515B93BB940"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\058.jpg",
+    "Target": "public/assets/novice/brkati-2024/058.jpg",
+    "SHA256": "E4DF95F6ADE1C0F0B09D43ABFAAA510155233CC680E1A8E2D78CBB6BBCAFC311",
+    "CurrentSHA256": "E4DF95F6ADE1C0F0B09D43ABFAAA510155233CC680E1A8E2D78CBB6BBCAFC311"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\059.jpg",
+    "Target": "public/assets/novice/brkati-2024/059.jpg",
+    "SHA256": "0A281F2F5E39FB8E43958EC2FDB9092B9AB357B95AFE4964F3515420DB518F3E",
+    "CurrentSHA256": "0A281F2F5E39FB8E43958EC2FDB9092B9AB357B95AFE4964F3515420DB518F3E"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\060.jpg",
+    "Target": "public/assets/novice/brkati-2024/060.jpg",
+    "SHA256": "B0E838C746C8EAE1FA6A6C5AA4CF7DB55180CCDA5DF7E682796831AB68EDE80D",
+    "CurrentSHA256": "B0E838C746C8EAE1FA6A6C5AA4CF7DB55180CCDA5DF7E682796831AB68EDE80D"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\061.jpg",
+    "Target": "public/assets/novice/brkati-2024/061.jpg",
+    "SHA256": "9B9E6BC7B0D44C8C45D9398B2A8C39B31D0257F83F150737B3B83016F5A673A1",
+    "CurrentSHA256": "9B9E6BC7B0D44C8C45D9398B2A8C39B31D0257F83F150737B3B83016F5A673A1"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\062.jpg",
+    "Target": "public/assets/novice/brkati-2024/062.jpg",
+    "SHA256": "1E7CEF716943EA067815652F598E1BB1A1C3E177752702878EA733E7B044396C",
+    "CurrentSHA256": "1E7CEF716943EA067815652F598E1BB1A1C3E177752702878EA733E7B044396C"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\063.jpg",
+    "Target": "public/assets/novice/brkati-2024/063.jpg",
+    "SHA256": "3D710AE1B54E60881B56A342A98D1FD9DA28D15FAB96CEE833DA4108344E11A0",
+    "CurrentSHA256": "3D710AE1B54E60881B56A342A98D1FD9DA28D15FAB96CEE833DA4108344E11A0"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\064.jpg",
+    "Target": "public/assets/novice/brkati-2024/064.jpg",
+    "SHA256": "337BF078DD7105F4F28DC0E96DAB8CB86FEA1D75D75241199D81020681A415C9",
+    "CurrentSHA256": "337BF078DD7105F4F28DC0E96DAB8CB86FEA1D75D75241199D81020681A415C9"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\065.jpg",
+    "Target": "public/assets/novice/brkati-2024/065.jpg",
+    "SHA256": "A745C40EBC6D6E238D2EE72C5A237A777B24EB758D15ECFBFC252B177970ACC7",
+    "CurrentSHA256": "A745C40EBC6D6E238D2EE72C5A237A777B24EB758D15ECFBFC252B177970ACC7"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\066.jpg",
+    "Target": "public/assets/novice/brkati-2024/066.jpg",
+    "SHA256": "E94CEF8F4510DB12E9D797828C6368B96DB75825ED610E40A726868378C61E2B",
+    "CurrentSHA256": "E94CEF8F4510DB12E9D797828C6368B96DB75825ED610E40A726868378C61E2B"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\067.jpg",
+    "Target": "public/assets/novice/brkati-2024/067.jpg",
+    "SHA256": "877B5C2735C55CC3489B6C820D9EEF3B72A1CC9F9D3FF461B2D90D3C4C66B15C",
+    "CurrentSHA256": "877B5C2735C55CC3489B6C820D9EEF3B72A1CC9F9D3FF461B2D90D3C4C66B15C"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\068.jpg",
+    "Target": "public/assets/novice/brkati-2024/068.jpg",
+    "SHA256": "AFEFE31960869174C225A86F2EA7E81345990461813E50ABE5A86AFBC26CBF92",
+    "CurrentSHA256": "AFEFE31960869174C225A86F2EA7E81345990461813E50ABE5A86AFBC26CBF92"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\069.jpg",
+    "Target": "public/assets/novice/brkati-2024/069.jpg",
+    "SHA256": "4423AC87FC597B7257BCA013CDBF6D60A3C3CC381CAA4F738F282E4F4432D896",
+    "CurrentSHA256": "4423AC87FC597B7257BCA013CDBF6D60A3C3CC381CAA4F738F282E4F4432D896"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\070.jpg",
+    "Target": "public/assets/novice/brkati-2024/070.jpg",
+    "SHA256": "F72450EFB37301FA362D349A050D15E100142F09334D53873B317C158A50F767",
+    "CurrentSHA256": "F72450EFB37301FA362D349A050D15E100142F09334D53873B317C158A50F767"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\071.jpg",
+    "Target": "public/assets/novice/brkati-2024/071.jpg",
+    "SHA256": "98B905AC5ACA501245956145F63BFE14049F21A17938131CC548D2C724F1DE89",
+    "CurrentSHA256": "98B905AC5ACA501245956145F63BFE14049F21A17938131CC548D2C724F1DE89"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\072.jpg",
+    "Target": "public/assets/novice/brkati-2024/072.jpg",
+    "SHA256": "A6522E518C6202F1ECFF8907B2A6B9DB1310BD7DCF3047CAC6910E6671D49FEE",
+    "CurrentSHA256": "A6522E518C6202F1ECFF8907B2A6B9DB1310BD7DCF3047CAC6910E6671D49FEE"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\073.jpg",
+    "Target": "public/assets/novice/brkati-2024/073.jpg",
+    "SHA256": "7177AB5267EF825E4111ECCBC6F009838D2FA51063FF4D705852163D4FBC3F6F",
+    "CurrentSHA256": "7177AB5267EF825E4111ECCBC6F009838D2FA51063FF4D705852163D4FBC3F6F"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\074.jpg",
+    "Target": "public/assets/novice/brkati-2024/074.jpg",
+    "SHA256": "ED26E4788DBA2E67BFF1D7FB9197453FEF253D579500A1A497F6B717EFB2FDCF",
+    "CurrentSHA256": "ED26E4788DBA2E67BFF1D7FB9197453FEF253D579500A1A497F6B717EFB2FDCF"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\075.jpg",
+    "Target": "public/assets/novice/brkati-2024/075.jpg",
+    "SHA256": "20BDF987ABC6BB3FB57A588696705E6946772CCF7B526227D97A5E120883D385",
+    "CurrentSHA256": "20BDF987ABC6BB3FB57A588696705E6946772CCF7B526227D97A5E120883D385"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\076.jpg",
+    "Target": "public/assets/novice/brkati-2024/076.jpg",
+    "SHA256": "798D3D5940EC3E5B54242150C477A8970F9CCC60F5BB743948E03C0A2936C9D4",
+    "CurrentSHA256": "798D3D5940EC3E5B54242150C477A8970F9CCC60F5BB743948E03C0A2936C9D4"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\077.jpg",
+    "Target": "public/assets/novice/brkati-2024/077.jpg",
+    "SHA256": "D6DB657877796501796D312E7D013BE4D77B9324780F538EA347AB4E9EFD04B3",
+    "CurrentSHA256": "D6DB657877796501796D312E7D013BE4D77B9324780F538EA347AB4E9EFD04B3"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\078.jpg",
+    "Target": "public/assets/novice/brkati-2024/078.jpg",
+    "SHA256": "CF537CF1C78FA2BC7B3C6E10FDC1E9125468AAC7FEC061AE66D1C7784B308413",
+    "CurrentSHA256": "CF537CF1C78FA2BC7B3C6E10FDC1E9125468AAC7FEC061AE66D1C7784B308413"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\079.jpg",
+    "Target": "public/assets/novice/brkati-2024/079.jpg",
+    "SHA256": "32C5BD74F4E63E64C1F7EAD682A602D111C35182442D9335F85EF90BCAE7366D",
+    "CurrentSHA256": "32C5BD74F4E63E64C1F7EAD682A602D111C35182442D9335F85EF90BCAE7366D"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\080.jpg",
+    "Target": "public/assets/novice/brkati-2024/080.jpg",
+    "SHA256": "8250E1EB3E492724580DA3D3E51E478993AB2A8A6D901508E3DAA41C40AEF577",
+    "CurrentSHA256": "8250E1EB3E492724580DA3D3E51E478993AB2A8A6D901508E3DAA41C40AEF577"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\081.jpg",
+    "Target": "public/assets/novice/brkati-2024/081.jpg",
+    "SHA256": "47AF6AD524CD5BF331D89A4BF08F5C6E8E55DA3C2A6F011C16279197BF2357A5",
+    "CurrentSHA256": "47AF6AD524CD5BF331D89A4BF08F5C6E8E55DA3C2A6F011C16279197BF2357A5"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\082.jpg",
+    "Target": "public/assets/novice/brkati-2024/082.jpg",
+    "SHA256": "F739C48845ACC0FF637EFCE60A6D72624ACDD0AED0E16352B8228DE9A72C7651",
+    "CurrentSHA256": "F739C48845ACC0FF637EFCE60A6D72624ACDD0AED0E16352B8228DE9A72C7651"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\083.jpg",
+    "Target": "public/assets/novice/brkati-2024/083.jpg",
+    "SHA256": "647DB3DB98E14369AD9E3E6BD7FB27D2625530FC43632A008652ECB511DCDE3E",
+    "CurrentSHA256": "647DB3DB98E14369AD9E3E6BD7FB27D2625530FC43632A008652ECB511DCDE3E"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\084.jpg",
+    "Target": "public/assets/novice/brkati-2024/084.jpg",
+    "SHA256": "D3B14CB4EAE98F55D862719BE604D040C5DE989E252D413A481F628F90916B48",
+    "CurrentSHA256": "D3B14CB4EAE98F55D862719BE604D040C5DE989E252D413A481F628F90916B48"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\085.jpg",
+    "Target": "public/assets/novice/brkati-2024/085.jpg",
+    "SHA256": "774DC0DBBD4F8E4015176B498306828644823593DF3A53A3DD448CD9CF59A459",
+    "CurrentSHA256": "774DC0DBBD4F8E4015176B498306828644823593DF3A53A3DD448CD9CF59A459"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\086.jpg",
+    "Target": "public/assets/novice/brkati-2024/086.jpg",
+    "SHA256": "14A3D8A6EA358C9E4C24BF394ECA18EAF18FEFA21AB1A31730EDAE8210702F32",
+    "CurrentSHA256": "14A3D8A6EA358C9E4C24BF394ECA18EAF18FEFA21AB1A31730EDAE8210702F32"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\087.jpg",
+    "Target": "public/assets/novice/brkati-2024/087.jpg",
+    "SHA256": "F6712D5387FAC676BE7E40836A9AAEC017689C6A3CEB720C275699BAD59E596B",
+    "CurrentSHA256": "F6712D5387FAC676BE7E40836A9AAEC017689C6A3CEB720C275699BAD59E596B"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\088.jpg",
+    "Target": "public/assets/novice/brkati-2024/088.jpg",
+    "SHA256": "EDDBF58C1E3753F7718A8207D977713FA77F83363377C6AB20FFD8D543175204",
+    "CurrentSHA256": "EDDBF58C1E3753F7718A8207D977713FA77F83363377C6AB20FFD8D543175204"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\089.jpg",
+    "Target": "public/assets/novice/brkati-2024/089.jpg",
+    "SHA256": "26F534842914E3A1E58EBAC5BD47B742D4D19DA95539B8C0509F091BF78D60E9",
+    "CurrentSHA256": "26F534842914E3A1E58EBAC5BD47B742D4D19DA95539B8C0509F091BF78D60E9"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\090.jpg",
+    "Target": "public/assets/novice/brkati-2024/090.jpg",
+    "SHA256": "EABBBC1D6CD7F3C6D5EB22D264C71C8F6C9C2E55D73CBF45D67919AE04E70C64",
+    "CurrentSHA256": "EABBBC1D6CD7F3C6D5EB22D264C71C8F6C9C2E55D73CBF45D67919AE04E70C64"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\091.jpg",
+    "Target": "public/assets/novice/brkati-2024/091.jpg",
+    "SHA256": "1229D952033D037BE2E4FA5D4D8DE37609E1FEDE8417C592461448732C23F7E2",
+    "CurrentSHA256": "1229D952033D037BE2E4FA5D4D8DE37609E1FEDE8417C592461448732C23F7E2"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\092.jpg",
+    "Target": "public/assets/novice/brkati-2024/092.jpg",
+    "SHA256": "18C15758E9F3A224187A6287117899D18002937868F309C167C2998DA8CF0575",
+    "CurrentSHA256": "18C15758E9F3A224187A6287117899D18002937868F309C167C2998DA8CF0575"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\093.jpg",
+    "Target": "public/assets/novice/brkati-2024/093.jpg",
+    "SHA256": "DA5986CAE79D099C217929A17BBED130D171DD88EC3F6DADB5B670C8E546C182",
+    "CurrentSHA256": "DA5986CAE79D099C217929A17BBED130D171DD88EC3F6DADB5B670C8E546C182"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\094.jpg",
+    "Target": "public/assets/novice/brkati-2024/094.jpg",
+    "SHA256": "1DBEDB5C5E9FC7EFAACE940078DF83FD74CC0CFA98DE89783911BAE769727C20",
+    "CurrentSHA256": "1DBEDB5C5E9FC7EFAACE940078DF83FD74CC0CFA98DE89783911BAE769727C20"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\095.jpg",
+    "Target": "public/assets/novice/brkati-2024/095.jpg",
+    "SHA256": "310567A940EDD5C895888CCEA2CD10C6A523FBA12D4FEE8849307FEBF624E2CA",
+    "CurrentSHA256": "310567A940EDD5C895888CCEA2CD10C6A523FBA12D4FEE8849307FEBF624E2CA"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\096.jpg",
+    "Target": "public/assets/novice/brkati-2024/096.jpg",
+    "SHA256": "E5992F0FD89F3711219F2C2C5921FAC4C65BAEAA1F11EF10357AF5FEA56C183A",
+    "CurrentSHA256": "E5992F0FD89F3711219F2C2C5921FAC4C65BAEAA1F11EF10357AF5FEA56C183A"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\097.jpg",
+    "Target": "public/assets/novice/brkati-2024/097.jpg",
+    "SHA256": "85A51AFB8083F5F2E2C44DE7595E5D7B0AA99FE61B090C41895CB8F506C4A07C",
+    "CurrentSHA256": "85A51AFB8083F5F2E2C44DE7595E5D7B0AA99FE61B090C41895CB8F506C4A07C"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\098.jpg",
+    "Target": "public/assets/novice/brkati-2024/098.jpg",
+    "SHA256": "AECF75519CF7FB21BD75E4E60F10C0454F6144C8FB6DCFDF1C03C82C2EC00F86",
+    "CurrentSHA256": "AECF75519CF7FB21BD75E4E60F10C0454F6144C8FB6DCFDF1C03C82C2EC00F86"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\099.jpg",
+    "Target": "public/assets/novice/brkati-2024/099.jpg",
+    "SHA256": "0B845667EF422BBFDE89B640E409D2C5D0CAD958C68D8F326129CC5E8936E08E",
+    "CurrentSHA256": "0B845667EF422BBFDE89B640E409D2C5D0CAD958C68D8F326129CC5E8936E08E"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\100.jpg",
+    "Target": "public/assets/novice/brkati-2024/100.jpg",
+    "SHA256": "8581A9DCEF823D5D22AFBED953E0FB6108F25064E3F75128F6DEF22155C9E17A",
+    "CurrentSHA256": "8581A9DCEF823D5D22AFBED953E0FB6108F25064E3F75128F6DEF22155C9E17A"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\101.jpg",
+    "Target": "public/assets/novice/brkati-2024/101.jpg",
+    "SHA256": "4DA6CFA38C4A2F9475D1742EB7BC802B7A8DEEF9BA90C819F9FB5C56F70C83D0",
+    "CurrentSHA256": "4DA6CFA38C4A2F9475D1742EB7BC802B7A8DEEF9BA90C819F9FB5C56F70C83D0"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\102.jpg",
+    "Target": "public/assets/novice/brkati-2024/102.jpg",
+    "SHA256": "C39B5CDB54068C3658735D6352D558FA0E82B26DF4BE4D636C5D4300D01FB145",
+    "CurrentSHA256": "C39B5CDB54068C3658735D6352D558FA0E82B26DF4BE4D636C5D4300D01FB145"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\103.jpg",
+    "Target": "public/assets/novice/brkati-2024/103.jpg",
+    "SHA256": "82DE7DFADEBE1CCEB44B292630CB81311AFEBB00E1BF78360F1484EB68DA5D18",
+    "CurrentSHA256": "82DE7DFADEBE1CCEB44B292630CB81311AFEBB00E1BF78360F1484EB68DA5D18"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\104.jpg",
+    "Target": "public/assets/novice/brkati-2024/104.jpg",
+    "SHA256": "ACA88189C1D8BE51BB418A4745D2AC5B170AEEE609494DE3BCD98705AD53A528",
+    "CurrentSHA256": "ACA88189C1D8BE51BB418A4745D2AC5B170AEEE609494DE3BCD98705AD53A528"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\105.jpg",
+    "Target": "public/assets/novice/brkati-2024/105.jpg",
+    "SHA256": "9AC56A5A9A22CC403EBAB2F332A9BBDCEFA8F0AFB259246256BE6FD4AD6B2869",
+    "CurrentSHA256": "9AC56A5A9A22CC403EBAB2F332A9BBDCEFA8F0AFB259246256BE6FD4AD6B2869"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\106.jpg",
+    "Target": "public/assets/novice/brkati-2024/106.jpg",
+    "SHA256": "BD6F505B5C920B7B04DE38475224D90477E6E5AC70F33A5C3321F59EB6617E38",
+    "CurrentSHA256": "BD6F505B5C920B7B04DE38475224D90477E6E5AC70F33A5C3321F59EB6617E38"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\107.jpg",
+    "Target": "public/assets/novice/brkati-2024/107.jpg",
+    "SHA256": "A268385221CA6853EF7175DEF6F09D17D352CF4BA79063436C5180EA4C5C75C3",
+    "CurrentSHA256": "A268385221CA6853EF7175DEF6F09D17D352CF4BA79063436C5180EA4C5C75C3"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\108.jpg",
+    "Target": "public/assets/novice/brkati-2024/108.jpg",
+    "SHA256": "CBB02149A7370E85656386C10A919F1398F2AE93CD03D13E6D88132A62CF504C",
+    "CurrentSHA256": "CBB02149A7370E85656386C10A919F1398F2AE93CD03D13E6D88132A62CF504C"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\109.jpg",
+    "Target": "public/assets/novice/brkati-2024/109.jpg",
+    "SHA256": "CF6813FB6C2FE6F4C7170827F52D2004628155CA1E202CA0043E78552DECE8FF",
+    "CurrentSHA256": "CF6813FB6C2FE6F4C7170827F52D2004628155CA1E202CA0043E78552DECE8FF"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\110.jpg",
+    "Target": "public/assets/novice/brkati-2024/110.jpg",
+    "SHA256": "B5CBF3EEA83BF32F48CC943A03E9400D07BF8FC1007923B4F7DA2525A8A213A3",
+    "CurrentSHA256": "B5CBF3EEA83BF32F48CC943A03E9400D07BF8FC1007923B4F7DA2525A8A213A3"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\111.jpg",
+    "Target": "public/assets/novice/brkati-2024/111.jpg",
+    "SHA256": "2487D30E22FC1D28CB90D65280D1A09C22BF2C27A462BD9F53B420278B1051D8",
+    "CurrentSHA256": "2487D30E22FC1D28CB90D65280D1A09C22BF2C27A462BD9F53B420278B1051D8"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\112.jpg",
+    "Target": "public/assets/novice/brkati-2024/112.jpg",
+    "SHA256": "E1F50847D0B3DBA75D2A3074F4E4AFA3F03CCF4C645D1F62925B5701E509CD28",
+    "CurrentSHA256": "E1F50847D0B3DBA75D2A3074F4E4AFA3F03CCF4C645D1F62925B5701E509CD28"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\113.jpg",
+    "Target": "public/assets/novice/brkati-2024/113.jpg",
+    "SHA256": "CBE07C9B531A06692566AE3EA115D2C412A99062D8896F109B032225D566E88E",
+    "CurrentSHA256": "CBE07C9B531A06692566AE3EA115D2C412A99062D8896F109B032225D566E88E"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\114.jpg",
+    "Target": "public/assets/novice/brkati-2024/114.jpg",
+    "SHA256": "1B3BE0F1F8429E6D6B380B60221A3044EA87F7D18C5DD845D2FDE2331AC44589",
+    "CurrentSHA256": "1B3BE0F1F8429E6D6B380B60221A3044EA87F7D18C5DD845D2FDE2331AC44589"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\115.jpg",
+    "Target": "public/assets/novice/brkati-2024/115.jpg",
+    "SHA256": "7ADF17F5901523BA619B50496571DC71E855D1FFBAE7771C202B66CDFE246154",
+    "CurrentSHA256": "7ADF17F5901523BA619B50496571DC71E855D1FFBAE7771C202B66CDFE246154"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\116.jpg",
+    "Target": "public/assets/novice/brkati-2024/116.jpg",
+    "SHA256": "B88ADF644CB2389EB02F97D1BF6BD027D59DC05761406761EBF199B22AEB268F",
+    "CurrentSHA256": "B88ADF644CB2389EB02F97D1BF6BD027D59DC05761406761EBF199B22AEB268F"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\117.jpg",
+    "Target": "public/assets/novice/brkati-2024/117.jpg",
+    "SHA256": "86975349514E394A4F5C81E88FF2111CABB8075D3B002C76A1B3F40657ABBEB8",
+    "CurrentSHA256": "86975349514E394A4F5C81E88FF2111CABB8075D3B002C76A1B3F40657ABBEB8"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2024\\118.jpg",
+    "Target": "public/assets/novice/brkati-2024/118.jpg",
+    "SHA256": "FEFA2576BA49BBBB89739556CCF3CE4CEF913ECA2AA3BD5E06B6A378E8CC883A",
+    "CurrentSHA256": "FEFA2576BA49BBBB89739556CCF3CE4CEF913ECA2AA3BD5E06B6A378E8CC883A"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\001.jpg",
+    "Target": "public/assets/novice/brkati-2025/001.jpg",
+    "SHA256": "A6E3B7314FDADC608C1629276F308CD15F6CBDE1059BE731783534F58F775617",
+    "CurrentSHA256": "A6E3B7314FDADC608C1629276F308CD15F6CBDE1059BE731783534F58F775617"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\002.jpg",
+    "Target": "public/assets/novice/brkati-2025/002.jpg",
+    "SHA256": "0586716974E6837DEA5A43F3A3998F866B51684323265170D2440ADA7D100F1C",
+    "CurrentSHA256": "0586716974E6837DEA5A43F3A3998F866B51684323265170D2440ADA7D100F1C"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\003.jpg",
+    "Target": "public/assets/novice/brkati-2025/003.jpg",
+    "SHA256": "905C4DF32CC01E3893889F503BAAAF41FA82A5317C7E01FE28FD729E1C5E77B9",
+    "CurrentSHA256": "905C4DF32CC01E3893889F503BAAAF41FA82A5317C7E01FE28FD729E1C5E77B9"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\004.jpg",
+    "Target": "public/assets/novice/brkati-2025/004.jpg",
+    "SHA256": "6D7FCA2B90DA50B9B23E423ABE5AB67AEAA9F04EBDC3ED2EB1DEFCB3310F8946",
+    "CurrentSHA256": "6D7FCA2B90DA50B9B23E423ABE5AB67AEAA9F04EBDC3ED2EB1DEFCB3310F8946"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\005.jpg",
+    "Target": "public/assets/novice/brkati-2025/005.jpg",
+    "SHA256": "431886F370E6E63D2A47F2C369DDDE5E600B08F0D4B90218FB1B564263C99655",
+    "CurrentSHA256": "431886F370E6E63D2A47F2C369DDDE5E600B08F0D4B90218FB1B564263C99655"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\006.jpg",
+    "Target": "public/assets/novice/brkati-2025/006.jpg",
+    "SHA256": "E662294465A5CAF1B33E86ABD04D7A83F44999ADF03211E57836C3228AC6F8F3",
+    "CurrentSHA256": "E662294465A5CAF1B33E86ABD04D7A83F44999ADF03211E57836C3228AC6F8F3"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\007.jpg",
+    "Target": "public/assets/novice/brkati-2025/007.jpg",
+    "SHA256": "792D8262822AF8479403F5295A4971963688401D2CC812FBD9774142B7B8E194",
+    "CurrentSHA256": "792D8262822AF8479403F5295A4971963688401D2CC812FBD9774142B7B8E194"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\008.jpg",
+    "Target": "public/assets/novice/brkati-2025/008.jpg",
+    "SHA256": "02A69A5AFF967BD945FFB797BAA8FCA06475A8BFC2C261633DEE5BCE1C21FF5E",
+    "CurrentSHA256": "02A69A5AFF967BD945FFB797BAA8FCA06475A8BFC2C261633DEE5BCE1C21FF5E"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\009.jpg",
+    "Target": "public/assets/novice/brkati-2025/009.jpg",
+    "SHA256": "96B13F72CC857C618D58EF97AF679E7F6D024C4A2B734935378F3893751C04D4",
+    "CurrentSHA256": "96B13F72CC857C618D58EF97AF679E7F6D024C4A2B734935378F3893751C04D4"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\010.jpg",
+    "Target": "public/assets/novice/brkati-2025/010.jpg",
+    "SHA256": "C32AC2D7194FFB52F6CBB07BA5BE5F9AE8CAB6051E76F0B7B31AB200864AD6D2",
+    "CurrentSHA256": "C32AC2D7194FFB52F6CBB07BA5BE5F9AE8CAB6051E76F0B7B31AB200864AD6D2"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\011.jpg",
+    "Target": "public/assets/novice/brkati-2025/011.jpg",
+    "SHA256": "C2EB9606DD9602CEB998582EE9A68F9266757CC7B0A79EEABA80CDB167D0FFF2",
+    "CurrentSHA256": "C2EB9606DD9602CEB998582EE9A68F9266757CC7B0A79EEABA80CDB167D0FFF2"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\012.jpg",
+    "Target": "public/assets/novice/brkati-2025/012.jpg",
+    "SHA256": "154A6CAC7A266F13BDC4163A62BD6FBB18A505574F1B5F8D8984096A62F058EE",
+    "CurrentSHA256": "154A6CAC7A266F13BDC4163A62BD6FBB18A505574F1B5F8D8984096A62F058EE"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\013.jpg",
+    "Target": "public/assets/novice/brkati-2025/013.jpg",
+    "SHA256": "AFF463173E147E10BEE8FB538DA48EDF36C37959A250E88EB9DF544A17A2BCE1",
+    "CurrentSHA256": "AFF463173E147E10BEE8FB538DA48EDF36C37959A250E88EB9DF544A17A2BCE1"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\014.jpg",
+    "Target": "public/assets/novice/brkati-2025/014.jpg",
+    "SHA256": "73007A2C2956D0F8AAB1BBB69607C667554C268A2A384540E2C0FCC7DFBF058C",
+    "CurrentSHA256": "73007A2C2956D0F8AAB1BBB69607C667554C268A2A384540E2C0FCC7DFBF058C"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\015.jpg",
+    "Target": "public/assets/novice/brkati-2025/015.jpg",
+    "SHA256": "F49A860239E0C0AA8CE95FD0E484DB45D18FDA5B13D94ED9EFB0BEB5F42C743B",
+    "CurrentSHA256": "F49A860239E0C0AA8CE95FD0E484DB45D18FDA5B13D94ED9EFB0BEB5F42C743B"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\016.jpg",
+    "Target": "public/assets/novice/brkati-2025/016.jpg",
+    "SHA256": "C5A01C8EF13B8F6B753BDCEB6A8500FD3FE5CBDE665181F1330A6D54DE051A0B",
+    "CurrentSHA256": "C5A01C8EF13B8F6B753BDCEB6A8500FD3FE5CBDE665181F1330A6D54DE051A0B"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\017.jpg",
+    "Target": "public/assets/novice/brkati-2025/017.jpg",
+    "SHA256": "B12D618D2B2BB8A370F3BF4EA2D4CA1D6AFBC65FB78DFEA7C94BD591F50A2D98",
+    "CurrentSHA256": "B12D618D2B2BB8A370F3BF4EA2D4CA1D6AFBC65FB78DFEA7C94BD591F50A2D98"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\018.jpg",
+    "Target": "public/assets/novice/brkati-2025/018.jpg",
+    "SHA256": "23CD98A8162CCD5792BB7CA7FA24443E02A43556B2918E5CEFF3AE767F37D5D7",
+    "CurrentSHA256": "23CD98A8162CCD5792BB7CA7FA24443E02A43556B2918E5CEFF3AE767F37D5D7"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\019.jpg",
+    "Target": "public/assets/novice/brkati-2025/019.jpg",
+    "SHA256": "5DBDFE8EF2B6B2E7BF1626A64DACA2A97354500350C2F22FC019F339064B17BA",
+    "CurrentSHA256": "5DBDFE8EF2B6B2E7BF1626A64DACA2A97354500350C2F22FC019F339064B17BA"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\020.jpg",
+    "Target": "public/assets/novice/brkati-2025/020.jpg",
+    "SHA256": "9F46BF04493C6E86B16D0B51644A29F493BC1CE5441CCA3E1FAE85F133C6917F",
+    "CurrentSHA256": "9F46BF04493C6E86B16D0B51644A29F493BC1CE5441CCA3E1FAE85F133C6917F"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\021.jpg",
+    "Target": "public/assets/novice/brkati-2025/021.jpg",
+    "SHA256": "016C05F8AC30CD736F1F3AE3F90183CDF5694C385E06050AA37C532870F52FA3",
+    "CurrentSHA256": "016C05F8AC30CD736F1F3AE3F90183CDF5694C385E06050AA37C532870F52FA3"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\022.jpg",
+    "Target": "public/assets/novice/brkati-2025/022.jpg",
+    "SHA256": "EFFF39B488E522B05929C4CC22D5747CE11FB1E57FF849CC2F7C1D7B0E7AA8D8",
+    "CurrentSHA256": "EFFF39B488E522B05929C4CC22D5747CE11FB1E57FF849CC2F7C1D7B0E7AA8D8"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\023.jpg",
+    "Target": "public/assets/novice/brkati-2025/023.jpg",
+    "SHA256": "4962A3A5FBAA7F9C9D5676A462A74488D815B22349D16F215C5BD0558B555D3A",
+    "CurrentSHA256": "4962A3A5FBAA7F9C9D5676A462A74488D815B22349D16F215C5BD0558B555D3A"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\024.jpg",
+    "Target": "public/assets/novice/brkati-2025/024.jpg",
+    "SHA256": "FE55BC09EE1C8BABC58BDD82DDC30D6E8AF0A580B72E47A8CE2627BDAC6A8B2E",
+    "CurrentSHA256": "FE55BC09EE1C8BABC58BDD82DDC30D6E8AF0A580B72E47A8CE2627BDAC6A8B2E"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\025.jpg",
+    "Target": "public/assets/novice/brkati-2025/025.jpg",
+    "SHA256": "6E929689BF03EC26B57611CF6AC1280D20F541E4392764F685DC5178B312F681",
+    "CurrentSHA256": "6E929689BF03EC26B57611CF6AC1280D20F541E4392764F685DC5178B312F681"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\026.jpg",
+    "Target": "public/assets/novice/brkati-2025/026.jpg",
+    "SHA256": "5DE93D68FCDB3F04EA0B7C201FA380C9D47B0D69B420B7702D4F967AA34C1350",
+    "CurrentSHA256": "5DE93D68FCDB3F04EA0B7C201FA380C9D47B0D69B420B7702D4F967AA34C1350"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\brkati-2025\\027.jpg",
+    "Target": "public/assets/novice/brkati-2025/027.jpg",
+    "SHA256": "0F231D3CB5496655BA4B9E2403ABD2CA0731A82241587776BA1195510D37DE7F",
+    "CurrentSHA256": "0F231D3CB5496655BA4B9E2403ABD2CA0731A82241587776BA1195510D37DE7F"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\001.jpg",
+    "Target": "public/assets/novice/roznati-2024/001.jpg",
+    "SHA256": "A49D460CF004AF92A0E8B171D37152027A7F74ED41B2D103BA898BD55D672AE1",
+    "CurrentSHA256": "A49D460CF004AF92A0E8B171D37152027A7F74ED41B2D103BA898BD55D672AE1"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\002.jpg",
+    "Target": "public/assets/novice/roznati-2024/002.jpg",
+    "SHA256": "A0EBF1C21BF1F2AF3C88876DDC4363642ECEFD77796A660A2773B31146B03B87",
+    "CurrentSHA256": "A0EBF1C21BF1F2AF3C88876DDC4363642ECEFD77796A660A2773B31146B03B87"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\003.jpg",
+    "Target": "public/assets/novice/roznati-2024/003.jpg",
+    "SHA256": "6B52601F10DC8E30EA7451220D790D0694CC0273D2412F2E0F2607B79AA2C180",
+    "CurrentSHA256": "6B52601F10DC8E30EA7451220D790D0694CC0273D2412F2E0F2607B79AA2C180"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\004.jpg",
+    "Target": "public/assets/novice/roznati-2024/004.jpg",
+    "SHA256": "62A3FC21C381BD7903AEA24995113D60FA60C413629C33E670E27C80FE360485",
+    "CurrentSHA256": "62A3FC21C381BD7903AEA24995113D60FA60C413629C33E670E27C80FE360485"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\005.jpg",
+    "Target": "public/assets/novice/roznati-2024/005.jpg",
+    "SHA256": "79BE793A5E2618B1EAD095EC09BE87E06400379C5FDEABCA85D90BBFBFD11857",
+    "CurrentSHA256": "79BE793A5E2618B1EAD095EC09BE87E06400379C5FDEABCA85D90BBFBFD11857"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\006.jpg",
+    "Target": "public/assets/novice/roznati-2024/006.jpg",
+    "SHA256": "1F2C99865780F955726B16A12C311C5E11649AABDE566F507DA7A8492CA96606",
+    "CurrentSHA256": "1F2C99865780F955726B16A12C311C5E11649AABDE566F507DA7A8492CA96606"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\007.jpg",
+    "Target": "public/assets/novice/roznati-2024/007.jpg",
+    "SHA256": "4AC5231B6478862089FE6D29080F1F2172B47CFE342BE6D23C94E0E2E75B7822",
+    "CurrentSHA256": "4AC5231B6478862089FE6D29080F1F2172B47CFE342BE6D23C94E0E2E75B7822"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\008.jpg",
+    "Target": "public/assets/novice/roznati-2024/008.jpg",
+    "SHA256": "8F2C925E282E18446923CA3D6FBD1A88D7D4E32DFDE432A38F68A5343F4C5994",
+    "CurrentSHA256": "8F2C925E282E18446923CA3D6FBD1A88D7D4E32DFDE432A38F68A5343F4C5994"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\009.jpg",
+    "Target": "public/assets/novice/roznati-2024/009.jpg",
+    "SHA256": "549AFEC63E94358B5A0835B3C10250867ACC0811090A6BE4A594E833F84FDF5C",
+    "CurrentSHA256": "549AFEC63E94358B5A0835B3C10250867ACC0811090A6BE4A594E833F84FDF5C"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\010.jpg",
+    "Target": "public/assets/novice/roznati-2024/010.jpg",
+    "SHA256": "E039560ACF3E5E4580BC4B202FFC477EFA2F60430D4D742BADCAFA45096A6064",
+    "CurrentSHA256": "E039560ACF3E5E4580BC4B202FFC477EFA2F60430D4D742BADCAFA45096A6064"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\011.jpg",
+    "Target": "public/assets/novice/roznati-2024/011.jpg",
+    "SHA256": "837A572C7F49C3B3D8ADD94976E497506BC899E5511969C35B2B66B1076C7972",
+    "CurrentSHA256": "837A572C7F49C3B3D8ADD94976E497506BC899E5511969C35B2B66B1076C7972"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\012.jpg",
+    "Target": "public/assets/novice/roznati-2024/012.jpg",
+    "SHA256": "1E18787ADA784FEA96E6C117FCA8C76D8EDEA49FB512479F4852E53B22E3B1C0",
+    "CurrentSHA256": "1E18787ADA784FEA96E6C117FCA8C76D8EDEA49FB512479F4852E53B22E3B1C0"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\013.jpg",
+    "Target": "public/assets/novice/roznati-2024/013.jpg",
+    "SHA256": "6D7A250A06F82AA793A445BB5B1933086AF4AD13F24890A992B6D0EEB1373907",
+    "CurrentSHA256": "6D7A250A06F82AA793A445BB5B1933086AF4AD13F24890A992B6D0EEB1373907"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\014.jpg",
+    "Target": "public/assets/novice/roznati-2024/014.jpg",
+    "SHA256": "1335F5BDDD55D478526BF1348836736CD34634F83A953375095F8D900D3C72D2",
+    "CurrentSHA256": "1335F5BDDD55D478526BF1348836736CD34634F83A953375095F8D900D3C72D2"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\015.jpg",
+    "Target": "public/assets/novice/roznati-2024/015.jpg",
+    "SHA256": "BBC9D6F22E73A5C830E621A26CA410C66BC9CFC939AF3938565507AD91AF86DB",
+    "CurrentSHA256": "BBC9D6F22E73A5C830E621A26CA410C66BC9CFC939AF3938565507AD91AF86DB"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\016.jpg",
+    "Target": "public/assets/novice/roznati-2024/016.jpg",
+    "SHA256": "8A93D7AF347CF496344B118D7DD2E6BB59F3FDC23A9CC36567D172468BA29D9D",
+    "CurrentSHA256": "8A93D7AF347CF496344B118D7DD2E6BB59F3FDC23A9CC36567D172468BA29D9D"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\017.jpg",
+    "Target": "public/assets/novice/roznati-2024/017.jpg",
+    "SHA256": "78209075189A07C8F060E3E444AAF5027983E32563AA662026570DD06C2B8027",
+    "CurrentSHA256": "78209075189A07C8F060E3E444AAF5027983E32563AA662026570DD06C2B8027"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\018.jpg",
+    "Target": "public/assets/novice/roznati-2024/018.jpg",
+    "SHA256": "1C419B8E47FBD89828F1A21B8AB00E97971E32CD4A8926E82819806D3039C7EB",
+    "CurrentSHA256": "1C419B8E47FBD89828F1A21B8AB00E97971E32CD4A8926E82819806D3039C7EB"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\019.jpg",
+    "Target": "public/assets/novice/roznati-2024/019.jpg",
+    "SHA256": "259E6259C1C4AAF9B88B2AC4A31D940BFC91821DF3817F3C8789814A016C44C1",
+    "CurrentSHA256": "259E6259C1C4AAF9B88B2AC4A31D940BFC91821DF3817F3C8789814A016C44C1"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2024\\020.jpg",
+    "Target": "public/assets/novice/roznati-2024/020.jpg",
+    "SHA256": "2102C4F8E2E172B5F09671AA17E6304B2FA3E99E7C940F5029BF09F7F67E7DF3",
+    "CurrentSHA256": "2102C4F8E2E172B5F09671AA17E6304B2FA3E99E7C940F5029BF09F7F67E7DF3"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\001.jpg",
+    "Target": "public/assets/novice/roznati-2025/001.jpg",
+    "SHA256": "7FBD3A055D64858FA70B5456F317D62C34252A5F18DA2930C8347B54E5831BB6",
+    "CurrentSHA256": "7FBD3A055D64858FA70B5456F317D62C34252A5F18DA2930C8347B54E5831BB6"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\002.jpg",
+    "Target": "public/assets/novice/roznati-2025/002.jpg",
+    "SHA256": "5B044A767AF6AF54990FBE747E5965721565C9E520CC793742E11C28B9529CD7",
+    "CurrentSHA256": "5B044A767AF6AF54990FBE747E5965721565C9E520CC793742E11C28B9529CD7"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\003.jpg",
+    "Target": "public/assets/novice/roznati-2025/003.jpg",
+    "SHA256": "BC7B2835795C19D83A62318F88A7EF928358A0CBEC86DB59240D34AB0B27A510",
+    "CurrentSHA256": "BC7B2835795C19D83A62318F88A7EF928358A0CBEC86DB59240D34AB0B27A510"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\004.jpg",
+    "Target": "public/assets/novice/roznati-2025/004.jpg",
+    "SHA256": "0D5A54BF0D9664810D817D77AF7366DA34CD98668418AB1613A542D374671C00",
+    "CurrentSHA256": "0D5A54BF0D9664810D817D77AF7366DA34CD98668418AB1613A542D374671C00"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\005.jpg",
+    "Target": "public/assets/novice/roznati-2025/005.jpg",
+    "SHA256": "2605E941EBDF3C32C3EECFAAF51A45DF78A76C8B390E174F20D627C234B13FA2",
+    "CurrentSHA256": "2605E941EBDF3C32C3EECFAAF51A45DF78A76C8B390E174F20D627C234B13FA2"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\006.jpg",
+    "Target": "public/assets/novice/roznati-2025/006.jpg",
+    "SHA256": "2BDA9B636E06A4F9A740598C893FDC030A31CEBB5939E4F5455771231547243C",
+    "CurrentSHA256": "2BDA9B636E06A4F9A740598C893FDC030A31CEBB5939E4F5455771231547243C"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\007.jpg",
+    "Target": "public/assets/novice/roznati-2025/007.jpg",
+    "SHA256": "7F2404BA468EB974E42D23874875607C8B119D945B1F07352B321057B9B7E78E",
+    "CurrentSHA256": "7F2404BA468EB974E42D23874875607C8B119D945B1F07352B321057B9B7E78E"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\008.jpg",
+    "Target": "public/assets/novice/roznati-2025/008.jpg",
+    "SHA256": "EB9E30F00854122BAAE7A2B7DF53C2B8E3B02C353B1D6C0EE3480626D836F591",
+    "CurrentSHA256": "EB9E30F00854122BAAE7A2B7DF53C2B8E3B02C353B1D6C0EE3480626D836F591"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\009.jpg",
+    "Target": "public/assets/novice/roznati-2025/009.jpg",
+    "SHA256": "24507F3A4069F697FEDE976E3849606FDEA473195FA03CB1A1C9ED8233CEB714",
+    "CurrentSHA256": "24507F3A4069F697FEDE976E3849606FDEA473195FA03CB1A1C9ED8233CEB714"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\010.jpg",
+    "Target": "public/assets/novice/roznati-2025/010.jpg",
+    "SHA256": "C593C845080E1454840FDA3804E3064478AA9F90489E832533C473EE710639D3",
+    "CurrentSHA256": "C593C845080E1454840FDA3804E3064478AA9F90489E832533C473EE710639D3"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\011.jpg",
+    "Target": "public/assets/novice/roznati-2025/011.jpg",
+    "SHA256": "BD3C0325D0F2098CA16889EDEB945DEC6D1E6343C9194C6C32B72721205B4784",
+    "CurrentSHA256": "BD3C0325D0F2098CA16889EDEB945DEC6D1E6343C9194C6C32B72721205B4784"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\012.jpg",
+    "Target": "public/assets/novice/roznati-2025/012.jpg",
+    "SHA256": "0F52E30A66EFCF71C326C7290F24A7C0732649636B6400F2CF7FDA38A39DB41F",
+    "CurrentSHA256": "0F52E30A66EFCF71C326C7290F24A7C0732649636B6400F2CF7FDA38A39DB41F"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\013.jpg",
+    "Target": "public/assets/novice/roznati-2025/013.jpg",
+    "SHA256": "D3EE3DEAA31A158D8842DAD6D8977AEF783A2F0A290AC0E65B9B602B78BFF167",
+    "CurrentSHA256": "D3EE3DEAA31A158D8842DAD6D8977AEF783A2F0A290AC0E65B9B602B78BFF167"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\014.jpg",
+    "Target": "public/assets/novice/roznati-2025/014.jpg",
+    "SHA256": "6D73E925819EA222F28413050C27171834696797E5F8A4DE8A0A7F86F4F041E5",
+    "CurrentSHA256": "6D73E925819EA222F28413050C27171834696797E5F8A4DE8A0A7F86F4F041E5"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\015.jpg",
+    "Target": "public/assets/novice/roznati-2025/015.jpg",
+    "SHA256": "3A7BD9A01E5FCF73915E2BD4A614616E27B375338E99AAD7F5EDE6DD0CC6DD30",
+    "CurrentSHA256": "3A7BD9A01E5FCF73915E2BD4A614616E27B375338E99AAD7F5EDE6DD0CC6DD30"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\016.jpg",
+    "Target": "public/assets/novice/roznati-2025/016.jpg",
+    "SHA256": "D22AA8948B08CF75E341688325E8631E2080A30B8546C17CA651DACB8AADB482",
+    "CurrentSHA256": "D22AA8948B08CF75E341688325E8631E2080A30B8546C17CA651DACB8AADB482"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\017.jpg",
+    "Target": "public/assets/novice/roznati-2025/017.jpg",
+    "SHA256": "990031F22C60343DDB9108B5A6B260A36D197A8649BAC0DE839059AB864534D2",
+    "CurrentSHA256": "990031F22C60343DDB9108B5A6B260A36D197A8649BAC0DE839059AB864534D2"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\018.jpg",
+    "Target": "public/assets/novice/roznati-2025/018.jpg",
+    "SHA256": "F3034D14957314A565A5C35C61462708AC0500ECB46AAC01EAE131BC8F6C02CB",
+    "CurrentSHA256": "F3034D14957314A565A5C35C61462708AC0500ECB46AAC01EAE131BC8F6C02CB"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\019.jpg",
+    "Target": "public/assets/novice/roznati-2025/019.jpg",
+    "SHA256": "CEE658DAB026083ABFE9DF45913409F43577BEB3C987DCD64EA6D81918F94C34",
+    "CurrentSHA256": "CEE658DAB026083ABFE9DF45913409F43577BEB3C987DCD64EA6D81918F94C34"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\020.jpg",
+    "Target": "public/assets/novice/roznati-2025/020.jpg",
+    "SHA256": "1CA6F3C1F4A90E1CDC0F356439CD528C87A1D2B5B6A120C8B4713FBB6FE0277C",
+    "CurrentSHA256": "1CA6F3C1F4A90E1CDC0F356439CD528C87A1D2B5B6A120C8B4713FBB6FE0277C"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\021.jpg",
+    "Target": "public/assets/novice/roznati-2025/021.jpg",
+    "SHA256": "01D0197323FD05BDC6DF351728B6B1A284CA848F28BAB5581D9FF57211482529",
+    "CurrentSHA256": "01D0197323FD05BDC6DF351728B6B1A284CA848F28BAB5581D9FF57211482529"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\022.jpg",
+    "Target": "public/assets/novice/roznati-2025/022.jpg",
+    "SHA256": "D0A126F1D37E00B95D8B871AAE4F5449A8B8827B640B2D2AEF342AAF4D0747A4",
+    "CurrentSHA256": "D0A126F1D37E00B95D8B871AAE4F5449A8B8827B640B2D2AEF342AAF4D0747A4"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\023.jpg",
+    "Target": "public/assets/novice/roznati-2025/023.jpg",
+    "SHA256": "92DC439BA5E45EF05CCA17A2FF356E21A0FA8A8F3C5D92EC2491B0A4277DD2D7",
+    "CurrentSHA256": "92DC439BA5E45EF05CCA17A2FF356E21A0FA8A8F3C5D92EC2491B0A4277DD2D7"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\024.jpg",
+    "Target": "public/assets/novice/roznati-2025/024.jpg",
+    "SHA256": "A5D80E179382030A6116CCEF9943C7E7C8BBB023444BD721170CFEFA7E778DA0",
+    "CurrentSHA256": "A5D80E179382030A6116CCEF9943C7E7C8BBB023444BD721170CFEFA7E778DA0"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\025.jpg",
+    "Target": "public/assets/novice/roznati-2025/025.jpg",
+    "SHA256": "B951112FE436B6BA268995E254602F6838603961A3A2C6E46914708AF8EEC0D9",
+    "CurrentSHA256": "B951112FE436B6BA268995E254602F6838603961A3A2C6E46914708AF8EEC0D9"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\026.jpg",
+    "Target": "public/assets/novice/roznati-2025/026.jpg",
+    "SHA256": "F74BD2EAA8F603D9CD72D5473D8BC9FA760FCF96EB873D4B268A2C871A6DE341",
+    "CurrentSHA256": "F74BD2EAA8F603D9CD72D5473D8BC9FA760FCF96EB873D4B268A2C871A6DE341"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\027.jpg",
+    "Target": "public/assets/novice/roznati-2025/027.jpg",
+    "SHA256": "AD0FB9428EDC20C42B99E433C7D1109D428DA942989D9D0243E94D65B9CF53DA",
+    "CurrentSHA256": "AD0FB9428EDC20C42B99E433C7D1109D428DA942989D9D0243E94D65B9CF53DA"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\028.jpg",
+    "Target": "public/assets/novice/roznati-2025/028.jpg",
+    "SHA256": "40820EB87B98C5704763FF6169A152B756CD250625ECDDDFB3BD19C02256117D",
+    "CurrentSHA256": "40820EB87B98C5704763FF6169A152B756CD250625ECDDDFB3BD19C02256117D"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\029.jpg",
+    "Target": "public/assets/novice/roznati-2025/029.jpg",
+    "SHA256": "29228F5B098AA5B2C2B56D54557C77BF5401D17F57B24D31CD251FF09CDC26AD",
+    "CurrentSHA256": "29228F5B098AA5B2C2B56D54557C77BF5401D17F57B24D31CD251FF09CDC26AD"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\030.jpg",
+    "Target": "public/assets/novice/roznati-2025/030.jpg",
+    "SHA256": "4247AC553865CB15DBEC69796F33CFC19097C285DF9E75AF6781A62C0D108402",
+    "CurrentSHA256": "4247AC553865CB15DBEC69796F33CFC19097C285DF9E75AF6781A62C0D108402"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\031.jpg",
+    "Target": "public/assets/novice/roznati-2025/031.jpg",
+    "SHA256": "EDB61F46AD8B69C575D0F0D2CD6211F0A47C819DA4084F8077185C6A4989ED02",
+    "CurrentSHA256": "EDB61F46AD8B69C575D0F0D2CD6211F0A47C819DA4084F8077185C6A4989ED02"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\032.jpg",
+    "Target": "public/assets/novice/roznati-2025/032.jpg",
+    "SHA256": "273F8A8CE1B629A99F5FFBC0C95D37A1DC7FAC9097D8FA2C99931B3A0A4CA818",
+    "CurrentSHA256": "273F8A8CE1B629A99F5FFBC0C95D37A1DC7FAC9097D8FA2C99931B3A0A4CA818"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\033.jpg",
+    "Target": "public/assets/novice/roznati-2025/033.jpg",
+    "SHA256": "B70103DDE52418FCDDE4DB44CA518BA650BB4EEDE1BCA64BABEA9F42580B0AA3",
+    "CurrentSHA256": "B70103DDE52418FCDDE4DB44CA518BA650BB4EEDE1BCA64BABEA9F42580B0AA3"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\034.jpg",
+    "Target": "public/assets/novice/roznati-2025/034.jpg",
+    "SHA256": "EEDF6C6F2950B6E34EBBDDD92294721AADD9D9230BF6DB8CA9C705405C0E0835",
+    "CurrentSHA256": "EEDF6C6F2950B6E34EBBDDD92294721AADD9D9230BF6DB8CA9C705405C0E0835"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\035.jpg",
+    "Target": "public/assets/novice/roznati-2025/035.jpg",
+    "SHA256": "AB3EDFFAAD3264EBE96033252938BD76283265F449B5BF6C8D1CD819E6F0DADE",
+    "CurrentSHA256": "AB3EDFFAAD3264EBE96033252938BD76283265F449B5BF6C8D1CD819E6F0DADE"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\036.jpg",
+    "Target": "public/assets/novice/roznati-2025/036.jpg",
+    "SHA256": "C5F3BA9AD741D48CFB7BED8B8A9389921DC9C584BCD2E30B9AE802B507EEA555",
+    "CurrentSHA256": "C5F3BA9AD741D48CFB7BED8B8A9389921DC9C584BCD2E30B9AE802B507EEA555"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\037.jpg",
+    "Target": "public/assets/novice/roznati-2025/037.jpg",
+    "SHA256": "56169E2927B55689D055F51C27B8BE1355AE723053CBEBBC06E493791B2BEAD4",
+    "CurrentSHA256": "56169E2927B55689D055F51C27B8BE1355AE723053CBEBBC06E493791B2BEAD4"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\038.jpg",
+    "Target": "public/assets/novice/roznati-2025/038.jpg",
+    "SHA256": "70C15200B5D061C85763340992D5E639B49CEDF9FB83A6FCFDC3F19F79420D46",
+    "CurrentSHA256": "70C15200B5D061C85763340992D5E639B49CEDF9FB83A6FCFDC3F19F79420D46"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\039.jpg",
+    "Target": "public/assets/novice/roznati-2025/039.jpg",
+    "SHA256": "90283A9BC63F3891ED072F52F6A722C34AC2DAA20F653E842435310A08E18F8E",
+    "CurrentSHA256": "90283A9BC63F3891ED072F52F6A722C34AC2DAA20F653E842435310A08E18F8E"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\040.jpg",
+    "Target": "public/assets/novice/roznati-2025/040.jpg",
+    "SHA256": "CB966489563128184987B44754AF3CA4752FAEEBD5D6EF97AA39ADEA7A946729",
+    "CurrentSHA256": "CB966489563128184987B44754AF3CA4752FAEEBD5D6EF97AA39ADEA7A946729"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\041.jpg",
+    "Target": "public/assets/novice/roznati-2025/041.jpg",
+    "SHA256": "8D1F9BBCB58BE0888795D67E30256B109A0C0035BDAEA47A6C42D20F9B8C1F4B",
+    "CurrentSHA256": "8D1F9BBCB58BE0888795D67E30256B109A0C0035BDAEA47A6C42D20F9B8C1F4B"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\042.jpg",
+    "Target": "public/assets/novice/roznati-2025/042.jpg",
+    "SHA256": "FEF8485B5E741A32B74753AE0032B6CF563F6E61E892F77EFE72DA7D71472418",
+    "CurrentSHA256": "FEF8485B5E741A32B74753AE0032B6CF563F6E61E892F77EFE72DA7D71472418"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\043.jpg",
+    "Target": "public/assets/novice/roznati-2025/043.jpg",
+    "SHA256": "7C549B3F641C80715F6FBE67FA7D145D8BB8D8511B277FE9E4A2EE75CBB42979",
+    "CurrentSHA256": "7C549B3F641C80715F6FBE67FA7D145D8BB8D8511B277FE9E4A2EE75CBB42979"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\044.jpg",
+    "Target": "public/assets/novice/roznati-2025/044.jpg",
+    "SHA256": "F7BFA1DADAA8DA8336E7DF478750D6D88D39BE6557C82EB5B2250EA682717399",
+    "CurrentSHA256": "F7BFA1DADAA8DA8336E7DF478750D6D88D39BE6557C82EB5B2250EA682717399"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\045.jpg",
+    "Target": "public/assets/novice/roznati-2025/045.jpg",
+    "SHA256": "FE588BCC2E424F7531533EF1B4ADEAC3A18F6CC5C80F334AE39E4C9D2223BDE2",
+    "CurrentSHA256": "FE588BCC2E424F7531533EF1B4ADEAC3A18F6CC5C80F334AE39E4C9D2223BDE2"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\046.jpg",
+    "Target": "public/assets/novice/roznati-2025/046.jpg",
+    "SHA256": "3BBCBDDCF118E095F4ABD592207504D777E9DD7E64EA281303AEA361440433F4",
+    "CurrentSHA256": "3BBCBDDCF118E095F4ABD592207504D777E9DD7E64EA281303AEA361440433F4"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\047.jpg",
+    "Target": "public/assets/novice/roznati-2025/047.jpg",
+    "SHA256": "4EF8FFFB0991A11BA2C0782EDA148070EBE9A46D13A87C3400739C7E903BF544",
+    "CurrentSHA256": "4EF8FFFB0991A11BA2C0782EDA148070EBE9A46D13A87C3400739C7E903BF544"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\048.jpg",
+    "Target": "public/assets/novice/roznati-2025/048.jpg",
+    "SHA256": "56E961CAE36632D0A7885C5875E8A852F588A62A4CE05A9FCDD33755AB761C37",
+    "CurrentSHA256": "56E961CAE36632D0A7885C5875E8A852F588A62A4CE05A9FCDD33755AB761C37"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\049.jpg",
+    "Target": "public/assets/novice/roznati-2025/049.jpg",
+    "SHA256": "607F9AD01ED0006C6EEE272EB765B54EF2AB80704E0048D9760BECE5FA2E5D0B",
+    "CurrentSHA256": "607F9AD01ED0006C6EEE272EB765B54EF2AB80704E0048D9760BECE5FA2E5D0B"
+  },
+  {
+    "Source": "spletna-stran\\dist\\assets\\novice\\roznati-2025\\050.jpg",
+    "Target": "public/assets/novice/roznati-2025/050.jpg",
+    "SHA256": "64447274545B02447D415CADA2E0222B4CA73C572963E28C6C6FF2763215A5AB",
+    "CurrentSHA256": "64447274545B02447D415CADA2E0222B4CA73C572963E28C6C6FF2763215A5AB"
+  },
+  {
+    "Source": "spletna-stran\\dist\\data\\news.js",
+    "Target": "public/data/news.js",
+    "SHA256": "31A1E4EEE3AA90857C149E672ABF9D8590237E1D39FF2B44434B7BAADC873783",
+    "CurrentSHA256": "31A1E4EEE3AA90857C149E672ABF9D8590237E1D39FF2B44434B7BAADC873783"
+  },
+  {
+    "Source": "spletna-stran\\dist\\data\\news.json",
+    "Target": "public/data/news.json",
+    "SHA256": "34B06F702108BFEE32BA3E48E7ED6043F5A8528282FAE641EE691D8EE50EF706",
+    "CurrentSHA256": "34B06F702108BFEE32BA3E48E7ED6043F5A8528282FAE641EE691D8EE50EF706"
+  },
+  {
+    "Source": "spletna-stran\\import_odeon.py",
+    "Target": "scripts/import_odeon.py",
+    "SHA256": "1C0F261EB6B145CB88E7CCA06C8C50FF6E4C42DD6E415337AA135A50D5AED9B4",
+    "CurrentSHA256": "7AAB0AE76C5092A4C80285EDEAF665BB50C44A0F194EB0BE0AB71BBD4E0AD2CB"
+  },
+  {
+    "Source": "spletna-stran\\check_site.py",
+    "Target": "tests/check_site.py",
+    "SHA256": "283F6B384A190BB87FAA2E09AC731561CEC598907A362B8895C7F26D046D5A5E",
+    "CurrentSHA256": "7C3CE576D41ED1BA3F03F0DF5239642BBD93750C31039E4FEA3243E8033A0E3A"
+  },
+  {
+    "Source": "spletna-stran\\news-copy.json",
+    "Target": "content/news-copy.json",
+    "SHA256": "87EBA40F456E99733C59CC78FD0FF5BDF216D5A0B15DFD19269F03F7D4F46F46",
+    "CurrentSHA256": "87EBA40F456E99733C59CC78FD0FF5BDF216D5A0B15DFD19269F03F7D4F46F46"
+  },
+  {
+    "Source": "spletna-stran\\README.md",
+    "Target": "docs/UPORABA.md",
+    "SHA256": "44455DB9A08FD5F94C8C73A7813E6CB725DD76A08DEEA8F6594645522FC1E60F",
+    "CurrentSHA256": "C6DB0F752BDF6AAC3437CB3104E172F7259A1F7558F3195BEEDCF9079E0FAAEB"
+  },
+  {
+    "Source": "spletna-stran\\.gitignore",
+    "Target": ".gitignore",
+    "SHA256": "FC0228B0EAC6E07FC1F31A9F8A7A31D6976101A1DE0D0F891C7513A239F3232F",
+    "CurrentSHA256": "E08A6670767368AD4E34AB81B61859FDCD3B9F4A37688710F73ECBB5C9C087FA"
+  },
+  {
+    "Source": "spletna-stran\\.source-cache\\brkati-2023.html",
+    "Target": ".cache/odeon/brkati-2023.html",
+    "SHA256": "3D7C8062A3FDDB6D2629B92C32461BCEC6F38C1213DD9E78B0C9368C8442135F",
+    "CurrentSHA256": "3D7C8062A3FDDB6D2629B92C32461BCEC6F38C1213DD9E78B0C9368C8442135F"
+  },
+  {
+    "Source": "spletna-stran\\.source-cache\\brkati-2024.html",
+    "Target": ".cache/odeon/brkati-2024.html",
+    "SHA256": "80C750CFA4425D08FDA12273B5AE5E3A09F4B73178B3860A4EB0F0EF8B131D53",
+    "CurrentSHA256": "80C750CFA4425D08FDA12273B5AE5E3A09F4B73178B3860A4EB0F0EF8B131D53"
+  },
+  {
+    "Source": "spletna-stran\\.source-cache\\brkati-2025.html",
+    "Target": ".cache/odeon/brkati-2025.html",
+    "SHA256": "85A8CC952768ECD286A6DBC239E8F9221C7A4A1968B51474D3C42FCFE86533A7",
+    "CurrentSHA256": "85A8CC952768ECD286A6DBC239E8F9221C7A4A1968B51474D3C42FCFE86533A7"
+  },
+  {
+    "Source": "spletna-stran\\.source-cache\\roznati-2024.html",
+    "Target": ".cache/odeon/roznati-2024.html",
+    "SHA256": "8AAC4F3B0BE0BA6AE29E658D9A3261B50AC3420FADCAAF509F0FD9BD81C1A830",
+    "CurrentSHA256": "8AAC4F3B0BE0BA6AE29E658D9A3261B50AC3420FADCAAF509F0FD9BD81C1A830"
+  },
+  {
+    "Source": "spletna-stran\\.source-cache\\roznati-2025.html",
+    "Target": ".cache/odeon/roznati-2025.html",
+    "SHA256": "AF4428AF542F933D67BBCB172459CBCC2E855C87B961921BB27F07E6999DD589",
+    "CurrentSHA256": "AF4428AF542F933D67BBCB172459CBCC2E855C87B961921BB27F07E6999DD589"
+  },
+  {
+    "Source": "2024. 10. 12. - Rožnati koraki\\NOVO_SPREMEMBA DATUMA.png",
+    "Target": "gradiva/2024/2024-10-12-roznati-koraki/NOVO_SPREMEMBA DATUMA.png",
+    "SHA256": "12785C687352BA2EE7631B562A5B40B75E25D41E78D321CE8762CD30C3DED20A",
+    "CurrentSHA256": "12785C687352BA2EE7631B562A5B40B75E25D41E78D321CE8762CD30C3DED20A"
+  },
+  {
+    "Source": "2024. 11. 23. - Brkati pohod\\2. najbolj brkati pohod v beli krajini.jpg",
+    "Target": "gradiva/2024/2024-11-23-brkati-pohod/2. najbolj brkati pohod v beli krajini.jpg",
+    "SHA256": "FFE97686A8148EAA4091D0EE2DB9B70273EDC92A98CF1589799DE498615F76A0",
+    "CurrentSHA256": "FFE97686A8148EAA4091D0EE2DB9B70273EDC92A98CF1589799DE498615F76A0"
+  },
+  {
+    "Source": "2024. 11. 23. - Brkati pohod\\2. najbolj brkati pohod v beli krajini.pdf",
+    "Target": "gradiva/2024/2024-11-23-brkati-pohod/2. najbolj brkati pohod v beli krajini.pdf",
+    "SHA256": "CB86A9A8047E39E073990444CBD441F90DE8C9650246A8270DEB4CCD78741ED8",
+    "CurrentSHA256": "CB86A9A8047E39E073990444CBD441F90DE8C9650246A8270DEB4CCD78741ED8"
+  },
+  {
+    "Source": "2024. 11. 23. - Brkati pohod\\2. najbolj brkati pohod v beli krajini.png",
+    "Target": "gradiva/2024/2024-11-23-brkati-pohod/2. najbolj brkati pohod v beli krajini.png",
+    "SHA256": "7C054111D1702186FF4E83A1DB7DC745BA8BE8D6853279705DF63BAC77E87FBA",
+    "CurrentSHA256": "7C054111D1702186FF4E83A1DB7DC745BA8BE8D6853279705DF63BAC77E87FBA"
+  },
+  {
+    "Source": "2025. 10. 4 - Rožnati koraki\\Vabilo - Rožnati koraki - 2025. 10. 4.pdf",
+    "Target": "gradiva/2025/2025-10-04-roznati-koraki/Vabilo - Rožnati koraki - 2025. 10. 4.pdf",
+    "SHA256": "7B4F7B731C9954231B6FB0100ECD904BB7C6607D6982611F09D3369F7821789E",
+    "CurrentSHA256": "7B4F7B731C9954231B6FB0100ECD904BB7C6607D6982611F09D3369F7821789E"
+  },
+  {
+    "Source": "2025. 10. 4 - Rožnati koraki\\Vabilo - Rožnati koraki - 2025. 10. 4.png",
+    "Target": "gradiva/2025/2025-10-04-roznati-koraki/Vabilo - Rožnati koraki - 2025. 10. 4.png",
+    "SHA256": "7CF9B323151615EC59151FCD159E2E9817CEF7FE49B9773FBD164239EA2D165A",
+    "CurrentSHA256": "7CF9B323151615EC59151FCD159E2E9817CEF7FE49B9773FBD164239EA2D165A"
+  },
+  {
+    "Source": "2025. 11. 22. - Brkati pohod\\3_brkati_pohod_2.webp",
+    "Target": "gradiva/2025/2025-11-22-brkati-pohod/3_brkati_pohod_2.webp",
+    "SHA256": "CA95C42E9A6E884D0DD9F63190BA1C3769E4A77430FA7EF2AA0DFA85961A9607",
+    "CurrentSHA256": "CA95C42E9A6E884D0DD9F63190BA1C3769E4A77430FA7EF2AA0DFA85961A9607"
+  },
+  {
+    "Source": "2025. 11. 22. - Brkati pohod\\DODATNE INFORMACIJE(1).png",
+    "Target": "gradiva/2025/2025-11-22-brkati-pohod/DODATNE INFORMACIJE(1).png",
+    "SHA256": "5DEDA576671AC21DEF61C08B7EF5E880FB4DCA501FFAC8AD80CF4DE9E22C8A59",
+    "CurrentSHA256": "5DEDA576671AC21DEF61C08B7EF5E880FB4DCA501FFAC8AD80CF4DE9E22C8A59"
+  },
+  {
+    "Source": "2026. 10. 3. - Rožnati koraki\\dodatne_informacije.jpg",
+    "Target": "gradiva/2026/2026-10-03-roznati-koraki/dodatne_informacije.jpg",
+    "SHA256": "81385B285F28F721D8AED813F06F29D2A93ABEA9098173C95855253B003AA1D1",
+    "CurrentSHA256": "81385B285F28F721D8AED813F06F29D2A93ABEA9098173C95855253B003AA1D1"
+  },
+  {
+    "Source": "2026. 10. 3. - Rožnati koraki\\roznati_koraki_letak26.png",
+    "Target": "gradiva/2026/2026-10-03-roznati-koraki/roznati_koraki_letak26.png",
+    "SHA256": "E82B77F5566AFAE04A2E388C06A7D6D736A9F8F3F26EC72040076FE2F3C32AF4",
+    "CurrentSHA256": "E82B77F5566AFAE04A2E388C06A7D6D736A9F8F3F26EC72040076FE2F3C32AF4"
+  },
+  {
+    "Source": "2026. 10. 3. - Rožnati koraki\\roznati_koraki_letak26.webp",
+    "Target": "gradiva/2026/2026-10-03-roznati-koraki/roznati_koraki_letak26.webp",
+    "SHA256": "CFABCE7B62817CF8851136C9B8C3B6B55809F29E78348A27A421EFDD2BB56426",
+    "CurrentSHA256": "CFABCE7B62817CF8851136C9B8C3B6B55809F29E78348A27A421EFDD2BB56426"
+  },
+  {
+    "Source": "spletna-stran\\preview-colors.png",
+    "Target": "artifacts/previews/preview-colors.png",
+    "SHA256": "CEEB5DF6CCC00EFBE24D2E91EB71AC8DF1BC20B5DD55003C7CB90F3DBB06F766",
+    "CurrentSHA256": "CEEB5DF6CCC00EFBE24D2E91EB71AC8DF1BC20B5DD55003C7CB90F3DBB06F766"
+  },
+  {
+    "Source": "spletna-stran\\preview-desktop.png",
+    "Target": "artifacts/previews/preview-desktop.png",
+    "SHA256": "03FF941A4151DFF2DA6763D1B4D1E058D86EEA524D477F784B91B0D22C37AD53",
+    "CurrentSHA256": "03FF941A4151DFF2DA6763D1B4D1E058D86EEA524D477F784B91B0D22C37AD53"
+  },
+  {
+    "Source": "spletna-stran\\preview-mobile.png",
+    "Target": "artifacts/previews/preview-mobile.png",
+    "SHA256": "4FE567781048579D4E53F201AEC32DDC0A70811C54406FC8372C4C614756584C",
+    "CurrentSHA256": "4FE567781048579D4E53F201AEC32DDC0A70811C54406FC8372C4C614756584C"
+  },
+  {
+    "Source": "spletna-stran\\preview-news-dialog.png",
+    "Target": "artifacts/previews/preview-news-dialog.png",
+    "SHA256": "F77DEE27DBA3380EC8DB4B5847F853261206389CA5D13C0700A7423EA3DD1A69",
+    "CurrentSHA256": "F77DEE27DBA3380EC8DB4B5847F853261206389CA5D13C0700A7423EA3DD1A69"
+  },
+  {
+    "Source": "spletna-stran\\preview-news-mobile.png",
+    "Target": "artifacts/previews/preview-news-mobile.png",
+    "SHA256": "68EE7380D9E0A3DF34DE2311F6E5B7D3B62E16CF73987FC3391B23FD56EA9DE1",
+    "CurrentSHA256": "68EE7380D9E0A3DF34DE2311F6E5B7D3B62E16CF73987FC3391B23FD56EA9DE1"
+  },
+  {
+    "Source": "spletna-stran\\preview-news.png",
+    "Target": "artifacts/previews/preview-news.png",
+    "SHA256": "1BD0322C5B877B7EA7C85FC758CBA48D1D9FE1C859A8039041422E50AAD37609",
+    "CurrentSHA256": "1BD0322C5B877B7EA7C85FC758CBA48D1D9FE1C859A8039041422E50AAD37609"
+  }
+]

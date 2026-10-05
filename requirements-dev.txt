@@ -1,0 +1,5 @@
+# Za uvoz novic in brskalniška preverjanja; spletna stran jih ne potrebuje.
+requests==2.34.2
+beautifulsoup4==4.15.0
+Pillow==12.3.0
+playwright==1.62.0
