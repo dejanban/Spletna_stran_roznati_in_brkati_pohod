@@ -80,6 +80,8 @@ Na statično gostovanje prenesite **vsebino `public/`**, da je `index.html` v ko
 
 V repozitoriju odprite **Settings → Pages → Build and deployment → Source** in izberite **GitHub Actions**. Spremembe združite v vejo `main` in jo potisnite na GitHub. Workflow [.github/workflows/pages.yml](.github/workflows/pages.yml) nato objavi samo mapo `public/`, brez gradnje z Jekyllom. Objavo lahko na veji `main` ponovite tudi ročno prek **Actions → Deploy to GitHub Pages → Run workflow**.
 
-Korenska mapa repozitorija in mapa `docs/` ne vsebujeta vstopne strani, zato nista ustrezen vir za objavo tega projekta. Potek in morebitne napake objave so vidni v zavihku **Actions**. [Uradna navodila za GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+Če Pages že uporablja **Deploy from a branch** in mapo **/(root)**, korenski `index.html` obiskovalce samodejno preusmeri na spletno stran v `public/`. Datoteka `.nojekyll` omogoča neposredno objavo statičnih datotek. Preusmeritev ohrani parametre in povezave do razdelkov, na primer `#poti`. Spremembe morajo biti poslane v vejo, izbrano v nastavitvah Pages.
+
+Priporočena objava prek zgornjega workflowa še vedno objavi samo vsebino `public/`, zato preusmeritve ne potrebuje. Mapa `docs/` vsebuje navodila in ni vir spletne strani. Potek in morebitne napake objave so vidni v zavihku **Actions**. [Uradna navodila za GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 Lokalni urejevalnik za shranjevanje sprememb potrebuje strežnik Python; na GitHub Pages ne more shranjevati. Vsebino uredite lokalno in spremenjene datoteke nato pošljite v repozitorij.
