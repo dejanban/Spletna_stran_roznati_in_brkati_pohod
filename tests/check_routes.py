@@ -28,7 +28,12 @@ def main():
     for route in routes:
         path = ROOT / 'public' / route['download']
         assert module.read_route(path)['segments'] == route['segments']
-        assert hashlib.sha256(path.read_bytes()).hexdigest() == route['sha256']
+        data = path.read_bytes()
+        # Git may convert LF to CRLF on Windows; accept that checkout-only change.
+        assert route['sha256'] in {
+            hashlib.sha256(data).hexdigest(),
+            hashlib.sha256(data.replace(b'\r\n', b'\n')).hexdigest(),
+        }
     with TemporaryDirectory() as folder:
         path = Path(folder) / 'segments.gpx'
         path.write_text('<gpx><trk><trkseg><trkpt lat="0" lon="0"/><trkpt lat="0" lon="0.01"/></trkseg><trkseg><trkpt lat="20" lon="20"/><trkpt lat="20" lon="20.01"/></trkseg></trk></gpx>')
@@ -70,9 +75,7 @@ def main():
             expect(page.locator('#route-map')).to_be_visible()
             expect(page.locator('#route-map .leaflet-overlay-pane path')).to_have_count(3)
             expect(page.locator('#route-map-status')).to_be_visible()
-            expect(page.locator('#route-map')).to_have_attribute('data-local-basemap', 'ready')
-            expect(page.locator('#route-map .leaflet-local-base-pane canvas')).to_have_count(1)
-            assert page.locator('#route-map .route-map-label').count() > 0
+            expect(page.locator('#route-map-status')).to_contain_text('Preverite internetno povezavo')
             line = page.locator('#route-map .leaflet-overlay-pane path').first
             before_zoom = line.get_attribute('d')
             page.locator('.leaflet-control-zoom-in').click()
@@ -99,7 +102,7 @@ def main():
             expect(page.locator('#route-map-status')).to_contain_text('trenutno ni na voljo')
             assert not errors, errors
             browser.close()
-        print('PASS: GPX coordinates, distance, segments, validity, original downloads, route switching, map zoom, offline fallback and mobile layout.')
+        print('PASS: GPX coordinates, distance, segments, validity, original downloads, route switching, map zoom, unavailable tile handling and mobile layout.')
     finally:
         server.shutdown()
         server.server_close()

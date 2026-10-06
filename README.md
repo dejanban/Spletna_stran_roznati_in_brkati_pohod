@@ -74,4 +74,12 @@ Brskalniško preverjanje uporablja nameščen Microsoft Edge. Preveri novice, sl
 
 ## Objava
 
-Na statično gostovanje prenesite **vsebino `public/`**, da je `index.html` v korenu spletne objave. Ohranite podmape in imena datotek. Lokalna projektna gradiva ostanejo zunaj objave. Stran trenutno deluje lokalno.
+Na statično gostovanje prenesite **vsebino `public/`**, da je `index.html` v korenu spletne objave. Ohranite podmape in imena datotek. Lokalna projektna gradiva ostanejo zunaj objave.
+
+### GitHub Pages
+
+V repozitoriju odprite **Settings → Pages → Build and deployment → Source** in izberite **GitHub Actions**. Spremembe združite v vejo `main` in jo potisnite na GitHub. Workflow [.github/workflows/pages.yml](.github/workflows/pages.yml) nato objavi samo mapo `public/`, brez gradnje z Jekyllom. Objavo lahko na veji `main` ponovite tudi ročno prek **Actions → Deploy to GitHub Pages → Run workflow**.
+
+Korenska mapa repozitorija in mapa `docs/` ne vsebujeta vstopne strani, zato nista ustrezen vir za objavo tega projekta. Potek in morebitne napake objave so vidni v zavihku **Actions**. [Uradna navodila za GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+Lokalni urejevalnik za shranjevanje sprememb potrebuje strežnik Python; na GitHub Pages ne more shranjevati. Vsebino uredite lokalno in spremenjene datoteke nato pošljite v repozitorij.

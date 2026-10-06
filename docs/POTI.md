@@ -25,7 +25,7 @@ Višinski profil ni prikazan. Začetna koordinata je označena kot **začetek sl
 
 ## Zemljevid
 
-Pri odpiranju prek HTTP/HTTPS se samodejno prikaže interaktivni zemljevid s podlago OpenStreetMap pod sledjo GPX. Omogoča povečavo, premikanje ter oznaki začetka in konca. Spletne ploščice potrebujejo internet; lokalna podlaga ostane na voljo ob nedosegljivih ploščicah. Gumb **Prikaži obris poti** preklopi na lokalni obris brez podlage. Pri neposrednem odpiranju datoteke ostaneta na voljo obris in GPX.
+Pri odpiranju prek HTTP/HTTPS se samodejno prikaže interaktivni zemljevid s podlago OpenStreetMap pod sledjo GPX. Omogoča povečavo, premikanje ter oznaki začetka in konca. Podlaga potrebuje internetno povezavo. Gumb **Prikaži obris poti** preklopi na obris brez podlage. Pri neposrednem odpiranju datoteke ostaneta na voljo obris in GPX.
 
 Za prikaz je vključena lokalna kopija **Leaflet 1.9.4** v `public/vendor/leaflet/`, skupaj z licenco. Avtorstvo OpenStreetMap je vidno na zemljevidu. Če podlage ni mogoče naložiti, stran pokaže obvestilo, sled in prenos GPX pa ostaneta na voljo. Ploščice se ne prenašajo vnaprej za delo brez povezave.
 
@@ -33,7 +33,3 @@ Za prikaz je vključena lokalna kopija **Leaflet 1.9.4** v `public/vendor/leafle
 - [Pravila uporabe podlage OpenStreetMap](https://operations.osmfoundation.org/policies/tiles/)
 
 Preverjanje poti: `python tests/check_routes.py`. Test preveri podatke glede na izvirna GPX, preklapljanje, prenos, približevanje in odziv na nedostopno podlago. Posnetki so v `artifacts/previews/`.
-
-## Podlaga ob nedosegljivih spletnih ploščicah
-
-Glavni interaktivni zemljevid ohrani lokalno vektorsko podlago `public/data/map-basemap.geojson` pod ploščicami OpenStreetMap. Tako ostanejo vidne ceste, steze, vodotoki in krajevna imena okoli poti, če spletne ploščice niso dosegljive. Podatki so iz OpenStreetMap, pod licenco ODbL; vir in datum sta shranjena v datoteki. Samostojen zemljevid za prenos brez povezave ni več del strani.

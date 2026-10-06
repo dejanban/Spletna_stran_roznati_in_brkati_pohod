@@ -7,48 +7,6 @@
   const format = new Intl.NumberFormat("sl-SI", {maximumFractionDigits: 1, minimumFractionDigits: 1});
   let selected = routes[0], map, layers, mapVisible = false;
 
-  async function addLocalBasemap() {
-    try {
-      const response = await fetch('data/map-basemap.geojson');
-      if (!response.ok) throw new Error('Local map unavailable');
-      const basemap = await response.json();
-      map.createPane('local-base');
-      map.getPane('local-base').style.zIndex = 190;
-      const renderer = L.canvas({pane: 'local-base', padding: .3});
-      const features = basemap.features.filter(f => f.geometry.type !== 'Point');
-      features.sort((a, b) => Number(b.geometry.type === 'Polygon') - Number(a.geometry.type === 'Polygon'));
-      L.geoJSON(features, {renderer, interactive: false, style: feature => {
-        const p = feature.properties;
-        if (feature.geometry.type === 'Polygon') return {color: p.natural === 'water' ? '#acd3df' : p.landuse === 'residential' ? '#e3ded5' : '#d7e3c9', stroke: false, fillOpacity: .8};
-        if (p.waterway) return {color: '#7cbbd6', weight: p.waterway === 'river' ? 3 : 1.5};
-        if (p.railway) return {color: '#8b9194', weight: 2, dashArray: '6 4'};
-        if (['path', 'footway', 'track', 'bridleway', 'steps', 'cycleway'].includes(p.highway)) return {color: '#958268', weight: 1.5, dashArray: '4 4'};
-        return {color: '#b39b77', weight: ['primary', 'secondary', 'tertiary'].includes(p.highway) ? 3.5 : 2};
-      }}).addTo(map);
-      const labels = L.layerGroup().addTo(map);
-      map.createPane('local-labels');
-      map.getPane('local-labels').style.zIndex = 195;
-      const updateLabels = () => {
-        labels.clearLayers();
-        for (const feature of basemap.features) {
-          if (feature.geometry.type !== 'Point') continue;
-          const p = feature.properties;
-          if (p.place === 'isolated_dwelling' && map.getZoom() < 15) continue;
-          const element = document.createElement('span');
-          element.textContent = (p.natural === 'peak' ? '▲ ' : '') + p.name;
-          const [lon, lat] = feature.geometry.coordinates;
-          L.tooltip({pane: 'local-labels', permanent: true, direction: 'center', className: 'route-map-label', interactive: false}).setLatLng([lat, lon]).setContent(element).addTo(labels);
-        }
-      };
-      map.on('zoomend', updateLabels);
-      updateLabels();
-      map.attributionControl.addAttribution('Lokalna podlaga · ODbL');
-      map.getContainer().dataset.localBasemap = 'ready';
-    } catch (error) {
-      map.getContainer().dataset.localBasemap = 'unavailable';
-    }
-  }
-
   function renderOutline(route) {
     const points = route.segments.flat();
     const meanLat = points.reduce((sum, p) => sum + p[0], 0) / points.length;
@@ -110,13 +68,12 @@
       map = L.map('route-map', {scrollWheelZoom: false, zoomControl: false});
       L.control.zoom({zoomInTitle: 'Približaj', zoomOutTitle: 'Oddalji'}).addTo(map);
       layers = L.featureGroup().addTo(map);
-      addLocalBasemap();
       L.tileLayer(window.SITE_CONFIG.mapTileUrl || 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
       }).on('tileerror', () => {
         $('#route-map-status').hidden = false;
-        $('#route-map-status').textContent = 'Spletne podlage ni mogoče naložiti. Lokalna podlaga prikazuje ceste, steze in krajevna imena v okolici poti.';
+        $('#route-map-status').textContent = 'Spletne podlage ni mogoče naložiti. Preverite internetno povezavo ali izberite prikaz obrisa poti. Prenos GPX ostaja na voljo.';
       }).addTo(map);
     }
     drawMap();
