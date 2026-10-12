@@ -8,7 +8,7 @@ Spremembe so pripravljene v lokalnem projektu 12. oktobra 2026. Objava uporablja
 - Kontakt za povratne informacije uporablja že objavljeni `ckz@zd-crnomelj.si` in telefon `07 30 61 723`. Povezavi do izjave in prijave sta v nogi strani.
 - Vseh pet slikovnih vabil ima besedilno različico v podrobnostih dogodka in na `public/vabila.html`. Povezave kod QR so prebrane iz izvirnih vabil in navedene kot običajne spletne povezave.
 - Stran z vabili vsebuje bistvene besedilne podatke obeh priloženih poti GPX in deluje brez JavaScripta.
-- Vseh 227 lokalnih fotografij ima opis prizora v `public/data/news.json` in brskalniškem katalogu. Opisi ne ugibajo identitete oseb.
+- Vseh 259 lokalnih fotografij ima opis prizora v `public/data/news.json` in brskalniškem katalogu. Opisi ne ugibajo identitete oseb.
 - Popravljeni so kontrasti besedila, prikaz fokusa, preskok na vsebino, cilj fokusa po izbiri mobilne navigacije in kroženje fokusa v pojavnem oknu. Escape zapre meni ali pojavno okno.
 - Galerije se odprejo brez samodejnega predvajanja. Predvajanje je izrecna izbira; med uporabo galerije s tipkovnico ali kazalcem se ustavi. Ročno menjavo spremlja dostopno obvestilo o številki fotografije.
 - Urejevalnik in njegov API zahtevata besedilo slikovnega vabila ter opise novih fotografij. Ob shranjevanju ponovno ustvarita statično besedilno stran.
@@ -17,7 +17,7 @@ Spremembe so pripravljene v lokalnem projektu 12. oktobra 2026. Objava uporablja
 
 Preverjanje je izvedeno v lokalnem Chromiumu, ne na objavljenem gostovanju. Orodje axe-core 4.10.3 uporablja pravila za WCAG 2.0 A/AA, WCAG 2.1 A/AA in dodatne dobre prakse.
 
-- 26 pregledov z axe-core: glavna stran, vse novice, vabila v pojavnih oknih, tri javne strani pri širinah 320, 360, 768 in 1280 px, mobilni meni ter urejevalnik. Zaznanih kršitev ni. [Povzetek avtomatskega pregleda](PREGLED-DOSTOPNOSTI.json) vsebuje rezultate in opozorila za ročni pregled po posameznih prikazih.
+- 27 pregledov z axe-core: glavna stran, vse novice, vabila v pojavnih oknih, tri javne strani pri širinah 320, 360, 768 in 1280 px, mobilni meni ter urejevalnik. Zaznanih kršitev ni. [Povzetek avtomatskega pregleda](PREGLED-DOSTOPNOSTI.json) vsebuje rezultate in opozorila za ročni pregled po posameznih prikazih.
 - Preizkus dejanske uporabe tipkovnice: preskok na vsebino, odpiranje/zapiranje in kroženje fokusa v dialogu, vračanje na sprožilni gumb, upravljanje fotografij in mobilnega menija.
 - Reflow pri širini 320 px, kar preverja postavitev za 400-odstotno povečavo začetnega pogleda s širino 1280 px. Preverjene so tudi prilagoditve razmikov med vrsticami, črkami, besedami in odstavki.
 - Besedilni strani vabil in izjave delujeta tudi z izključenim JavaScriptom.

@@ -63,7 +63,7 @@ def main():
             page.wait_for_timeout(5700)
             expect(page.locator('.gallery-counter')).to_have_text(first)
             page.locator('[data-next]').focus(); page.keyboard.press('Enter')
-            expect(page.locator('.gallery-counter')).to_have_text('2 / 27')
+            expect(page.locator('.gallery-counter')).to_have_text('2 / 32')
             page.keyboard.press('Tab')
             expect(page.locator('.gallery')).to_be_visible()
             assert page.evaluate('document.activeElement.closest("dialog") !== null')
@@ -125,7 +125,7 @@ def main():
             print(f'PASS: {len(report)} axe-core audits without violations; report: {output}')
         else:
             print('SKIP: axe-core audit (set AXE_CORE_PATH).')
-        print('PASS: keyboard, focus, static invitations, 227 photo descriptions, mobile layout and text spacing.')
+        print('PASS: keyboard, focus, static invitations, 259 photo descriptions, mobile layout and text spacing.')
     finally:
         server.shutdown();server.server_close()
 

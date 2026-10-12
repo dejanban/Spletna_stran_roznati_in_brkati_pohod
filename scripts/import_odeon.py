@@ -1,4 +1,5 @@
-"""Import the five requested Radio Odeon galleries into the local site catalog."""
+"""Import Radio Odeon galleries into the local site catalog."""
+import argparse
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 import json
@@ -12,6 +13,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTICLES = {
+    'roznati-2026': 'roznati-koraki-znova-povezali-belo-krajino-v-znamenju-upanja-in-zdravja',
     'brkati-2025': 'brkati-pohod-ozavescal-o-zdravju-moskih',
     'brkati-2023': 'najbolj-brkati-pohod-v-beli-krajini',
     'brkati-2024': 'drugi-najbolj-brkati-pohod-na-mirno-goro-druzenje-zdravje-in-brki',
@@ -42,7 +44,7 @@ def download_photo(job):
             'sha256': hashlib.sha256(data).hexdigest()}
 
 
-def import_news():
+def import_news(event_ids=None):
     cache = ROOT / '.cache' / 'odeon'
     cache.mkdir(parents=True, exist_ok=True)
     copy = json.loads((ROOT / 'content' / 'news-copy.json').read_text(encoding='utf-8'))
@@ -52,10 +54,12 @@ def import_news():
     existing = json.loads(existing_path.read_text(encoding='utf-8')) if existing_path.exists() else {'articles': []}
     descriptions_path = ROOT / 'content/photo-descriptions.json'
     descriptions = json.loads(descriptions_path.read_text(encoding='utf-8')) if descriptions_path.exists() else {}
-    managed = [a for a in existing['articles'] if a.get('editorManaged')]
+    managed = [a for a in existing['articles'] if a.get('editorManaged') or (event_ids and a['eventId'] not in event_ids)]
     managed_ids = {a['eventId'] for a in managed}
     catalog = {'schemaVersion': 1, 'source': 'Radio Odeon', 'articles': managed}
     for event_id, slug in ARTICLES.items():
+        if event_ids and event_id not in event_ids:
+            continue
         if event_id in managed_ids:
             continue  # Preserve articles and galleries saved through the editor.
         url = f'https://radio-odeon.com/novice/{slug}/'
@@ -106,4 +110,6 @@ def import_news():
 
 if __name__ == '__main__':
     sys.stdout.reconfigure(encoding='utf-8')
-    import_news()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--event', action='append', choices=ARTICLES, help='Import only this event; preserve other articles. Can be repeated.')
+    import_news(parser.parse_args().event)

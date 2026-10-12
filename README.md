@@ -1,6 +1,6 @@
 # Rožnati koraki & Brkati pohod
 
-Slovenska spletna stran za pohoda v podporo zdravju žensk in moških. Vključuje napovedi, arhiv dogodkov, pet novic in 227 lokalno shranjenih fotografij z Radia Odeon.
+Slovenska spletna stran za pohoda v podporo zdravju žensk in moških. Vključuje napovedi, arhiv dogodkov, šest novic in 259 lokalno shranjenih fotografij z Radia Odeon.
 
 ## Zagon
 

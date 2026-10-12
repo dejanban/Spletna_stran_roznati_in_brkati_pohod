@@ -18,9 +18,9 @@ Vsi dogodki so v `public/data/events.js`, v seznamu `window.EVENTS`. Za urejanje
 
 ### Novice Radia Odeon in lokalna zbirka fotografij
 
-Razdelek **Novice** vsebuje pet objav z lastnimi kratkimi povzetki izvirnih člankov. Klik odpre pojavno okno z besedilom, povezavo do članka, navedbo vira in fotografsko galerijo. Datum ob novici je datum objave članka; datumi pohodov so ločeno prikazani v arhivu.
+Razdelek **Novice** vsebuje šest objav z lastnimi kratkimi povzetki izvirnih člankov. Klik odpre pojavno okno z besedilom, povezavo do članka, navedbo vira in fotografsko galerijo. Datum ob novici je datum objave članka; datumi pohodov so ločeno prikazani v arhivu.
 
-V projektu je objavljenih **227 fotografij (41,4 MiB)**: Brkati pohod 2023 (20), 2024 (110), 2025 (27) ter Rožnati koraki 2024 (20) in 2025 (50). Slike so shranjene kot izvirne slikovne datoteke in niso odvisne od razpoložljivosti Radia Odeon ali Google Drive.
+V projektu je objavljenih **259 fotografij (47,6 MiB)**: Brkati pohod 2023 (20), 2024 (110), 2025 (27) ter Rožnati koraki 2024 (20), 2025 (50) in 2026 (32). Slike so shranjene kot izvirne slikovne datoteke in niso odvisne od razpoložljivosti Radia Odeon ali Google Drive.
 
 - `public/assets/novice/<id-pohoda>/`: lokalne fotografije, razvrščene po pohodih.
 - `public/data/news.json`: datotečna baza s povzetki, datumom objave, viri, avtorstvom, lokalnimi potmi in kontrolnimi vsotami fotografij.
@@ -28,9 +28,9 @@ V projektu je objavljenih **227 fotografij (41,4 MiB)**: Brkati pohod 2023 (20),
 - `content/news-copy.json`: besedila povzetkov, ki jih lahko uredite.
 - `scripts/import_odeon.py`: uvoz fotografij in izgradnja obeh katalogov. Potrebuje Python pakete `requests`, `beautifulsoup4` in `Pillow`.
 
-Po urejanju `content/news-copy.json` zaženite `python scripts/import_odeon.py` iz korenske mape. Skripta uporabi že prenesene datoteke in preveri njihovo veljavnost; manjkajoče prenese. Predpomnilnik izvornih strani je v `.cache/odeon/`, izključen iz Gita in zunaj mape za objavo. Za osvežitev izvorne strani odstranite le ustrezno datoteko HTML iz tega predpomnilnika pred ponovnim uvozom.
+Po urejanju `content/news-copy.json` zaženite `python scripts/import_odeon.py` iz korenske mape. Posamezno novico uvozite z `python scripts/import_odeon.py --event roznati-2026`; druge novice ostanejo ohranjene. Skripta uporabi že prenesene datoteke in preveri njihovo veljavnost; manjkajoče prenese. Predpomnilnik izvornih strani je v `.cache/odeon/`, izključen iz Gita in zunaj mape za objavo. Za osvežitev izvorne strani odstranite le ustrezno datoteko HTML iz tega predpomnilnika pred ponovnim uvozom.
 
-Za pet uvoženih pohodov se povzetki in fotografije ob nalaganju povežejo z dogodki po `eventId`. Za njihovo urejanje uporabite `content/news-copy.json`, saj uvožena vsebina nadomesti osnovni povzetek v `public/data/events.js`. Galerija novice vedno prikazuje lokalno zbirko; galerijo podrobnosti pohoda je še vedno mogoče povezati z Google Drive.
+Za šest uvoženih pohodov se povzetki in fotografije ob nalaganju povežejo z dogodki po `eventId`. Za njihovo urejanje uporabite `content/news-copy.json`, saj uvožena vsebina nadomesti osnovni povzetek v `public/data/events.js`. Galerija novice vedno prikazuje lokalno zbirko; galerijo podrobnosti pohoda je še vedno mogoče povezati z Google Drive.
 
 Izločene fotografije so navedene v `content/gallery-exclusions.json` s svojim izvornim URL-jem (`sourceUrl` iz kataloga). Uvoz jih preskoči in ohrani imena preostalih lokalnih datotek. Pri Brkatem pohodu 2024 je izločenih osem fotografij, katerih datoteke so bile odstranjene iz mape. Za nadaljnje izločanje dodajte izvorni URL pod ustrezni `eventId` in ponovno zaženite uvoz; samo brisanje slikovne datoteke pusti nedelujočo povezavo v katalogu.
 
@@ -53,7 +53,7 @@ Izločene fotografije so navedene v `content/gallery-exclusions.json` s svojim i
 }
 ```
 
-Prihodnji dogodki in današnji dogodki se pojavijo v razdelku »Aktualno«. Naslednji dan preidejo v arhiv. Datumi se primerjajo po časovnem pasu Europe/Ljubljana ob nalaganju strani. Po izvedbi uredite naslov, povzetek in besedilo v poročilo. Sam datum ni dokaz izvedbe: zapis za 2026 zato jasno pove, da je na voljo program iz vabila in da poročilo še ni dodano. Datum za prvi Brkati pohod je datum objave članka, posebej označen z `dateIsPublication: true`.
+Prihodnji dogodki in današnji dogodki se pojavijo v razdelku »Aktualno«. Naslednji dan preidejo v arhiv. Datumi se primerjajo po časovnem pasu Europe/Ljubljana ob nalaganju strani. Po izvedbi uredite naslov, povzetek in besedilo v poročilo. Sam datum ni dokaz izvedbe. Rožnati koraki 2026 imajo dodano poročilo Radia Odeon, objavljeno 6. oktobra 2026, in 32 lokalno shranjenih fotografij. Datum za prvi Brkati pohod je datum objave članka, posebej označen z `dateIsPublication: true`.
 
 ## Živa galerija iz Google Drive
 
@@ -66,7 +66,7 @@ Galerija podpira neposredno nalaganje slik iz javne mape prek Google Drive API. 
 
 Album se prebere ob odprtju galerije, zato se dodane in odstranjene slike upoštevajo ob naslednjem odprtju. Podmape se ne pregledujejo. Vrstni red je naravno razvrščanje po imenih; priporočena so imena `01-…`, `02-…`. Podprti so večstranski seznami datotek. Za splet uporabljajte manjše JPEG/WebP/PNG fotografije: nalaga se izvirna datoteka, ne predogled. HEIC pretvorite v JPEG.
 
-Slike se izmenjujejo vsakih 5,5 sekunde po uspešnem nalaganju; na voljo so prejšnja/naslednja slika, puščični tipki in ustavitev predvajanja. Pri nastavitvi zmanjšanega gibanja je samodejno predvajanje sprva izključeno. Ob zaprtju se prenosi prekinejo in slike sprostijo iz pomnilnika. Napaka pokaže možnost ponovitve in povezavo do albuma.
+Slike se izmenjujejo vsakih 5,5 sekunde po uspešnem nalaganju; na voljo so prejšnja/naslednja slika, puščični tipki in ustavitev predvajanja. Samodejno predvajanje je sprva izključeno; uporabnik ga vključi z gumbom Predvajaj. Ob zaprtju se prenosi prekinejo in slike sprostijo iz pomnilnika. Napaka pokaže možnost ponovitve in povezavo do albuma.
 
 Dokumentacija: [seznam datotek](https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list), [prenos datotek](https://developers.google.com/workspace/drive/api/guides/manage-downloads), [omejitve API ključev](https://cloud.google.com/docs/authentication/api-keys#api_key_restrictions).
 
@@ -85,11 +85,12 @@ Običajna povezava `drive.google.com/file/d/.../view` ni neposredna slikovna dat
 
 ## Viri vsebine
 
-Vsebinska osnova so priloženi letaki 2024–2026 in naslednji članki. Vseh pet člankov je bilo pregledanih ob uvozu novic. Povzetki so kratki in napisani na novo, povezave do izvirnikov in navedbe avtorstva oziroma vira pa so vključene ob novicah in fotografijah.
+Vsebinska osnova so priloženi letaki 2024–2026 in naslednji članki. Vseh šest člankov je bilo pregledanih ob uvozu novic. Povzetki so kratki in napisani na novo, povezave do izvirnikov in navedbe avtorstva oziroma vira pa so vključene ob novicah in fotografijah.
 
 - [Brkati pohod 2025](https://radio-odeon.com/novice/brkati-pohod-ozavescal-o-zdravju-moskih/)
 - [Prvi Brkati pohod, poročilo 2023](https://radio-odeon.com/novice/najbolj-brkati-pohod-v-beli-krajini/)
 - [Drugi Brkati pohod 2024](https://www.radio-odeon.com/novice/drugi-najbolj-brkati-pohod-na-mirno-goro-druzenje-zdravje-in-brki/)
+- [Rožnati koraki 2026](https://radio-odeon.com/novice/roznati-koraki-znova-povezali-belo-krajino-v-znamenju-upanja-in-zdravja/)
 - [Rožnati koraki 2025](https://radio-odeon.com/novice/roznati-koraki-za-zdravje-pogum-in-povezanost/)
 - [Rožnati koraki 2024](https://radio-odeon.com/novice/roznati-koraki-v-doblicah/)
 
@@ -99,6 +100,6 @@ Kontakt organizatorja je prepisan iz priloženih letakov. Uporabnik je naknadno 
 
 `python tests/check_site.py` iz korenske projektne mape zažene preverjanje v nameščenem Microsoft Edge prek Python Playwright. Preverjeni so filtri, prazni rezultati, današnji/prihodnji/pretekli dogodki, modalno okno in vračanje fokusa, mobilni meni, pet širin zaslona (360–1440 px), prikaz slik in ustavitev samodejnega predvajanja. Simulirani odgovori Drive preverjajo več strani rezultatov, prenos fotografij, zavrnjen dostop, ponovitev in prazen album. Test ne uporablja pravega Google računa.
 
-Preverijo se tudi kontrolne vsote vseh 227 fotografij, upoštevanje izločenih fotografij, odpiranje petih novic, pravilna povezava do vira, prva in zadnja fotografija vsakega albuma ter pojavno okno na mobilniku. Dostop do Radia Odeon je med brskalniškim testom blokiran, da se potrdi neodvisen prikaz lokalno shranjenih fotografij.
+Preverijo se tudi kontrolne vsote vseh 259 fotografij, upoštevanje izločenih fotografij, odpiranje šestih novic, pravilna povezava do vira, prva in zadnja fotografija vsakega albuma ter pojavno okno na mobilniku. Dostop do Radia Odeon je med brskalniškim testom blokiran, da se potrdi neodvisen prikaz lokalno shranjenih fotografij.
 
 Preverjanje je uspešno, brez zaznanih JavaScript napak. Posnetka prikaza sta `artifacts/previews/preview-desktop.png` in `artifacts/previews/preview-mobile.png`. Resnične povezave Google Drive in objave na gostovanje brez ustrezne konfiguracije ni mogoče potrditi.

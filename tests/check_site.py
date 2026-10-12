@@ -29,7 +29,7 @@ class QuietHandler(SimpleHTTPRequestHandler):
 def run():
     PREVIEWS.mkdir(parents=True, exist_ok=True)
     catalog = json.loads((ROOT / 'public/data/news.json').read_text(encoding='utf-8'))
-    expected_counts = {'brkati-2025': 27, 'brkati-2024': 110, 'brkati-2023': 20, 'roznati-2025': 50, 'roznati-2024': 20}
+    expected_counts = {'roznati-2026': 32, 'brkati-2025': 27, 'brkati-2024': 110, 'brkati-2023': 20, 'roznati-2025': 50, 'roznati-2024': 20}
     exclusions = json.loads((ROOT / 'content/gallery-exclusions.json').read_text(encoding='utf-8'))
     for article in catalog['articles']:
         assert len(article['photos']) == expected_counts[article['eventId']]
@@ -73,11 +73,15 @@ def run():
             page.locator('[data-filter="all"]').click()
             page.locator('[data-event="roznati-2026"]').first.click()
             expect(page.locator('#event-dialog')).to_be_visible()
-            expect(page.locator('.gallery-empty')).to_contain_text('še niso objavljene')
+            expect(page.locator('.gallery-counter')).to_have_text('1 / 32')
+            expect(page.locator('#dialog-content')).to_contain_text('3. oktobra 2026')
+            expect(page.locator('#dialog-content')).not_to_contain_text('Poročilo o izvedbi in fotografije še niso dodani')
+            expect(page.locator('.gallery-frame img')).to_be_visible()
             page.keyboard.press('Escape')
             expect(page.locator('#event-dialog')).not_to_be_visible()
             assert page.evaluate('document.activeElement.dataset.event') == 'roznati-2026'
-            expect(page.locator('.news-card')).to_have_count(5)
+            expect(page.locator('.news-card')).to_have_count(6)
+            expect(page.locator('#news-grid .news-card').first).to_contain_text('Rožnati koraki znova povezali')
             for article in catalog['articles']:
                 trigger = page.locator(f'[data-news="{article["eventId"]}"]').first
                 trigger.click()
@@ -200,7 +204,7 @@ def run():
             expect(page.locator('.event-card')).to_have_count(6)
             assert not errors, errors
             browser.close()
-            print('PASS: 227 catalog images and editorial exclusions verified; five news popups and first/last photos load locally with Radio Odeon blocked; source links, focus, mobile layout, archive, filters, dates, slideshow, mocked Drive checks; no JavaScript errors.')
+            print('PASS: 259 catalog images and editorial exclusions verified; six news popups and first/last photos load locally with Radio Odeon blocked; source links, focus, mobile layout, archive, filters, dates, slideshow, mocked Drive checks; no JavaScript errors.')
     finally:
         server.shutdown()
         server.server_close()

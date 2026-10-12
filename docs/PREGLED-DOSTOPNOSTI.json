@@ -15,6 +15,16 @@
       ]
     },
     {
+      "page": "Novica roznati-2026",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
       "page": "Novica brkati-2025",
       "violations": 0,
       "manualReview": [
@@ -67,7 +77,12 @@
     {
       "page": "Vabilo v pojavnem oknu roznati-2026",
       "violations": 0,
-      "manualReview": []
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 2
+        }
+      ]
     },
     {
       "page": "Vabilo v pojavnem oknu brkati-2025",
@@ -135,7 +150,7 @@
       "manualReview": [
         {
           "rule": "color-contrast",
-          "nodes": 8
+          "nodes": 11
         }
       ]
     },
@@ -145,7 +160,7 @@
       "manualReview": [
         {
           "rule": "color-contrast",
-          "nodes": 8
+          "nodes": 13
         }
       ]
     },
