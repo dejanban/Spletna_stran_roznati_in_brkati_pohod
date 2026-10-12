@@ -1,0 +1,223 @@
+{
+  "date": "2026-10-12",
+  "tool": "axe-core 4.10.3",
+  "scope": "Local project; WCAG 2.0 A/AA, WCAG 2.1 A/AA and best practices",
+  "screenReaderTestingCompleted": false,
+  "audits": [
+    {
+      "page": "Domov – namizni prikaz",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 13
+        }
+      ]
+    },
+    {
+      "page": "Novica brkati-2025",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "page": "Novica roznati-2025",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "page": "Novica brkati-2024",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "page": "Novica roznati-2024",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "page": "Novica brkati-2023",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "page": "Vabilo v pojavnem oknu roznati-2026",
+      "violations": 0,
+      "manualReview": []
+    },
+    {
+      "page": "Vabilo v pojavnem oknu brkati-2025",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "page": "Vabilo v pojavnem oknu roznati-2025",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "page": "Vabilo v pojavnem oknu brkati-2024",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "page": "Vabilo v pojavnem oknu roznati-2024",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "page": "index.html – 320 px",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 13
+        }
+      ]
+    },
+    {
+      "page": "index.html – 360 px",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 12
+        }
+      ]
+    },
+    {
+      "page": "index.html – 768 px",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 8
+        }
+      ]
+    },
+    {
+      "page": "index.html – 1280 px",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 8
+        }
+      ]
+    },
+    {
+      "page": "dostopnost.html – 320 px",
+      "violations": 0,
+      "manualReview": []
+    },
+    {
+      "page": "dostopnost.html – 360 px",
+      "violations": 0,
+      "manualReview": []
+    },
+    {
+      "page": "dostopnost.html – 768 px",
+      "violations": 0,
+      "manualReview": []
+    },
+    {
+      "page": "dostopnost.html – 1280 px",
+      "violations": 0,
+      "manualReview": []
+    },
+    {
+      "page": "vabila.html – 320 px",
+      "violations": 0,
+      "manualReview": []
+    },
+    {
+      "page": "vabila.html – 360 px",
+      "violations": 0,
+      "manualReview": []
+    },
+    {
+      "page": "vabila.html – 768 px",
+      "violations": 0,
+      "manualReview": []
+    },
+    {
+      "page": "vabila.html – 1280 px",
+      "violations": 0,
+      "manualReview": []
+    },
+    {
+      "page": "Odprt mobilni meni",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 16
+        }
+      ]
+    },
+    {
+      "page": "Urejevalnik – nov dogodek",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "page": "Urejevalnik – obstoječi dogodek",
+      "violations": 0,
+      "manualReview": [
+        {
+          "rule": "color-contrast",
+          "nodes": 3
+        }
+      ]
+    }
+  ]
+}

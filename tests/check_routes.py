@@ -8,6 +8,7 @@ import hashlib
 import importlib.util
 import json
 from playwright.sync_api import sync_playwright, expect
+from browser_support import launch_browser
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -52,7 +53,7 @@ def main():
     previews.mkdir(parents=True, exist_ok=True)
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(channel='msedge', headless=True)
+            browser = launch_browser(p)
             page = browser.new_page(viewport={'width':1440, 'height':1000})
             errors, tile_requests = [], []
             page.on('pageerror', lambda error: errors.append(str(error)))

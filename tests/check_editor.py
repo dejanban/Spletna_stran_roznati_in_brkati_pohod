@@ -8,6 +8,7 @@ import sys
 from tempfile import TemporaryDirectory
 from threading import Thread
 from playwright.sync_api import sync_playwright, expect
+from browser_support import launch_browser
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
@@ -27,14 +28,14 @@ def main():
         base = f'http://127.0.0.1:{server.server_port}'
         try:
             with sync_playwright() as p:
-                browser = p.chromium.launch(headless=True)
+                browser = launch_browser(p)
                 page = browser.new_page()
                 errors = []
                 page.on('pageerror', lambda e: errors.append(str(e)))
                 page.route('https://tile.openstreetmap.org/**', lambda r: r.abort())
                 page.goto(base + '/urejevalnik/')
                 page.locator('#new').click()
-                values = {'id':'roznati-test','date':'2027-10-02','title':'Testni pohod','location':'Dobliče','summary':'Napoved novega pohoda.','paragraphs':'Prvi odstavek.\n\nDrugi odstavek.'}
+                values = {'id':'roznati-test','date':'2027-10-02','title':'Testni pohod','location':'Dobliče','summary':'Napoved novega pohoda.','paragraphs':'Prvi odstavek.\n\nDrugi odstavek.','posterText':'Sobota, 2. oktober 2027. Zbor v Dobličah.'}
                 for name, value in values.items():
                     page.locator(f'[name="{name}"]').fill(value)
                 image = next((root / 'public/assets/novice').rglob('*.jpg'))
@@ -45,6 +46,8 @@ def main():
                 events, news, version = editor.read_state()
                 event = next(e for e in events['events'] if e['id'] == 'roznati-test')
                 assert (root / 'public' / event['poster']).read_bytes() == image.read_bytes()
+                assert event['posterText'] == ['Sobota, 2. oktober 2027. Zbor v Dobličah.']
+                assert 'Sobota, 2. oktober 2027. Zbor v Dobličah.' in (root / 'public/vabila.html').read_text()
                 site = browser.new_page()
                 site.route('https://tile.openstreetmap.org/**', lambda r: r.abort())
                 site.goto(base)
@@ -54,6 +57,8 @@ def main():
                 for name,value in {'newsTitle':'Zgodba testnega pohoda','newsSummary':'Lep dan na poti.','newsParagraphs':'Poročilo o pohodu.','photoCredit':'PGD Dobliče'}.items():
                     page.locator(f'[name="{name}"]').fill(value)
                 page.locator('#photos-file').set_input_files([image,image])
+                for i, caption in enumerate(['Pohodniki se zbirajo pred stavbo.', 'Pohodniki na poti skozi gozd.']):
+                    page.locator('.photo input[type="text"]').nth(i).fill(caption)
                 page.locator('.photo input[type="radio"]').nth(1).check()
                 page.locator('#save').click()
                 expect(page.locator('#save-status')).to_contain_text('Shranjeno')
@@ -82,6 +87,23 @@ def main():
                 assert response.status == 403
                 # Stale versions and path traversal cannot modify the catalog.
                 before = editor.read_state()[2]
+                # Accessibility metadata is required by the API as well as the form.
+                missing_transcript = {'version':before, 'event':{**event,'posterText':[]}, 'isNew':False}
+                try:
+                    editor.save(missing_transcript)
+                except ValueError as error:
+                    assert 'besedilno' in str(error)
+                else:
+                    raise AssertionError('An invitation without a text version was accepted')
+                saved_article = next(a for a in news['articles'] if a['eventId'] == event['id'])
+                missing_caption = {**saved_article,'photos':[{**saved_article['photos'][0],'caption':''}]}
+                try:
+                    editor.save({'version':before,'event':event,'isNew':False,'article':missing_caption})
+                except ValueError:
+                    pass
+                else:
+                    raise AssertionError('A photograph without a description was accepted')
+                assert editor.read_state()[2] == before
                 for payload in [
                     {'version':'stale','event':event,'isNew':False},
                     {'version':before,'event':{**event,'poster':'assets/../../scripts/serve.py'},'isNew':False},

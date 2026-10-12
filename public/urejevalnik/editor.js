@@ -39,6 +39,7 @@
     for (const key of ['id', 'type', 'date', 'time', 'endTime', 'title', 'location', 'route', 'summary']) field(key).value = event?.[key] || (key === 'type' ? 'roznati' : '');
     field('id').readOnly = Boolean(event);
     field('paragraphs').value = (event?.paragraphs || []).join('\n\n');
+    field('posterText').value = (event?.posterText || []).join('\n\n');
     poster = event?.poster || ''; posterUpload = null;
     photos = (article?.photos || []).map(p => ({...p}));
     coverIndex = Math.max(0, photos.findIndex(p => p.url === article?.cover));
@@ -47,6 +48,7 @@
     $('#publish-news').checked = Boolean(article); $('#publish-news').disabled = Boolean(article);
     toggleNews(); renderPoster(); renderPhotos(); renderList();
     $('#form-title').textContent = event ? 'Uredi dogodek' : 'Nov dogodek'; form.hidden = false; dirty = false;
+    field('title').focus();
     status('');
   }
   function toggleNews() {
@@ -61,6 +63,7 @@
     if (currentSize + files.reduce((sum, f) => sum + f.size, 0) > 50 * 1024 * 1024) throw new Error('Naenkrat dodajte največ 50 MB novih slik. Shranite in nato dodajte preostale.');
   }
   function renderPoster() {
+    field('posterText').required = Boolean(poster);
     $('#poster-preview').replaceChildren();
     if (poster) { const img = document.createElement('img'); img.src = poster.startsWith('blob:') ? poster : '/' + poster; img.alt = 'Vabilo pohoda'; $('#poster-preview').append(img); }
     $('#remove-poster').hidden = !poster;
@@ -72,12 +75,15 @@
       const img = document.createElement('img'); img.src = photo.preview || '/' + photo.url; img.alt = photo.caption || `Fotografija ${index + 1}`;
       const label = document.createElement('label'), radio = document.createElement('input');
       radio.type = 'radio'; radio.name = 'cover'; radio.checked = index === coverIndex;
+      radio.setAttribute('aria-label', `Naslovna fotografija: fotografija ${index + 1}`);
       radio.onchange = () => { coverIndex = index; dirty = true; };
       label.append(radio, document.createTextNode('Naslovna fotografija'));
       const caption = document.createElement('input'); caption.type = 'text'; caption.value = photo.caption || ''; caption.placeholder = 'Opis fotografije'; caption.setAttribute('aria-label', `Opis fotografije ${index + 1}`);
+      caption.required = true;
       caption.oninput = () => { photo.caption = caption.value; dirty = true; };
       const remove = document.createElement('button'); remove.type = 'button'; remove.className = 'secondary'; remove.textContent = 'Odstrani iz galerije';
-      remove.onclick = () => { photos.splice(index,1); if (index < coverIndex) coverIndex--; else if (index === coverIndex) coverIndex = 0; dirty = true; renderPhotos(); };
+      remove.setAttribute('aria-label', `Odstrani iz galerije: fotografija ${index + 1}`);
+      remove.onclick = () => { photos.splice(index,1); if (index < coverIndex) coverIndex--; else if (index === coverIndex) coverIndex = 0; dirty = true; renderPhotos(); const remaining = $('#photos').querySelectorAll('button'); (remaining[Math.min(index, remaining.length - 1)] || $('#photos-file')).focus(); };
       card.append(img, label, caption, remove); $('#photos').append(card);
     });
   }
@@ -109,6 +115,7 @@
       const record = {};
       for (const key of ['id','type','date','time','endTime','title','location','route','summary']) record[key] = field(key).value;
       record.paragraphs = paragraphs(field('paragraphs').value); record.poster = posterUpload ? '' : poster;
+      record.posterText = paragraphs(field('posterText').value);
       const payload = {version: state.version, event: record, isNew: !selectedId};
       if (posterUpload) payload.posterUpload = await encoded(posterUpload);
       if ($('#publish-news').checked) {

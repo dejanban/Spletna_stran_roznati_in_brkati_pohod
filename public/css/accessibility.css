@@ -1,0 +1,36 @@
+/* Dostopne besedilne strani in dopolnitve obstoječega oblikovanja. */
+[hidden]{display:none!important}
+body{overflow-wrap:break-word}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #1d1c1d;outline-offset:3px;box-shadow:0 0 0 6px #fff}
+[tabindex="-1"]:focus{outline:none}
+main,section,article,.hero-copy,.route-details,.contact{min-width:0}
+.skip:focus{max-width:calc(100% - 20px);white-space:normal}
+.skip{color:#1d1c1d}
+.footer-bottom{flex-wrap:wrap;align-items:center;gap:16px 24px;font-size:12px}
+.footer-bottom a{padding-block:8px;text-decoration:underline;text-underline-offset:4px}
+.footer .eyebrow{color:var(--pink-light)}
+.together-word{color:var(--pink-ink);opacity:1}
+.poster-transcript{border-top:1px solid var(--line);margin-top:30px;padding-top:28px}
+.poster-transcript h3{font-size:26px;margin-bottom:18px}
+.poster-transcript p{margin-top:12px;line-height:1.8}
+.route-help{font-size:14px;margin-top:18px}
+.route-help a,.content-page a:not(.brand){text-decoration:underline;text-underline-offset:3px}
+.gallery-controls{flex-wrap:wrap}
+.content-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;padding-block:24px;border-bottom:1px solid var(--line)}
+.content-header nav{display:flex;flex-wrap:wrap;gap:16px}
+.content-page{max-width:860px;padding-block:48px 64px}
+.content-page h1{font-size:clamp(36px,6vw,56px);letter-spacing:-1px;line-height:1.15;margin:0 0 24px}
+.content-page h2{font-size:30px;letter-spacing:-.5px;margin:34px 0 16px}
+.content-page h3{font-size:24px;margin:24px 0 12px}
+.content-page p,.content-page ul,.content-page dl{margin-block:16px;line-height:1.8}
+.content-page li{margin-block:8px}
+.content-page dt{font-weight:600}.content-page dd{margin:4px 0 18px}
+.content-page code{white-space:normal;overflow-wrap:anywhere}
+.content-page .notice{background:var(--blue-light);padding:20px;border-radius:5px}
+.content-page .poster-transcript{margin-block:36px}
+.content-page .poster-preview{max-height:300px;width:auto;margin-block:20px}
+.content-footer{background:var(--blue-ink);color:#fff;padding-block:24px}
+.content-footer .wrap{display:flex;flex-wrap:wrap;gap:16px 24px}
+.content-footer a{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:420px){.walk-identity{flex-wrap:wrap}.walk-identity h3{font-size:32px}.route-stats{flex-wrap:wrap}.hero-art{height:390px}.art-label{right:0;font-size:14px}.orbit{width:270px;height:270px}.content-page{padding-block:32px}.content-header nav{font-size:14px}}
+@media(forced-colors:active){button,.button,.filters button,.route-selector button{border:1px solid ButtonText}a:focus-visible,button:focus-visible,select:focus-visible{outline-color:Highlight;box-shadow:none}.filters button.active,.route-selector button[aria-pressed="true"]{border:3px solid Highlight}.filter-dot,.little-dot{background:CanvasText}}

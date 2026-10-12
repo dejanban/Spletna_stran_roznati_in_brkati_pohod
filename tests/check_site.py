@@ -11,6 +11,7 @@ from urllib.parse import urlparse, parse_qs, urljoin
 import hashlib
 import json
 from playwright.sync_api import sync_playwright, expect
+from browser_support import launch_browser
 
 ROOT = Path(__file__).resolve().parents[1]
 PREVIEWS = ROOT / 'artifacts' / 'previews'
@@ -43,7 +44,7 @@ def run():
     base = f'http://127.0.0.1:{server.server_port}'
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(channel='msedge', headless=True)
+            browser = launch_browser(p)
             page = browser.new_page(viewport={'width': 1440, 'height': 1000}, timezone_id='Europe/Ljubljana')
             errors = []
             page.on('pageerror', lambda error: errors.append(str(error)))
@@ -125,6 +126,21 @@ def run():
             expect(page.locator('.gallery-frame img')).to_be_visible()
             expect(page.locator('.gallery-counter')).to_have_text('1 / 2')
             page.clock.run_for(5700)
+            expect(page.locator('.gallery-counter')).to_have_text('1 / 2')
+            page.locator('[data-pause]').click()
+            page.mouse.move(0, 0)
+            page.locator('.dialog-close').focus()
+            page.clock.run_for(5700)
+            expect(page.locator('.gallery-counter')).to_have_text('2 / 2')
+            # Pointer hover and keyboard focus independently suspend playback.
+            page.locator('.gallery-frame').hover()
+            page.locator('[data-next]').focus()
+            page.locator('.dialog-close').focus()
+            page.clock.run_for(6000)
+            expect(page.locator('.gallery-counter')).to_have_text('2 / 2')
+            page.mouse.move(0, 0)
+            page.locator('[data-next]').focus()
+            page.clock.run_for(6000)
             expect(page.locator('.gallery-counter')).to_have_text('2 / 2')
             page.locator('[data-pause]').click()
             page.clock.run_for(6000)

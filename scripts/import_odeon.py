@@ -50,6 +50,8 @@ def import_news():
     exclusions = json.loads(exclusions_path.read_text(encoding='utf-8')) if exclusions_path.exists() else {}
     existing_path = ROOT / 'public/data/news.json'
     existing = json.loads(existing_path.read_text(encoding='utf-8')) if existing_path.exists() else {'articles': []}
+    descriptions_path = ROOT / 'content/photo-descriptions.json'
+    descriptions = json.loads(descriptions_path.read_text(encoding='utf-8')) if descriptions_path.exists() else {}
     managed = [a for a in existing['articles'] if a.get('editorManaged')]
     managed_ids = {a['eventId'] for a in managed}
     catalog = {'schemaVersion': 1, 'source': 'Radio Odeon', 'articles': managed}
@@ -85,7 +87,7 @@ def import_news():
         with ThreadPoolExecutor(max_workers=4) as pool:
             photos = list(pool.map(download_photo, jobs))
         for index, photo in enumerate(photos, 1):
-            photo['caption'] = f"{copy[event_id]['title']} · Fotografija {index}. {copy[event_id]['photoCredit']}"
+            photo['caption'] = descriptions.get(photo['sourceUrl']) or f"{copy[event_id]['title']} · Fotografija {index}. {copy[event_id]['photoCredit']}"
         article = {'eventId': event_id, **copy[event_id], 'sourceTitle': area.find('h1').get_text(' ', strip=True),
                    'sourceUrl': url, 'publishedAt': area.find('time')['datetime'],
                    'sourceCredit': attribution.get_text(' ', strip=True) if attribution else 'Radio Odeon',

@@ -59,6 +59,10 @@ Mapa `public` vsebuje neposredno uporabljene datoteke. Stran ne potrebuje gradnj
 
 Uvozne skripte ne spreminjajo izvirnih gradiv. Fotografije in katalog so že shranjeni v projektu; za običajen zagon strani ponovni uvoz ni potreben.
 
+## Dostopnost
+
+Izjava je na [public/dostopnost.html](public/dostopnost.html), besedilne različice vabil in podatki poti pa na [public/vabila.html](public/vabila.html). [Zapis preverjanja, začetna ocena za dopolnitev in obveznosti upravljavca](docs/DOSTOPNOST.md) opisujejo opravljene prilagoditve in preostalo preverjanje. Po ročnih spremembah dogodkov ali poti zaženite `python3 scripts/prepare_accessible_content.py`; urejevalnik besedilno stran posodobi sam.
+
 ## Razvojna orodja in preverjanje
 
 Potrebujete Python 3.11 ali novejši. Za uvoz in brskalniška preverjanja namestite odvisnosti v lokalno okolje:

@@ -9,6 +9,7 @@ import secrets
 from threading import Lock
 from urllib.parse import urlparse
 import uuid
+from prepare_accessible_content import render_vabila
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / 'public'
@@ -92,6 +93,8 @@ def save(payload):
         if event[key] and not re.fullmatch(r'(?:[01]\d|2[0-3]):[0-5]\d', event[key]):
             raise ValueError('Uro vnesite v obliki HH:MM.')
     event['paragraphs'] = paragraphs(supplied.get('paragraphs'))
+    poster_text = supplied.get('posterText', event.get('posterText', []))
+    event['posterText'] = paragraphs(poster_text) if poster_text != [] else []
     event.setdefault('photos', [])
     event.setdefault('driveFolderId', '')
     event.setdefault('reportUrl', '')
@@ -100,6 +103,8 @@ def save(payload):
     event['poster'] = asset(supplied.get('poster', ''))
     if payload.get('posterUpload'):
         event['poster'], _ = upload(payload['posterUpload'], pending)
+    if event['poster'] and not event['posterText']:
+        raise ValueError('Vabilu dodajte besedilno različico vseh pomembnih informacij.')
     article = payload.get('article')
     copy = json.loads((ROOT / 'content/news-copy.json').read_text())
     if article is not None:
@@ -125,7 +130,7 @@ def save(payload):
             else:
                 url = asset(photo.get('url', ''))
                 saved = next((dict(p) for p in prior.get('photos', []) if p['url'] == url), {'url': url})
-            saved['caption'] = text(photo.get('caption', '')) or result['photoCredit']
+            saved['caption'] = text(photo.get('caption', ''), True)
             result['photos'].append(saved)
         if not result['photos']:
             raise ValueError('Novici dodajte vsaj eno fotografijo.')
@@ -146,6 +151,7 @@ def save(payload):
         PUBLIC / 'data/news.json': encode(news) + '\n',
         PUBLIC / 'data/news.js': '/* Generated catalog. */\nwindow.NEWS_DATABASE = ' + encode(news) + ';\n',
         ROOT / 'content/news-copy.json': encode(copy) + '\n',
+        PUBLIC / 'vabila.html': render_vabila(events['events'], json.loads((PUBLIC / 'data/routes.json').read_text())['routes']),
     }
     backup = ROOT / 'artifacts/editor-backups' / (datetime.now().strftime('%Y%m%d-%H%M%S-') + uuid.uuid4().hex[:8])
     for path in files:
