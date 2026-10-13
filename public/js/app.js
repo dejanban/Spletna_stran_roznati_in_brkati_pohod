@@ -135,7 +135,10 @@
       clear(); current = (index + photos.length) % photos.length;
       const requestId = ++imageRequest, photo = photos[current];
       $(".gallery-counter", container).textContent = `${current + 1} / ${photos.length}`;
-      $(".gallery-caption", container).textContent = photo.caption || photo.name || "Utrinek s pohoda";
+      const caption = $(".gallery-caption", container);
+      // A shorter caption must not shrink the dialog while its controls are in view.
+      caption.style.minHeight = `${caption.getBoundingClientRect().height}px`;
+      caption.textContent = photo.caption || photo.name || "Utrinek s pohoda";
       $(".gallery-loading", container).textContent = "Nalagam fotografijo …";
       const img = $(".gallery-frame img", container); img.hidden = true;
       try {
@@ -159,7 +162,7 @@
     }
     function renderPhotos() {
       if (!photos.length) { container.innerHTML = `<div class="gallery-empty">Fotografije tega pohoda še niso objavljene.</div>${folderLink}`; return; }
-      container.innerHTML = `<div class="gallery-frame"><img alt="" hidden></div><p class="gallery-loading" role="status"></p><p class="gallery-caption"></p><div class="gallery-controls"><button data-prev aria-label="Prejšnja fotografija">←</button><span class="gallery-counter" role="status" aria-live="polite" aria-atomic="true"></span><button data-pause></button><button data-next aria-label="Naslednja fotografija">→</button></div>${folderLink}`;
+      container.innerHTML = `<div class="gallery-frame"><img alt="" hidden><p class="gallery-loading" role="status"></p></div><p class="gallery-caption"></p><div class="gallery-controls"><button data-prev aria-label="Prejšnja fotografija">←</button><span class="gallery-counter" role="status" aria-live="polite" aria-atomic="true"></span><button data-pause></button><button data-next aria-label="Naslednja fotografija">→</button></div>${folderLink}`;
       const pause = $("[data-pause]", container);
       const setPauseLabel = () => { pause.textContent = paused ? "Predvajaj" : "Ustavi"; pause.setAttribute("aria-label", paused ? "Začni samodejno menjavanje fotografij" : "Ustavi samodejno menjavanje fotografij"); $(".gallery-counter", container).setAttribute("aria-live", paused ? "polite" : "off"); };
       setPauseLabel();
