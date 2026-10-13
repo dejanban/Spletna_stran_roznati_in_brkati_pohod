@@ -21,7 +21,12 @@ Skripta iz izvirnikov ustvari `public/data/routes.json` in `public/data/routes.j
 
 Razdalja se izračuna kot vsota razdalj med koordinatami po zemeljski površini (Haversinova formula), brez višinskega popravka. Ločeni segmenti se ne povezujejo z navidezno ravno črto. Sklenjena sled ima en segment, njen konec pa je manj kot 50 m od začetka. Preverja se veljavnost koordinat. Shranjena je tudi kontrolna vsota izvornega GPX.
 
-Višinski profil ni prikazan. Začetna koordinata je označena kot **začetek sledi**, ne kot potrjeno zbirno mesto.
+Višinski profil ni prikazan. Zbor in začetek pohodov sta označena posebej od začetka sledi GPX:
+
+- **Rožnati koraki:** Dobliče 22, 8340 Črnomelj (45.559096, 15.143954).
+- **Brkati pohod:** Blatnik pri Črmošnjicah 1, 8333 Semič (45.646197, 15.136487).
+
+Podatki zbirnih mest so v `MEETING_POINTS` v `scripts/prepare_routes.py`; podatki posameznih dogodkov so v `public/data/events.json`.
 
 ## Zemljevid
 

@@ -29,7 +29,7 @@ class QuietHandler(SimpleHTTPRequestHandler):
 def run():
     PREVIEWS.mkdir(parents=True, exist_ok=True)
     catalog = json.loads((ROOT / 'public/data/news.json').read_text(encoding='utf-8'))
-    expected_counts = {'roznati-2026': 32, 'brkati-2025': 27, 'brkati-2024': 110, 'brkati-2023': 20, 'roznati-2025': 50, 'roznati-2024': 20}
+    expected_counts = {'brkati-2026': 0, 'roznati-2026': 32, 'brkati-2025': 27, 'brkati-2024': 110, 'brkati-2023': 20, 'roznati-2025': 50, 'roznati-2024': 20}
     exclusions = json.loads((ROOT / 'content/gallery-exclusions.json').read_text(encoding='utf-8'))
     for article in catalog['articles']:
         assert len(article['photos']) == expected_counts[article['eventId']]
@@ -57,11 +57,14 @@ def run():
                 "nodes => nodes.map(e => e.getAttribute('src') || e.getAttribute('href'))")
             resources += page.evaluate('window.EVENTS.map(event => event.poster).filter(Boolean)')
             for resource in set(resources):
+                if urlparse(urljoin(base + '/', resource)).netloc != urlparse(base).netloc:
+                    continue  # External map tiles are not entry-point assets.
                 assert page.request.get(urljoin(base + '/', resource)).status == 200, resource
             for private_path in ['.git/config', '.cache/odeon/brkati-2025.html', 'docs/UPORABA.md', 'content/news-copy.json']:
                 assert page.request.get(base + '/' + private_path).status == 404, private_path
             expect(page.locator('.event-card')).to_have_count(6)
-            expect(page.locator('#upcoming-content')).to_contain_text('Brkati pohod 2026')
+            expect(page.locator('#upcoming-content')).to_contain_text('4. Brkati pohod na Mirno goro')
+            expect(page.locator('#upcoming-content')).to_contain_text('Blatnik pri Črmošnjicah 1, 8333 Semič · ob 09:00')
             expect(page.locator('#upcoming-content')).to_contain_text('21. november 2026')
             page.locator('[data-filter="roznati"]').click()
             expect(page.locator('.event-card')).to_have_count(3)
@@ -80,12 +83,22 @@ def run():
             page.keyboard.press('Escape')
             expect(page.locator('#event-dialog')).not_to_be_visible()
             assert page.evaluate('document.activeElement.dataset.event') == 'roznati-2026'
-            expect(page.locator('.news-card')).to_have_count(6)
-            expect(page.locator('#news-grid .news-card').first).to_contain_text('Rožnati koraki znova povezali')
+            expect(page.locator('.news-card')).to_have_count(7)
+            expect(page.locator('#news-grid .news-card').first).to_contain_text('4. Brkati pohod na Mirno goro')
             for article in catalog['articles']:
                 trigger = page.locator(f'[data-news="{article["eventId"]}"]').first
                 trigger.click()
                 expect(page.locator('#dialog-title')).to_have_text(article['title'])
+                if article.get('kind') == 'announcement':
+                    expect(page.locator('.detail-poster')).to_be_visible()
+                    expect(page.locator('.poster-transcript')).to_contain_text('Vrčice – Mirna gora')
+                    expect(page.locator('.poster-transcript')).to_contain_text('Društvo za boj proti raku')
+                    expect(page.locator('.gallery')).to_have_count(0)
+                    expect(page.locator('a[href$="assets/vabila/brkati-2026.pdf"]')).to_be_visible()
+                    assert page.request.get(urljoin(base + '/', article['sourceUrl'])).status == 200
+                    page.keyboard.press('Escape')
+                    expect(trigger).to_be_focused()
+                    continue
                 expect(page.locator('.news-source a')).to_have_attribute('href', article['sourceUrl'])
                 expect(page.locator('.gallery-frame img')).to_be_visible()
                 expect(page.locator('.gallery-frame img')).to_have_attribute('src', article['photos'][0]['url'])
@@ -103,6 +116,11 @@ def run():
                 page.set_viewport_size({'width': width, 'height': 900})
                 assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), f'Overflow at {width}'
             page.set_viewport_size({'width': 390, 'height': 844})
+            page.locator('[data-news="brkati-2026"]').first.click()
+            expect(page.locator('.detail-poster')).to_be_visible()
+            assert page.locator('#event-dialog').evaluate('e => e.scrollWidth <= e.clientWidth')
+            page.screenshot(path=str(PREVIEWS / 'preview-brkati-2026-mobile.png'))
+            page.keyboard.press('Escape')
             page.locator('.menu-toggle').click()
             expect(page.locator('#navigation')).to_be_visible()
             page.locator('#navigation a[href="#arhiv"]').click()
@@ -204,7 +222,7 @@ def run():
             expect(page.locator('.event-card')).to_have_count(6)
             assert not errors, errors
             browser.close()
-            print('PASS: 259 catalog images and editorial exclusions verified; six news popups and first/last photos load locally with Radio Odeon blocked; source links, focus, mobile layout, archive, filters, dates, slideshow, mocked Drive checks; no JavaScript errors.')
+            print('PASS: Brkati 2026 invitation, PDF, program and mobile dialog; 259 catalog images and editorial exclusions; six gallery news popups and first/last photos with Radio Odeon blocked; source links, focus, mobile layout, archive, filters, dates, slideshow, mocked Drive; no JavaScript errors.')
     finally:
         server.shutdown()
         server.server_close()

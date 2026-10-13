@@ -11,7 +11,7 @@ window.EVENTS = [
     "time": "09:00",
     "endTime": "12:00",
     "title": "Rožnati koraki 2026",
-    "location": "Gasilski dom Dobliče",
+    "location": "Dobliče 22, 8340 Črnomelj",
     "route": "Učno-rekreacijska pot ob reki Dobličici – Srčna pot",
     "summary": "Pohod ob Dobličici je 3. oktobra povezal udeležence v podporo obolelim za rakom dojk ter ozaveščanju o zdravju.",
     "paragraphs": [
@@ -30,7 +30,14 @@ window.EVENTS = [
       "Dodatne informacije: 07 30 61 723, ckz@zd-crnomelj.si. Organizator: Center za krepitev zdravja ZD Črnomelj.",
       "Opis poti iz kode QR: https://sites.google.com/view/potobdoblicici/domov",
       "Dodatne informacije iz kode QR: https://www.canvaqr.com/RGTfWyR3gY"
-    ]
+    ],
+    "meetingPoint": {
+      "address": "Dobliče 22, 8340 Črnomelj",
+      "coordinates": [
+        45.559096,
+        15.143954
+      ]
+    }
   },
   {
     "id": "brkati-2025",
@@ -164,19 +171,36 @@ window.EVENTS = [
     "id": "brkati-2026",
     "type": "brkati",
     "date": "2026-11-21",
-    "time": "",
-    "title": "Brkati pohod 2026",
-    "location": "Zbirno mesto bo objavljeno naknadno",
-    "route": "Pot in program bosta objavljena naknadno",
-    "summary": "Rezervirajte si soboto, 21. novembra 2026, za Brkati pohod in skupne korake v podporo zdravju moških.",
+    "time": "09:00",
+    "title": "4. Brkati pohod na Mirno goro",
+    "location": "Blatnik pri Črmošnjicah 1, 8333 Semič",
+    "route": "Blatnik – Mirna gora; v vabilu tudi poti z Vrčic in Planine",
+    "summary": "V soboto, 21. novembra 2026, vabljeni na 4. Brkati pohod na Mirno goro. Zbor in začetek pohoda bosta ob 9.00 na naslovu Blatnik pri Črmošnjicah 1, 8333 Semič.",
     "paragraphs": [
-      "Naslednji Brkati pohod bo v soboto, 21. novembra 2026. Z druženjem in gibanjem bomo znova širili zavedanje o zdravju moških in izrazili podporo vsem, ki jo potrebujejo.",
-      "Uro začetka, zbirno mesto, pot in program bomo objavili naknadno. Spremljajte to stran za podrobnosti."
+      "Center za krepitev zdravja ZD Črnomelj vabi na 4. Brkati pohod na Mirno goro v soboto, 21. novembra 2026. Zbor in začetek pohoda bosta ob 9.00 na naslovu Blatnik pri Črmošnjicah 1, 8333 Semič (45.646197, 15.136487). S skupnimi koraki bomo podprli ozaveščanje o zdravju moških.",
+      "V vabilu so predstavljene tri poti na Mirno goro: z Blatnika, z Vrčic in s Planine. Na cilju bo Rdeči križ prikazal temeljne postopke oživljanja, CKZ Črnomelj bo izvajal različne meritve, Društvo za boj proti raku Dolenjske in Bele krajine pa bo ponudilo svetovanje.",
+      "Poskrbite za primerno nepremočljivo športno opremo in vodo; priporočene so pohodne palice. Če brkov nimate, jih dobite na startu, na cilju pa praktično nagrado.",
+      "Dodatne informacije: 07 30 61 723 ali ckz@zd-crnomelj.si."
     ],
-    "poster": "",
-    "reportUrl": "",
-    "reportLabel": "",
+    "poster": "assets/vabila/brkati-2026.png",
+    "reportUrl": "assets/vabila/brkati-2026.pdf",
+    "reportLabel": "Celotno vabilo in program (PDF)",
     "driveFolderId": "",
-    "photos": []
+    "photos": [],
+    "posterText": [
+      "4. Brkati pohod na Mirno goro. Sobota, 21. november 2026. Zbor na parkirišču na Blatniku ob 9.00.",
+      "Tri poti na Mirno goro: Blatnik – Mirna gora; Vrčice – Mirna gora; Planina – Mirna gora.",
+      "Aktivnosti na cilju: Rdeči križ – prikaz temeljnih postopkov oživljanja (TPO); CKZ Črnomelj – različne meritve; Društvo za boj proti raku Dolenjske in Bele krajine – svetovanje.",
+      "Poskrbite za primerno nepremočljivo športno opremo ter vodo. Zaželene so pohodne palice. Če brkov nimate, jih dobite na startu; na cilju pa praktično nagrado.",
+      "Movember je globalno gibanje, ki vsako leto novembra ozavešča o zdravju moških. Brki so simbol podpore in spodbude k pogovoru o raku prostate, raku mod, duševnem zdravju ter preprečevanju samomorov.",
+      "Dodatne informacije: 07 30 61 723, ckz@zd-crnomelj.si. Organizator: Center za krepitev zdravja ZD Črnomelj."
+    ],
+    "meetingPoint": {
+      "address": "Blatnik pri Črmošnjicah 1, 8333 Semič",
+      "coordinates": [
+        45.646197,
+        15.136487
+      ]
+    }
   }
 ];

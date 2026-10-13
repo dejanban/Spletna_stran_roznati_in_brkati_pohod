@@ -18,7 +18,7 @@ Vsi dogodki so v `public/data/events.js`, v seznamu `window.EVENTS`. Za urejanje
 
 ### Novice Radia Odeon in lokalna zbirka fotografij
 
-Razdelek **Novice** vsebuje šest objav z lastnimi kratkimi povzetki izvirnih člankov. Klik odpre pojavno okno z besedilom, povezavo do članka, navedbo vira in fotografsko galerijo. Datum ob novici je datum objave članka; datumi pohodov so ločeno prikazani v arhivu.
+Razdelek **Novice** vsebuje vabilo na 4. Brkati pohod 2026 in šest objav z lastnimi kratkimi povzetki izvirnih člankov. Vabilo odpre podrobnosti dogodka, besedilni prepis letaka in povezavo do celotnega programa v PDF-ju. V katalogu je označeno z `kind: "announcement"` in `editorManaged: true`, zato ga uvoz z Radia Odeon ohrani. Klik odpre pojavno okno z besedilom, povezavo do članka, navedbo vira in fotografsko galerijo. Datum ob novici je datum objave članka; datumi pohodov so ločeno prikazani v arhivu.
 
 V projektu je objavljenih **259 fotografij (47,6 MiB)**: Brkati pohod 2023 (20), 2024 (110), 2025 (27) ter Rožnati koraki 2024 (20), 2025 (50) in 2026 (32). Slike so shranjene kot izvirne slikovne datoteke in niso odvisne od razpoložljivosti Radia Odeon ali Google Drive.
 

@@ -57,3 +57,5 @@
 #route-map .leaflet-control-attribution{font-size:10px}#route-map .leaflet-control-attribution a{color:#18546b}
 @media(max-width:900px){.route-layout{grid-template-columns:1fr}.route-stage{height:380px}.route-details{padding:26px}.route-stats{margin:20px 0}.route-map-actions{padding:18px}}
 @media(max-width:500px){.route-stage{height:320px}.route-selector button{padding:10px 15px;font-size:13px}.route-details h3{font-size:30px}.route-stats{gap:23px}.route-stats dd{font-size:18px}.route-details{padding:23px}}
+
+.news-image.news-invitation img{object-fit:contain}

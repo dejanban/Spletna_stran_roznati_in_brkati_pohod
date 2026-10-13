@@ -35,7 +35,7 @@
     if (saving || (!force && !canLeave())) return;
     urls.splice(0).forEach(url => URL.revokeObjectURL(url));
     form.reset(); selectedId = event?.id || null;
-    const article = state.articles.find(a => a.eventId === selectedId);
+    const article = state.articles.find(a => a.eventId === selectedId && a.kind !== 'announcement');
     for (const key of ['id', 'type', 'date', 'time', 'endTime', 'title', 'location', 'route', 'summary']) field(key).value = event?.[key] || (key === 'type' ? 'roznati' : '');
     field('id').readOnly = Boolean(event);
     field('paragraphs').value = (event?.paragraphs || []).join('\n\n');

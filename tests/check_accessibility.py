@@ -54,7 +54,7 @@ def main():
             expect(page.locator('#vsebina')).to_be_focused()
             audit(page, 'Domov – namizni prikaz')
             # Actual keyboard use of modal, controls and native focus containment.
-            trigger = page.locator('[data-news]').first
+            trigger = page.locator('[data-news="roznati-2026"]').first
             trigger.focus(); page.keyboard.press('Enter')
             expect(page.locator('.dialog-close')).to_be_focused()
             expect(page.locator('.gallery-frame img')).to_be_visible()
@@ -72,7 +72,10 @@ def main():
             catalog = json.loads((ROOT / 'public/data/news.json').read_text())
             for article in catalog['articles']:
                 page.locator(f'[data-news="{article["eventId"]}"]').first.click()
-                expect(page.locator('.gallery-frame img')).to_be_visible()
+                if article.get('kind') == 'announcement':
+                    expect(page.locator('.poster-transcript')).to_be_visible()
+                else:
+                    expect(page.locator('.gallery-frame img')).to_be_visible()
                 audit(page, 'Novica ' + article['eventId'])
                 page.keyboard.press('Escape')
                 assert all(p['caption'].strip() and ' · Fotografija ' not in p['caption'] for p in article['photos'])
@@ -106,7 +109,7 @@ def main():
             page.goto(base + '/urejevalnik/')
             page.locator('#new').click()
             audit(page, 'Urejevalnik – nov dogodek')
-            page.locator('#events button').filter(has_text='Brkati pohod 2026').click()
+            page.locator('#events button').filter(has_text='4. Brkati pohod na Mirno goro').click()
             audit(page, 'Urejevalnik – obstoječi dogodek')
             assert not errors, errors
             browser.close()

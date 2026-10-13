@@ -10,6 +10,10 @@ ROUTES = (
     ('roznati', 'Rožnati koraki', 'Roznati-koraki.gpx', '#bf4a70'),
     ('brkati', 'Brkati pohod', 'Brkati-pohod.gpx', '#3b5366'),
 )
+MEETING_POINTS = {
+    'roznati': {'address': 'Dobliče 22, 8340 Črnomelj', 'coordinates': [45.559096, 15.143954]},
+    'brkati': {'address': 'Blatnik pri Črmošnjicah 1, 8333 Semič', 'coordinates': [45.646197, 15.136487]},
+}
 
 
 def distance(a, b):
@@ -50,7 +54,7 @@ def main():
     for route_id, title, filename, color in ROUTES:
         path = ROOT / 'public' / 'assets' / 'gpx' / filename
         routes.append({'id': route_id, 'title': title, 'color': color,
-                       'download': f'assets/gpx/{filename}', **read_route(path)})
+                       'download': f'assets/gpx/{filename}', 'meetingPoint': MEETING_POINTS[route_id], **read_route(path)})
     data = json.dumps({'routes': routes}, ensure_ascii=False, separators=(',', ':'))
     destination = ROOT / 'public' / 'data'
     destination.mkdir(parents=True, exist_ok=True)

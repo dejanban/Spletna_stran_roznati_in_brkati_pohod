@@ -29,7 +29,11 @@
     const start = selected.segments[0][0], end = selected.segments.at(-1).at(-1);
     L.circleMarker(start, {radius: 7, color: selected.color, fillColor: '#fff', fillOpacity: 1, weight: 3}).bindPopup(selected.closed ? 'Začetek in konec sledi GPX' : 'Začetek sledi GPX').addTo(layers);
     if (!selected.closed) L.circleMarker(end, {radius: 7, color: '#fff', fillColor: selected.color, fillOpacity: 1, weight: 3}).bindPopup('Konec sledi GPX').addTo(layers);
-    requestAnimationFrame(() => { map.invalidateSize(); map.fitBounds(line.getBounds(), {padding: [32,32], maxZoom: 15}); });
+    const meeting = selected.meetingPoint;
+    const label = document.createElement('span');
+    label.textContent = `Zbor in začetek pohoda: ${meeting.address}`;
+    L.marker(meeting.coordinates, {title: label.textContent, alt: label.textContent}).bindPopup(label).addTo(layers);
+    requestAnimationFrame(() => { map.invalidateSize(); map.fitBounds(layers.getBounds(), {padding: [32,32], maxZoom: 15}); });
   }
 
   function selectRoute(id) {
@@ -40,8 +44,9 @@
     $('#route-length').textContent = `${format.format(selected.distanceMeters / 1000)} km`;
     $('#route-shape').textContent = selected.closed ? 'Sklenjena sled' : 'Enosmerna sled';
     $('#route-note').textContent = selected.closed ? 'Sled se vrne do izhodišča. Razdalja je izračunana iz priložene datoteke GPX.' : 'Sled vodi od izhodišča do cilja. Povratek ni vključen v prikazano dolžino.';
-    const start = selected.segments[0][0];
-    $('#route-start').textContent = `${start[0].toFixed(5)}, ${start[1].toFixed(5)}`;
+    const start = selected.meetingPoint.coordinates;
+    $('#route-address').textContent = selected.meetingPoint.address;
+    $('#route-start').textContent = `${start[0].toFixed(6)}, ${start[1].toFixed(6)}`;
     $('#route-download').href = selected.download;
     $('#route-download').download = selected.download.split('/').pop();
     $('#route-download').setAttribute('aria-label', `Prenesi GPX: ${selected.title}`);

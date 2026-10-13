@@ -66,6 +66,20 @@ def main():
                 page.locator(f'button[data-route="{route["id"]}"]').click()
                 expect(page.locator('#route-title')).to_have_text(route['title'])
                 expect(page.locator('#route-map')).to_be_visible()
+                meeting = route['meetingPoint']
+                lat, lon = meeting['coordinates']
+                expect(page.locator('#route-address')).to_have_text(meeting['address'])
+                expect(page.locator('#route-start')).to_have_text(f'{lat:.6f}, {lon:.6f}')
+                expect(page.locator('#route-start-link')).to_have_attribute('href', f'https://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=16/{lat}/{lon}')
+                marker = page.locator('#route-map .leaflet-marker-icon')
+                expect(marker).to_have_attribute('title', 'Zbor in začetek pohoda: ' + meeting['address'])
+                marker.click()
+                expect(page.locator('.leaflet-popup-content')).to_contain_text(meeting['address'])
+                page.locator('.leaflet-popup-close-button').click()
+                page.locator(f'[data-news="{route["id"]}-2026"]').first.click()
+                expect(page.locator('#event-dialog .meeting-point')).to_contain_text(meeting['address'])
+                expect(page.locator('#event-dialog .meeting-point')).to_contain_text(f'{lat:.6f}, {lon:.6f}')
+                page.keyboard.press('Escape')
                 with page.expect_download() as download_info:
                     page.locator('#route-download').click()
                 download = download_info.value
@@ -103,7 +117,7 @@ def main():
             expect(page.locator('#route-map-status')).to_contain_text('trenutno ni na voljo')
             assert not errors, errors
             browser.close()
-        print('PASS: GPX coordinates, distance, segments, validity, original downloads, route switching, map zoom, unavailable tile handling and mobile layout.')
+        print('PASS: meeting addresses, coordinates, map markers, links and event dialogs; GPX coordinates, distance, segments, validity, original downloads, route switching, map zoom, unavailable tile handling and mobile layout.')
     finally:
         server.shutdown()
         server.server_close()

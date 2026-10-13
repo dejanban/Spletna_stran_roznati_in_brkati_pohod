@@ -7,6 +7,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def meeting_html(meeting):
+    if not meeting:
+        return ''
+    lat, lon = meeting['coordinates']
+    url = f'https://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=16/{lat}/{lon}'
+    return f'<p><strong>Zbor in začetek pohoda: {escape(meeting["address"])}</strong><br>GPS: {lat:.6f}, {lon:.6f}<br><a href="{escape(url)}">Poglej zbirno mesto na zemljevidu</a></p>'
+
+
 def paragraph_html(value):
     # Split before escaping so URLs and ordinary text remain safely encoded.
     return ''.join(f'<a href="{escape(part)}">{escape(part)}</a>' if part.startswith(('https://', 'http://')) else escape(part)
@@ -22,7 +30,7 @@ def render_vabila(events, routes):
         paragraphs = ''.join(f'<p>{paragraph_html(p)}</p>' for p in event['posterText'])
         poster = event.get('poster', '')
         original = f'<p><a href="{escape(poster)}">Ogled izvirnega slikovnega vabila: {escape(event["title"])}</a></p>' if poster else ''
-        sections.append(f'<section id="{escape(event["id"])}" class="poster-transcript"><h2>{escape(event["title"])}</h2>{paragraphs}{original}</section>')
+        sections.append(f'<section id="{escape(event["id"])}" class="poster-transcript"><h2>{escape(event["title"])}</h2>{meeting_html(event.get("meetingPoint"))}{paragraphs}{original}</section>')
     route_sections = []
     for route in routes:
         points = [point for segment in route['segments'] for point in segment]
@@ -31,7 +39,7 @@ def render_vabila(events, routes):
         note = ('Krožna sled na območju Doblič in reke Dobličice. Sled se vrne do izhodišča.' if route['closed'] else
                 'Sled Brkatega pohoda proti Mirni gori. Pot je enosmerna; povratek ni vključen v razdaljo.')
         route_sections.append(f'''<section id="{escape(route['id'])}-pot"><h3>{escape(route['title'])}</h3>
-<p>{note}</p><dl><dt>Dolžina priložene sledi</dt><dd>{distance} km</dd>
+{meeting_html(route.get('meetingPoint'))}<p>{note}</p><dl><dt>Dolžina priložene sledi</dt><dd>{distance} km</dd>
 <dt>Začetek sledi – zemljepisna širina in dolžina</dt><dd><code>{coordinates(points[0])}</code></dd>
 <dt>Konec sledi – zemljepisna širina in dolžina</dt><dd><code>{coordinates(points[-1])}</code></dd></dl>
 <p><a href="{escape(route['download'])}" download>Prenesi GPX: {escape(route['title'])}</a></p></section>''')

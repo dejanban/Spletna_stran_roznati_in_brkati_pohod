@@ -110,6 +110,7 @@ def save(payload):
     if article is not None:
         prior = next((a for a in news['articles'] if a['eventId'] == event_id), {})
         result = dict(prior)
+        result.pop('kind', None)  # Adding a gallery turns an invitation into a report.
         result.update(eventId=event_id, editorManaged=True)
         for key in ('title', 'summary', 'photoCredit'):
             result[key] = text(article.get(key), True)
@@ -141,6 +142,14 @@ def save(payload):
         news['articles'] = [a for a in news['articles'] if a['eventId'] != event_id] + [result]
         news['articles'].sort(key=lambda a: a['publishedAt'], reverse=True)
         copy[event_id] = {key: result[key] for key in ('title', 'summary', 'paragraphs', 'photoCredit')}
+    else:
+        announcement = next((a for a in news['articles'] if a['eventId'] == event_id and a.get('kind') == 'announcement'), None)
+        if announcement:
+            if not event['poster']:
+                raise ValueError('Vabilo v novicah potrebuje slikovno vabilo.')
+            announcement.update({key: event[key] for key in ('title', 'summary', 'paragraphs')})
+            announcement['cover'] = event['poster']
+            copy[event_id] = {key: announcement[key] for key in ('title', 'summary', 'paragraphs', 'photoCredit')}
     events['events'] = [event if e['id'] == event_id else e for e in events['events']]
     if not existing:
         events['events'].append(event)
