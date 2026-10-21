@@ -81,7 +81,7 @@
     const newsTrigger = event.target.closest("[data-news]");
     if (newsTrigger) { lastTrigger = newsTrigger; openNews(news.find(item => item.eventId === newsTrigger.dataset.news)); return; }
     const trigger = event.target.closest("[data-event]");
-    if (trigger) { lastTrigger = trigger; openEvent(events.find(item => item.id === trigger.dataset.event)); }
+    if (trigger) { event.preventDefault(); lastTrigger = trigger; openEvent(events.find(item => item.id === trigger.dataset.event)); }
   });
   $(".dialog-close").addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", event => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); } });
