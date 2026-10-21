@@ -23,10 +23,13 @@ def main():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     routes = json.loads((ROOT / 'public/data/routes.json').read_text(encoding='utf-8'))['routes']
-    assert [(r['pointCount'], r['closed']) for r in routes] == [(1166, True), (152, False)]
+    assert (routes[0]['pointCount'], routes[0]['closed']) == (1166, True)
     assert 10700 < routes[0]['distanceMeters'] < 10800
-    assert 4500 < routes[1]['distanceMeters'] < 4600
-    for route in routes:
+    assert routes[1]['meetingPoint']['coordinates'] == [45.646197, 15.136487]
+    assert routes[1]['finishPoint'] == {'address': 'Smučišče Gače', 'coordinates': [45.664092, 15.088865]}
+    assert not any(key in routes[1] for key in ('segments', 'download', 'distanceMeters', 'sha256'))
+    assert not (ROOT / 'public/assets/gpx/Brkati-pohod.gpx').exists()
+    for route in routes[:1]:
         path = ROOT / 'public' / route['download']
         assert module.read_route(path)['segments'] == route['segments']
         data = path.read_bytes()
@@ -71,7 +74,7 @@ def main():
                 expect(page.locator('#route-address')).to_have_text(meeting['address'])
                 expect(page.locator('#route-start')).to_have_text(f'{lat:.6f}, {lon:.6f}')
                 expect(page.locator('#route-start-link')).to_have_attribute('href', f'https://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=16/{lat}/{lon}')
-                marker = page.locator('#route-map .leaflet-marker-icon')
+                marker = page.locator('#route-map .leaflet-marker-icon[title^="Zbor"]')
                 expect(marker).to_have_attribute('title', 'Zbor in začetek pohoda: ' + meeting['address'])
                 marker.click()
                 expect(page.locator('.leaflet-popup-content')).to_contain_text(meeting['address'])
@@ -80,17 +83,37 @@ def main():
                 expect(page.locator('#event-dialog .meeting-point')).to_contain_text(meeting['address'])
                 expect(page.locator('#event-dialog .meeting-point')).to_contain_text(f'{lat:.6f}, {lon:.6f}')
                 page.keyboard.press('Escape')
-                with page.expect_download() as download_info:
-                    page.locator('#route-download').click()
-                download = download_info.value
-                assert Path(download.path()).read_bytes() == (ROOT / 'public' / route['download']).read_bytes()
+                if route.get('download'):
+                    with page.expect_download() as download_info:
+                        page.locator('#route-download').click()
+                    download = download_info.value
+                    assert Path(download.path()).read_bytes() == (ROOT / 'public' / route['download']).read_bytes()
+                else:
+                    expect(page.locator('#route-download')).to_be_hidden()
+                    expect(page.locator('#route-download')).not_to_have_attribute('href')
+                    expect(page.locator('.route-stats')).to_be_hidden()
+                    expect(page.locator('#route-end')).to_have_text('45.664092, 15.088865')
+                    expect(page.locator('#route-end-link')).to_have_attribute('href', 'https://www.openstreetmap.org/?mlat=45.664092&mlon=15.088865#map=16/45.664092/15.088865')
+                    finish = page.locator('#route-map .leaflet-marker-icon[title="Zaključek pohoda: Smučišče Gače"]')
+                    expect(finish).to_be_visible()
+                    expect(page.locator('#route-map .leaflet-marker-icon')).to_have_count(2)
+                    finish.click()
+                    popup = page.locator('.leaflet-popup').filter(has_text='Zaključek pohoda: Smučišče Gače')
+                    expect(popup.locator('.leaflet-popup-content')).to_have_text('Zaključek pohoda: Smučišče Gače')
+                    popup.locator('.leaflet-popup-close-button').click()
             assert tile_requests  # OpenStreetMap loads beneath the GPX by default.
-            expect(page.locator('#route-length')).to_have_text('4,5 km')
-            expect(page.locator('#route-note')).to_contain_text('Povratek ni vključen')
+            expect(page.locator('#route-note')).to_contain_text('smučišču Gače')
             expect(page.locator('#route-map')).to_be_visible()
-            expect(page.locator('#route-map .leaflet-overlay-pane path')).to_have_count(3)
+            expect(page.locator('#route-map .leaflet-overlay-pane path')).to_have_count(0)
             expect(page.locator('#route-map-status')).to_be_visible()
             expect(page.locator('#route-map-status')).to_contain_text('Preverite internetno povezavo')
+            page.locator('#route-map-toggle').click()
+            expect(page.locator('#route-outline polyline')).to_have_count(0)
+            expect(page.locator('#route-outline svg')).to_have_attribute('aria-label', 'Začetna in končna točka: Brkati pohod')
+            page.locator('#route-map-toggle').click()
+            page.locator('button[data-route="roznati"]').click()
+            expect(page.locator('#route-finish')).to_be_hidden()
+            expect(page.locator('#route-download')).to_be_visible()
             line = page.locator('#route-map .leaflet-overlay-pane path').first
             before_zoom = line.get_attribute('d')
             page.locator('.leaflet-control-zoom-in').click()

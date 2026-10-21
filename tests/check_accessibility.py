@@ -109,7 +109,7 @@ def main():
             page.goto(base + '/urejevalnik/')
             page.locator('#new').click()
             audit(page, 'Urejevalnik – nov dogodek')
-            page.locator('#events button').filter(has_text='4. Brkati pohod na Mirno goro').click()
+            page.locator('#events button').filter(has_text='4. Brkati pohod do smučišča Gače').click()
             audit(page, 'Urejevalnik – obstoječi dogodek')
             assert not errors, errors
             browser.close()

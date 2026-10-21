@@ -24,12 +24,12 @@ public/                       Spletna stran; vsebino te mape objavite na gostova
   data/events.js              Dogodki in nastavitve Google Drive.
   data/news.json              Katalog novic in fotografij.
   data/news.js                Ustvarjena brskalniška različica kataloga.
-  data/routes.js              Podatki poti, ustvarjeni iz GPX.
+  data/routes.js              Podatki sledi GPX ter začetnih in končnih točk.
   assets/branding/            Znak spletne strani.
   assets/Logo/                Dodani izvirni logotipi pohodov (PNG/PDF).
   assets/vabila/              Spletne kopije vabil.
   assets/novice/              Fotografije po posameznih pohodih.
-  assets/gpx/                 Izvirni poti GPX za prikaz in prenos.
+  assets/gpx/                 Sled GPX Rožnatih korakov za prikaz in prenos.
   assets/majice/              Fotografije majic za naročilo.
     roznati-koraki/           Majice Rožnatih korakov.
     brkati-pohod/             Majice Brkatega pohoda.
@@ -53,7 +53,7 @@ Mapa `public` vsebuje neposredno uporabljene datoteke. Stran ne potrebuje gradnj
 - **Napovedi in pohodi:** obrazec `/urejevalnik/`; podatki so v [public/data/events.json](public/data/events.json), brskalniška različica `events.js` se ustvari ob shranjevanju.
 - **Povzetki novic:** [content/news-copy.json](content/news-copy.json), nato `python scripts/import_odeon.py`.
 - **Oblikovanje:** [public/css/styles.css](public/css/styles.css).
-- **Poti GPX:** datoteki sta v [public/assets/gpx/](public/assets/gpx/); po spremembi zaženite `python scripts/prepare_routes.py`. [Navodila za poti in zemljevid](docs/POTI.md).
+- **Poti in točke:** sled Rožnatih korakov je v [public/assets/gpx/](public/assets/gpx/); točki Brkatega pohoda sta pri dogodku `brkati-2026` v `public/data/events.json`. Po spremembi zaženite `python scripts/prepare_routes.py`. [Navodila za poti in zemljevid](docs/POTI.md).
 - **Majice:** tri oblačila so prikazana v razdelku `#majice`; slike so v [public/assets/majice/](public/assets/majice/), [navodila in podatki za naročanje](docs/MAJICE.md). Prikaz in povezave za povpraševanje urejajte v `public/index.html`.
 - **Galerije, viri in podrobna navodila:** [docs/UPORABA.md](docs/UPORABA.md).
 

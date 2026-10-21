@@ -7,7 +7,7 @@ Spremembe so pripravljene v lokalnem projektu 12. oktobra 2026. Objava uporablja
 - Javna izjava `public/dostopnost.html`: obseg, trenutno stanje, nadomestne možnosti, kontakt, rok za odgovor, nadzorni organ ter datum priprave in pregleda.
 - Kontakt za povratne informacije uporablja že objavljeni `ckz@zd-crnomelj.si` in telefon `07 30 61 723`. Povezavi do izjave in prijave sta v nogi strani.
 - Vseh pet slikovnih vabil ima besedilno različico v podrobnostih dogodka in na `public/vabila.html`. Povezave kod QR so prebrane iz izvirnih vabil in navedene kot običajne spletne povezave.
-- Stran z vabili vsebuje bistvene besedilne podatke obeh priloženih poti GPX in deluje brez JavaScripta.
+- Stran z vabili vsebuje bistvene besedilne podatke sledi GPX Rožnatih korakov ter začetne in končne točke Brkatega pohoda in deluje brez JavaScripta.
 - Vseh 259 lokalnih fotografij ima opis prizora v `public/data/news.json` in brskalniškem katalogu. Opisi ne ugibajo identitete oseb.
 - Popravljeni so kontrasti besedila, prikaz fokusa, preskok na vsebino, cilj fokusa po izbiri mobilne navigacije in kroženje fokusa v pojavnem oknu. Escape zapre meni ali pojavno okno.
 - Galerije se odprejo brez samodejnega predvajanja. Predvajanje je izrecna izbira; med uporabo galerije s tipkovnico ali kazalcem se ustavi. Ročno menjavo spremlja dostopno obvestilo o številki fotografije.

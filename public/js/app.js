@@ -21,12 +21,13 @@
     try { const url = new URL(value, document.baseURI); return ["https:", "http:", "file:"].includes(url.protocol) ? escape(url.href) : ""; } catch { return ""; }
   };
   const paragraphHtml = value => String(value).split(/(https?:\/\/[^\s]+)/g).map(part => part.startsWith("https://") || part.startsWith("http://") ? `<a class="source-link" href="${safeUrl(part)}">${escape(part)}</a>` : escape(part)).join("");
-  const meetingHtml = event => {
-    if (!event.meetingPoint) return "";
-    const {address, coordinates: [lat, lon]} = event.meetingPoint;
+  const pointHtml = (point, finish = false) => {
+    if (!point) return "";
+    const {address, coordinates: [lat, lon]} = point;
     const url = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=16/${lat}/${lon}`;
-    return `<p class="meeting-point"><strong>Zbor in začetek pohoda: ${escape(address)}</strong><br>GPS: ${lat.toFixed(6)}, ${lon.toFixed(6)}<br><a class="source-link" href="${safeUrl(url)}" target="_blank" rel="noopener">Poglej zbirno mesto na zemljevidu ↗</a></p>`;
+    return `<p class="${finish ? 'finish-point' : 'meeting-point'}"><strong>${finish ? 'Zaključek pohoda' : 'Zbor in začetek pohoda'}: ${escape(address)}</strong><br>GPS: ${lat.toFixed(6)}, ${lon.toFixed(6)}<br><a class="source-link" href="${safeUrl(url)}" target="_blank" rel="noopener">${finish ? 'Poglej cilj' : 'Poglej zbirno mesto'} na zemljevidu ↗</a></p>`;
   };
+  const meetingHtml = event => pointHtml(event.meetingPoint) + pointHtml(event.finishPoint, true);
   const today = () => new Intl.DateTimeFormat("sv-SE", {timeZone: "Europe/Ljubljana", year: "numeric", month: "2-digit", day: "2-digit"}).format(new Date());
   const isPast = event => event.dateIsPublication || event.date < today();
   const dateLabel = event => event.dateIsPublication ? "2023 · iz arhiva" : new Intl.DateTimeFormat("sl-SI", {day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Ljubljana"}).format(new Date(event.date + "T12:00:00+02:00"));

@@ -63,7 +63,7 @@ def run():
             for private_path in ['.git/config', '.cache/odeon/brkati-2025.html', 'docs/UPORABA.md', 'content/news-copy.json']:
                 assert page.request.get(base + '/' + private_path).status == 404, private_path
             expect(page.locator('.event-card')).to_have_count(6)
-            expect(page.locator('#upcoming-content')).to_contain_text('4. Brkati pohod na Mirno goro')
+            expect(page.locator('#upcoming-content')).to_contain_text('4. Brkati pohod do smučišča Gače')
             expect(page.locator('#upcoming-content')).to_contain_text('Blatnik pri Črmošnjicah 1, 8333 Semič · ob 09:00')
             expect(page.locator('#upcoming-content')).to_contain_text('21. november 2026')
             page.locator('[data-filter="roznati"]').click()
@@ -84,15 +84,19 @@ def run():
             expect(page.locator('#event-dialog')).not_to_be_visible()
             assert page.evaluate('document.activeElement.dataset.event') == 'roznati-2026'
             expect(page.locator('.news-card')).to_have_count(7)
-            expect(page.locator('#news-grid .news-card').first).to_contain_text('4. Brkati pohod na Mirno goro')
+            expect(page.locator('#news-grid .news-card').first).to_contain_text('4. Brkati pohod do smučišča Gače')
             for article in catalog['articles']:
                 trigger = page.locator(f'[data-news="{article["eventId"]}"]').first
                 trigger.click()
                 expect(page.locator('#dialog-title')).to_have_text(article['title'])
                 if article.get('kind') == 'announcement':
                     expect(page.locator('.detail-poster')).to_be_visible()
-                    expect(page.locator('.poster-transcript')).to_contain_text('Vrčice – Mirna gora')
+                    expect(page.locator('.poster-transcript')).to_contain_text('Črmošnjic do smučišča Gače')
                     expect(page.locator('.poster-transcript')).to_contain_text('Društvo za boj proti raku')
+                    expect(page.locator('.poster-transcript')).to_contain_text('GOLAŽ ali ŽAR')
+                    expect(page.locator('.poster-transcript')).to_contain_text('Hrana in pijača sta na lastne stroške')
+                    expect(page.locator('.finish-point')).to_contain_text('Smučišče Gače')
+                    expect(page.locator('.finish-point')).to_contain_text('45.664092, 15.088865')
                     expect(page.locator('.gallery')).to_have_count(0)
                     expect(page.locator('a[href$="assets/vabila/brkati-2026.pdf"]')).to_be_visible()
                     assert page.request.get(urljoin(base + '/', article['sourceUrl'])).status == 200

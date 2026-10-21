@@ -7,12 +7,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def meeting_html(meeting):
+def meeting_html(meeting, finish=False):
     if not meeting:
         return ''
     lat, lon = meeting['coordinates']
     url = f'https://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=16/{lat}/{lon}'
-    return f'<p><strong>Zbor in začetek pohoda: {escape(meeting["address"])}</strong><br>GPS: {lat:.6f}, {lon:.6f}<br><a href="{escape(url)}">Poglej zbirno mesto na zemljevidu</a></p>'
+    label = 'Zaključek pohoda' if finish else 'Zbor in začetek pohoda'
+    link_label = 'Poglej cilj na zemljevidu' if finish else 'Poglej zbirno mesto na zemljevidu'
+    return f'<p><strong>{label}: {escape(meeting["address"])}</strong><br>GPS: {lat:.6f}, {lon:.6f}<br><a href="{escape(url)}">{link_label}</a></p>'
 
 
 def paragraph_html(value):
@@ -30,9 +32,14 @@ def render_vabila(events, routes):
         paragraphs = ''.join(f'<p>{paragraph_html(p)}</p>' for p in event['posterText'])
         poster = event.get('poster', '')
         original = f'<p><a href="{escape(poster)}">Ogled izvirnega slikovnega vabila: {escape(event["title"])}</a></p>' if poster else ''
-        sections.append(f'<section id="{escape(event["id"])}" class="poster-transcript"><h2>{escape(event["title"])}</h2>{meeting_html(event.get("meetingPoint"))}{paragraphs}{original}</section>')
+        report = event.get('reportUrl', '')
+        pdf = f'<p><a href="{escape(report)}">{escape(event["reportLabel"])}</a></p>' if report.endswith('.pdf') else ''
+        sections.append(f'<section id="{escape(event["id"])}" class="poster-transcript"><h2>{escape(event["title"])}</h2>{meeting_html(event.get("meetingPoint"))}{meeting_html(event.get("finishPoint"), finish=True)}{paragraphs}{original}{pdf}</section>')
     route_sections = []
     for route in routes:
+        if not route.get('segments'):
+            route_sections.append(f'<section id="{escape(route["id"])}-pot"><h3>{escape(route["title"])}</h3>{meeting_html(route.get("meetingPoint"))}{meeting_html(route.get("finishPoint"), finish=True)}<p>Prikazani sta začetna točka in zaključek na smučišču Gače.</p></section>')
+            continue
         points = [point for segment in route['segments'] for point in segment]
         coordinates = lambda p: f'{p[0]:.5f}, {p[1]:.5f}'
         distance = f'{route["distanceMeters"] / 1000:.1f}'.replace('.', ',')
@@ -52,9 +59,9 @@ def render_vabila(events, routes):
 <nav aria-label="Glavna navigacija"><a href="index.html">Domov</a><a href="dostopnost.html">Izjava o dostopnosti</a></nav></header>
 <main id="vsebina" tabindex="-1" class="content-page wrap"><h1>Vabila in poti v besedilu</h1>
 <p>Informacije iz slikovnih vabil so na tej strani na voljo kot besedilo. Vabila preteklih pohodov so arhivska; za naslednji pohod preverite <a href="index.html#aktualno">aktualno napoved</a>.</p>
-<nav aria-label="Kazalo vabil in poti"><ul>{links}<li><a href="#poti">Podatki poti GPX</a></li></ul></nav>
-{''.join(sections)}<section id="poti"><h2>Podatki poti GPX</h2>
-<p>Osnovni podatki zemljevida so dostopni tudi brez vizualnega prikaza: dolžina, potek ter koordinate začetka in konca priložene sledi. Aktualno zbirno mesto se lahko razlikuje od začetka sledi; upoštevajte vabilo posameznega pohoda.</p>
+<nav aria-label="Kazalo vabil in poti"><ul>{links}<li><a href="#poti">Podatki poti in točk pohodov</a></li></ul></nav>
+{''.join(sections)}<section id="poti"><h2>Podatki poti in točk pohodov</h2>
+<p>Osnovni podatki zemljevida so dostopni tudi brez vizualnega prikaza. Za Rožnate korake so navedeni dolžina, potek in koordinate priložene sledi GPX, za Brkati pohod pa začetna in končna točka. Za zbirno mesto in program upoštevajte aktualno napoved.</p>
 {''.join(route_sections)}</section>
 <p><a href="mailto:ckz@zd-crnomelj.si">Dodatne informacije: ckz@zd-crnomelj.si</a> · <a href="tel:+38673061723">07 30 61 723</a></p></main>
 <footer class="content-footer"><div class="wrap"><a href="index.html">Nazaj na spletno stran</a><a href="dostopnost.html#povratne-informacije">Prijavi težavo z dostopnostjo</a></div></footer></body></html>

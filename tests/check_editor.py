@@ -34,12 +34,15 @@ def main():
                 page.on('pageerror', lambda e: errors.append(str(e)))
                 page.route('https://tile.openstreetmap.org/**', lambda r: r.abort())
                 page.goto(base + '/urejevalnik/')
-                page.get_by_role('button', name='4. Brkati pohod na Mirno goro').click()
+                page.get_by_role('button', name='4. Brkati pohod do smučišča Gače').click()
                 expect(page.locator('#news-fields')).not_to_be_visible()
                 page.locator('[name="time"]').fill('09:15')
                 page.locator('#save').click()
                 expect(page.locator('#save-status')).to_contain_text('Shranjeno')
                 events, news, _ = editor.read_state()
+                updated = next(e for e in events['events'] if e['id'] == 'brkati-2026')
+                assert updated['meetingPoint']['coordinates'] == [45.646197, 15.136487]
+                assert updated['finishPoint']['coordinates'] == [45.664092, 15.088865]
                 announcement = next(a for a in news['articles'] if a['eventId'] == 'brkati-2026')
                 assert announcement['kind'] == 'announcement' and announcement['photos'] == []
                 assert announcement['cover'] == 'assets/vabila/brkati-2026.png'
