@@ -25,7 +25,7 @@ def main():
     routes = json.loads((ROOT / 'public/data/routes.json').read_text(encoding='utf-8'))['routes']
     assert (routes[0]['pointCount'], routes[0]['closed']) == (1166, True)
     assert 10700 < routes[0]['distanceMeters'] < 10800
-    assert routes[1]['meetingPoint']['coordinates'] == [45.646197, 15.136487]
+    assert routes[1]['meetingPoint']['coordinates'] == [45.67122998088778, 15.102209622592966]
     assert routes[1]['finishPoint'] == {'address': 'Smučišče Gače', 'coordinates': [45.664092, 15.088865]}
     assert not any(key in routes[1] for key in ('segments', 'download', 'distanceMeters', 'sha256'))
     assert not (ROOT / 'public/assets/gpx/Brkati-pohod.gpx').exists()
@@ -77,8 +77,9 @@ def main():
                 marker = page.locator('#route-map .leaflet-marker-icon[title^="Zbor"]')
                 expect(marker).to_have_attribute('title', 'Zbor in začetek pohoda: ' + meeting['address'])
                 marker.click()
-                expect(page.locator('.leaflet-popup-content')).to_contain_text(meeting['address'])
-                page.locator('.leaflet-popup-close-button').click()
+                popup = page.locator('.leaflet-popup').filter(has_text=meeting['address'])
+                expect(popup.locator('.leaflet-popup-content')).to_contain_text(meeting['address'])
+                popup.locator('.leaflet-popup-close-button').click()
                 page.locator(f'[data-news="{route["id"]}-2026"]').first.click()
                 expect(page.locator('#event-dialog .meeting-point')).to_contain_text(meeting['address'])
                 expect(page.locator('#event-dialog .meeting-point')).to_contain_text(f'{lat:.6f}, {lon:.6f}')

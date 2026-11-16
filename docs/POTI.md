@@ -23,10 +23,10 @@ Skripti ustvarita `public/data/routes.json`, `public/data/routes.js` in besediln
 Sled Rožnatih korakov zamenjajte v `public/assets/gpx/Roznati-koraki.gpx`. Razdalja se izračuna kot vsota razdalj med koordinatami po zemeljski površini (Haversinova formula), brez višinskega popravka. Ločeni segmenti se ne povezujejo z navidezno ravno črto. Sklenjena sled ima en segment, njen konec pa je manj kot 50 m od začetka. Preverja se veljavnost koordinat in shrani kontrolna vsota izvornega GPX. Višinski profil ni prikazan.
 
 - **Rožnati koraki – zbor in začetek:** Dobliče 22, 8340 Črnomelj (45.559096, 15.143954); podatki zemljevida so v `MEETING_POINTS` v `scripts/prepare_routes.py`.
-- **Brkati pohod – ohranjena začetna točka:** Blatnik pri Črmošnjicah 1, 8333 Semič (45.646197, 15.136487).
+- **Brkati pohod – zbor in začetek:** Prostovoljno gasilsko društvo Črmošnjice (45.67122998088778, 15.102209622592966); zbor na parkirišču gasilskega doma ob 9.00.
 - **Brkati pohod – zaključek:** smučišče Gače (45.664092, 15.088865).
 
-Točki Brkatega pohoda se prebereta iz `meetingPoint` in `finishPoint` dogodka `brkati-2026` v `public/data/events.json`. Novo slikovno in PDF-vabilo navajata zbor pred gasilskim domom Črmošnjice; obstoječa začetna točka na zemljevidu je ohranjena po navodilu organizatorja.
+Točki Brkatega pohoda se prebereta iz `meetingPoint` in `finishPoint` dogodka `brkati-2026` v `public/data/events.json`. Novi slikovni vabili sta v `public/assets/vabila/brkati-2026.jpg` in `public/assets/vabila/brkati-2026-dodatne-informacije.jpg`. Začetna točka je posodobljena na PGD Črmošnjice skladno z vabiloma in koordinatami organizatorja.
 
 ## Zemljevid
 

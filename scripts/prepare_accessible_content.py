@@ -33,8 +33,8 @@ def render_vabila(events, routes):
         poster = event.get('poster', '')
         original = f'<p><a href="{escape(poster)}">Ogled izvirnega slikovnega vabila: {escape(event["title"])}</a></p>' if poster else ''
         report = event.get('reportUrl', '')
-        pdf = f'<p><a href="{escape(report)}">{escape(event["reportLabel"])}</a></p>' if report.endswith('.pdf') else ''
-        sections.append(f'<section id="{escape(event["id"])}" class="poster-transcript"><h2>{escape(event["title"])}</h2>{meeting_html(event.get("meetingPoint"))}{meeting_html(event.get("finishPoint"), finish=True)}{paragraphs}{original}{pdf}</section>')
+        supplement = f'<p><a href="{escape(report)}">{escape(event["reportLabel"])}</a></p>' if report.lower().endswith(('.pdf', '.jpg', '.jpeg', '.png', '.webp')) else ''
+        sections.append(f'<section id="{escape(event["id"])}" class="poster-transcript"><h2>{escape(event["title"])}</h2>{meeting_html(event.get("meetingPoint"))}{meeting_html(event.get("finishPoint"), finish=True)}{paragraphs}{original}{supplement}</section>')
     route_sections = []
     for route in routes:
         if not route.get('segments'):

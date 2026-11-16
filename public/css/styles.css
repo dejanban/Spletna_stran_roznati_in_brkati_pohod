@@ -59,6 +59,7 @@
 @media(max-width:500px){.route-stage{height:320px}.route-selector button{padding:10px 15px;font-size:13px}.route-details h3{font-size:30px}.route-stats{gap:23px}.route-stats dd{font-size:18px}.route-details{padding:23px}}
 
 .news-image.news-invitation img{object-fit:contain}
+.detail-program{border-top:1px solid var(--line);margin-top:30px;padding-top:28px}.detail-program h3{font-size:26px;margin-bottom:18px}.detail-program-poster{width:100%;height:auto;border-radius:5px}
 
 /* Loading and error messages overlay the reserved image space. */
 .gallery-frame .gallery-loading{position:absolute;inset:auto 12px 12px;margin:0;padding:10px;background:#1d1c1de6;color:#fff;border-radius:4px}

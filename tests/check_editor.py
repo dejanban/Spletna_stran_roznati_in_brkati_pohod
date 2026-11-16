@@ -41,11 +41,11 @@ def main():
                 expect(page.locator('#save-status')).to_contain_text('Shranjeno')
                 events, news, _ = editor.read_state()
                 updated = next(e for e in events['events'] if e['id'] == 'brkati-2026')
-                assert updated['meetingPoint']['coordinates'] == [45.646197, 15.136487]
+                assert updated['meetingPoint']['coordinates'] == [45.67122998088778, 15.102209622592966]
                 assert updated['finishPoint']['coordinates'] == [45.664092, 15.088865]
                 announcement = next(a for a in news['articles'] if a['eventId'] == 'brkati-2026')
                 assert announcement['kind'] == 'announcement' and announcement['photos'] == []
-                assert announcement['cover'] == 'assets/vabila/brkati-2026.png'
+                assert announcement['cover'] == 'assets/vabila/brkati-2026.jpg'
                 page.locator('#new').click()
                 values = {'id':'roznati-test','date':'2027-10-02','title':'Testni pohod','location':'Dobliče','summary':'Napoved novega pohoda.','paragraphs':'Prvi odstavek.\n\nDrugi odstavek.','posterText':'Sobota, 2. oktober 2027. Zbor v Dobličah.'}
                 for name, value in values.items():

@@ -173,36 +173,34 @@ window.EVENTS = [
     "date": "2026-11-21",
     "time": "09:00",
     "title": "4. Brkati pohod do smučišča Gače",
-    "location": "Blatnik pri Črmošnjicah 1, 8333 Semič",
+    "location": "Prostovoljno gasilsko društvo Črmošnjice",
     "route": "Črmošnjice – smučišče Gače",
-    "summary": "V soboto, 21. novembra 2026, vabljeni na 4. Brkati pohod, ki se bo letos zaključil na smučišču Gače. Zbor in začetek pohoda bosta ob 9.00 na naslovu Blatnik pri Črmošnjicah 1, 8333 Semič.",
+    "summary": "V soboto, 21. novembra 2026, vabljeni na 4. Brkati pohod iz Črmošnjic do smučišča Gače. Zbor in začetek pohoda bosta ob 9.00 na parkirišču gasilskega doma Črmošnjice.",
     "paragraphs": [
-      "Center za krepitev zdravja ZD Črnomelj vabi na 4. Brkati pohod v soboto, 21. novembra 2026. Zbor in začetek pohoda bosta ob 9.00 na naslovu Blatnik pri Črmošnjicah 1, 8333 Semič (45.646197, 15.136487). S skupnimi koraki bomo podprli ozaveščanje o zdravju moških.",
+      "Center za krepitev zdravja ZD Črnomelj vabi na 4. Brkati pohod v soboto, 21. novembra 2026. Zbor in začetek pohoda bosta ob 9.00 na parkirišču pri Prostovoljnem gasilskem društvu Črmošnjice (45.671230, 15.102210). S skupnimi koraki bomo podprli ozaveščanje o zdravju moških.",
       "Letos se bo pohod zaradi prenove koče na Mirni gori izjemoma zaključil na smučišču Gače (45.664092, 15.088865). Organizirana bo ena pot iz Črmošnjic do smučišča Gače. Bolje telesno pripravljeni posamezniki bodo lahko šli do vrha smučišča.",
       "Na cilju bo Rdeči križ prikazal temeljne postopke oživljanja, CKZ Črnomelj bo izvajal različne meritve, Društvo za boj proti raku Dolenjske in Bele krajine pa bo ponudilo svetovanje.",
-      "V restavraciji na Gačah nam bodo po želji postregli s hrano (GOLAŽ ali ŽAR) in pijačo. Hrana in pijača sta na lastne stroške.",
       "Poskrbite za primerno nepremočljivo športno opremo in vodo; priporočene so pohodne palice. Če brkov nimate, jih dobite na startu, na cilju pa praktično nagrado.",
       "Dodatne informacije: 07 30 61 723 ali ckz@zd-crnomelj.si."
     ],
-    "poster": "assets/vabila/brkati-2026.png",
-    "reportUrl": "assets/vabila/brkati-2026.pdf",
-    "reportLabel": "Celotno vabilo in program (PDF)",
+    "poster": "assets/vabila/brkati-2026.jpg",
+    "reportUrl": "assets/vabila/brkati-2026-dodatne-informacije.jpg",
+    "reportLabel": "Dodatne informacije – izvirno vabilo",
     "driveFolderId": "",
     "photos": [],
     "posterText": [
-      "Pozor, sprememba lokacije! 4. Brkati pohod iz Črmošnjic do smučišča Gače. Sobota, 21. november 2026. Zbor po novem vabilu na parkirišču gasilskega doma Črmošnjice ob 9.00.",
+      "Pozor, sprememba lokacije! 4. Brkati pohod iz Črmošnjic do smučišča Gače. Sobota, 21. november 2026. Zbor in začetek pohoda na parkirišču gasilskega doma Črmošnjice ob 9.00.",
       "Letos izjemoma iz Črmošnjic do smučišča Gače zaradi prenove koče na Mirni gori. Organizirana bo ena pot do smučišča Gače. Bolje telesno pripravljeni posamezniki bodo lahko šli do vrha smučišča.",
       "Aktivnosti na cilju: Rdeči križ – prikaz temeljnih postopkov oživljanja (TPO); CKZ Črnomelj – različne meritve; Društvo za boj proti raku Dolenjske in Bele krajine – svetovanje.",
-      "V restavraciji na Gačah nam bodo po želji postregli s hrano (GOLAŽ ali ŽAR) in pijačo. Hrana in pijača sta na lastne stroške.",
       "Poskrbite za primerno nepremočljivo športno opremo ter vodo. Zaželene so pohodne palice. Če brkov nimate, jih dobite na startu; na cilju pa praktično nagrado.",
       "Movember je globalno gibanje, ki vsako leto novembra ozavešča o zdravju moških. Brki so simbol podpore in spodbude k pogovoru o raku prostate, raku mod, duševnem zdravju ter preprečevanju samomorov.",
       "Dodatne informacije: 07 30 61 723, ckz@zd-crnomelj.si. Organizator: Center za krepitev zdravja ZD Črnomelj."
     ],
     "meetingPoint": {
-      "address": "Blatnik pri Črmošnjicah 1, 8333 Semič",
+      "address": "Prostovoljno gasilsko društvo Črmošnjice",
       "coordinates": [
-        45.646197,
-        15.136487
+        45.67122998088778,
+        15.102209622592966
       ]
     },
     "finishPoint": {
